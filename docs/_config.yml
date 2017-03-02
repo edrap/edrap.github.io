@@ -11,7 +11,7 @@ title                    : "Edoardo Raparelli"
 title_separator          : "-"
 name                     : &name "Edoardo Raparelli"
 description              : &description ""
-url                      : &site https://edrap.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://edrap.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : #"/minimal-mistakes" # the subpath of your site, e.g. "/blog"
 repository               : "edrap/edrap.github.io/"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -84,7 +84,7 @@ author:
   bio              : "Master student at the University of Innsbruck (ACINN)"
   location         : "L'Aquila, IT"
   email            : "edoardo.raparelli@gmail.com"
-  uri              : *site
+  uri              : "https://edrap.github.io/"
   bitbucket        :
   codepen          :
   dribbble         :
