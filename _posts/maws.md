@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: single_post
 title: "Mountain Automatic Weather Station (MAWS)"
 categories:
 excerpt: "First lines"
