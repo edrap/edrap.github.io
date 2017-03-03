@@ -84,12 +84,12 @@ author:
   bio              : "Master student at the University of Innsbruck (ACINN)"
   location         : "L'Aquila, IT"
   email            : "edoardo.raparelli@gmail.com"
-  uri              : "https://edrap.github.io/"
+  uri              : #"https://edrap.github.io/"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "edoardo.raparelli"
+  facebook         : #"edoardo.raparelli"
   foursquare       :
   github           : "edrap"
   google_plus      :
