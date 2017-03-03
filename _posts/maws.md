@@ -2,14 +2,14 @@
 layout: single
 title: "Mountain Automatic Weather Station (MAWS)"
 categories:
-excerpt: "Short description"
+excerpt: "First lines"
 tags: []
 image:
   feature:
-modified: 2016-12-30T14:19:19-04:00
+modified: 
 author_profile: true
 comments: false
-read_time: true
+read_time: false
 share: true
 ---
 {% unless page.header.overlay_color or page.header.overlay_image %}
@@ -18,7 +18,6 @@ share: true
   {% if page.read_time %}
     <p style="font-size:18px" class="page__meta">
       <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}<BR>
-      <i class="fa fa-language" aria-hidden="true"></i> traduci questo post in <a href="{{ site.url }}{{ site.baseurl }}/posts_ITA/2016-12-30-un-nuovo-inizio"> <font color="#555555">italiano</font></a>.
     </p>
   {% endif %}
 </header>
