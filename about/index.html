@@ -1,5 +1,42 @@
 ---
-layout: single
-title: "About"
+layout: single_post
 author_profile: true
+title: About me
 ---
+{% unless page.header.overlay_color or page.header.overlay_image %}
+<header>
+  {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+    <p style="font-size:18px" class="page__meta">
+    </p>
+</header>
+{% endunless %}
+
+<p style="text-align: justify;">
+I am a Master student at the <a href="http://acinn.uibk.ac.at/">Institute of Atmospheric and Cryosferic Sciences (ACINN)</a> of the
+<a href="https://www.uibk.ac.at/">University of Innsbruck</a>
+
+
+<!-- <p style="text-align: justify;">
+I am PhD student at the <a href="http://www.gi.alaska.edu/">Geophysical Institute</a> of the
+<a href="http://www.uaf.edu/">University of Alaska Fairbanks</a>.
+My research is based at the <a href="http://glaciers.gi.alaska.edu/">Glaciers Group</a> and focuses on firn hydrology in Greenland.
+The project investigates the spatio-temporal variations of refreezing in the firn of the Kangerlussuaq section of the Greenland
+ice sheet and its role in the surface mass budget combining in-situ observations, remote sensing data and regional climate modeling.</p>
+
+<p style="text-align: justify;"> I was born in Rovereto, a small town south of the Central Eastern Alps main ridge.
+Since my earliest childhood I was fascinated by winter landscapes, mountains and wilderness.
+During my studies in Physics and Atmospheric Sciences I developed a keen interest in understanding the processes governing the atmosphere, glaciers and climate.
+For more than two years I was a core member of the Ice and Climate field work team at the Institute of Atmospheric and Cryospheric Sciences of Innsbruck
+(<a href="http://acinn.uibk.ac.at/">ACINN</a>). I was involved in planning, organizing and executing the glacier mass balance monitoring program of glaciers
+in the Ötztal Alps (Austria) and in the Ortler Group (Italy).</p>
+
+<p style="text-align: justify;">I am proud to actively contribute to the understanding of climate changes with my work and research.
+For further details please check out my CV.</p>
+
+
+
+<p style="text-align: center;"><a href="{{ site.url }}{{ site.baseurl }}/about/Federico_Covi_CV.pdf" class="btn btn--inverse">Curriculum Vitae</a></p>
+
+<h2 id="header-two">Where am I?</h2>
+
+<a href="{{ site.url }}{{ site.baseurl }}/images/map.jpg"><img style="width:100%;" src="{{ site.url }}{{ site.baseurl }}/images/map.jpg" alt=""> -->
