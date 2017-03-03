@@ -1,0 +1,31 @@
+---
+layout: single_post
+title: "Mountain Automatic Weather Station (MAWS)"
+categories:
+excerpt: "First lines"
+tags: []
+image:
+  feature:
+modified: 
+author_profile: true
+comments: false
+read_time: false
+share: true
+---
+{% unless page.header.overlay_color or page.header.overlay_image %}
+<header>
+  {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
+  {% if page.read_time %}
+    <p style="font-size:18px" class="page__meta">
+      <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}<BR>
+    </p>
+  {% endif %}
+</header>
+{% endunless %}
+
+Description
+
+<figure>
+<img src="{{ site.url }}/images/stazione_mc.jpeg" title="{{ include.title }}" alt="Foo" />
+<figcaption>"Monte Calvo, Scoppito"</figcaption>
+</figure>
