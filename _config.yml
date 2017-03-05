@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en"
-title                    : "Edrap"
+title                    : "Edoardo Raparelli"
 title_separator          : "-"
 name                     : "Edoardo Raparelli"
 description              : ""
@@ -16,6 +16,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "edrap/edrap.github.io/"
 teaser                   : "/images/edo.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
+favicon                  : "/images/edo.jpg"
 words_per_minute         : 200
 
 comments:
