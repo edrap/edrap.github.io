@@ -14,9 +14,9 @@ description              : ""
 url                      : "https://edrap.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "edrap/edrap.github.io/"
-teaser                   : "/images/favicon.ico" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/favicon.ico" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
-favicon                  : "/images/favicon.ico"
+favicon                  : "/favicon.ico"
 theme                    :
 words_per_minute         : 200
 
