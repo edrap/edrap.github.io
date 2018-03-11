@@ -119,17 +119,18 @@
       // })
 
       // ----------- MAPS LAYERS -----------
-	  var mappos = L.Permalink.getMapLocation();
-	  var map = L.map('map', {
-	    center: mappos.center,
-	    zoom: mappos.zoom
-	  });
-	  var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
-        maxZoom: 16,
-        minZoom: 10,
-	    subdomains:['mt0','mt1','mt2','mt3'],
-	    attribution: '&copy; <a href="https://www.google.com">Google</a>'
-	  });
+      var mappos = L.Permalink.getMapLocation();
+      var map = L.map('map', {
+        center: mappos.center,
+        zoom: mappos.zoom
+      });
+      
+      var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
+          maxZoom: 16,
+          minZoom: 10,
+        subdomains:['mt0','mt1','mt2','mt3'],
+        attribution: '&copy; <a href="https://www.google.com">Google</a>'
+      });
       
       var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
       	maxZoom: 16,
@@ -145,14 +146,14 @@
       // }).addTo(map);
       
       var igm25k = L.tileLayer.wms('http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/?', {
-    	layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
+    	  layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
       	maxZoom: 16,
-     	minZoom: 10,
+     	  minZoom: 10,
       	attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet">Geoportale Regione Abruzzo</a>'
-	  }).addTo(map);
+	    }).addTo(map);
       
       var tcdlayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/tcd_abr_png/{z}/{x}/{y}.png', {
-        transparent: true,
+        //transparent: true,
         opacity: 0.4,
         maxZoom: 16,
         minZoom: 10,
@@ -162,18 +163,20 @@
 
       //var hillshlayer = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/asterh/x={x}&y={y}&z={z}', {
       //var hillshlayer = L.tileLayer('https://129.206.66.245:8004/tms_hs.ashx?x={x}&y={y}&z={z}', {
-      var hillshlayer = L.tileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png', {
+      //var hillshlayer = L.tileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png', {
       //var hillshlayer = L.tileLayer('http://c.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png', {
-
+      var hillshlayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/hillshade_abr_png/{z}/{x}/{y}.png', {
+        //transparent: true,
         opacity: 0.4,
         maxZoom: 16,
         minZoom: 10,
-        attribution: '&copy; <a href="https://www2.jpl.nasa.gov/srtm/">NASA</a>'
+        attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet">Geoportale Regione Abruzzo</a>'
+        //attribution: '&copy; <a href="https://www2.jpl.nasa.gov/srtm/">NASA</a>'
         //attribution: '&copy; <a href="https://korona.geog.uni-heidelberg.de">MapSurfer</a>'
       }).addTo(map);
 
       var slopelayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/slope_abr_png/{z}/{x}/{y}.png', {
-        transparent: true,
+        //transparent: true,
         opacity: 0.5,
         maxZoom: 16,
         minZoom: 10,
