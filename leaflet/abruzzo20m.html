@@ -217,21 +217,21 @@
          document.getElementById('export').setAttribute('download','data.geojson');
       }
 
-      //----------- GET GPS LOCATION -----------
-    var gps = new L.Control.Gps({
-	  //autoActive:true,
-	  autoCenter:true,
-	  accuracy:true
-	  });//inizialize control
-	  gps
-	  .on('gps:located', function(e) {
-	  // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-	  console.log(e.latlng)
-	  })
-	  .on('gps:disabled', function(e) {
-	  e.marker.closePopup()
-	  });
-	  gps.addTo(map);
+    //----------- GET GPS LOCATION -----------
+    // var gps = new L.Control.Gps({
+	  // //autoActive:true,
+	  // autoCenter:true,
+	  // accuracy:true
+	  // });//inizialize control
+	  // gps
+	  // .on('gps:located', function(e) {
+	  // // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+	  // console.log(e.latlng)
+	  // })
+	  // .on('gps:disabled', function(e) {
+	  // e.marker.closePopup()
+	  // });
+	  // gps.addTo(map);
     
     var circle_drawn = false;
     function onLocationFound(e) {
