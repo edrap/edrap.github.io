@@ -47,7 +47,7 @@ L.Control.Gps = L.Control.extend({
 			fillColor: '#f23',
 			fillOpacity: 1
 		},
-		//accuracy: true,		//show accuracy Circle
+		accuracy: true,		//show accuracy Circle
 		position: 'topleft',
 		transform: function(latlng) { return latlng },
 		//TODO add gpsLayer
@@ -83,8 +83,8 @@ L.Control.Gps = L.Control.extend({
 		this._alert.style.display = 'none';
 
 		this._gpsMarker = this.options.marker ? this.options.marker : new L.CircleMarker([0,0], this.options.style);
-		//if(this.options.accuracy)
-		//	this._accuracyCircle = new L.Circle([0,0], this.options.style);
+		if(this.options.accuracy)
+			this._accuracyCircle = new L.Circle([0,0], this.options.style);
 
 		this._map
 			.on('locationfound', this._drawGps, this)
@@ -139,7 +139,7 @@ L.Control.Gps = L.Control.extend({
 			enableHighAccuracy: false,
 			watch: true,
 			setView: false,//this.options.autoCenter,
-			//maxZoom: this.options.maxZoom || this._map.getZoom()
+			maxZoom: this.options.maxZoom || this._map.getZoom()
 		});
 	},
 
@@ -170,8 +170,8 @@ L.Control.Gps = L.Control.extend({
 		if(this.options.autoCenter)
 			this._map.panTo(e.latlng);
 
-	//    	if(this._gpsMarker.accuracyCircle)
-	//    		this._gpsMarker.accuracyCircle.setRadius((e.accuracy / 2).toFixed(0));
+	    	if(this._gpsMarker.accuracyCircle)
+	    		this._gpsMarker.accuracyCircle.setRadius((e.accuracy / 2).toFixed(0));
 			
 		this.fire('gps:located', {
 			latlng: this._currentLocation,
@@ -189,13 +189,13 @@ L.Control.Gps = L.Control.extend({
 		this._errorFunc.call(this, this.options.textErr || e.message);
 	},
 
-	/*	_updateAccuracy: function (event) {
+		_updateAccuracy: function (event) {
 			var newZoom = this._map.getZoom(),
 				scale = this._map.options.crs.scale(newZoom);
 			this._gpsMarker.setRadius(this.options.style.radius * scale);
 			this._gpsMarker.redraw();
 		},
-	*/
+	
 	showAlert: function(text) {
 		this._alert.style.display = 'block';
 		this._alert.innerHTML = text;
