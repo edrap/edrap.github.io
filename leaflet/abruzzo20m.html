@@ -262,12 +262,12 @@
     //   map.on('locationfound', onLocationFound);
     // };
 
-    //   // // ----------- SEARCH BOX -----------
-    //  var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
-    //  map.addControl(geocoder);
-    //  geocoder.markGeocode = function(result) {
-    //  map.fitBounds(result.bbox);
-    //  };   	  
+    // ----------- SEARCH BOX -----------
+    var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
+    map.addControl(geocoder);
+    geocoder.markGeocode = function(result) {
+      map.fitBounds(result.bbox);
+    };   	  
 
       L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
 
