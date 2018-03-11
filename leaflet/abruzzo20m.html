@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.10/leaflet.draw.css"/>
-<!--   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.css"/> -->
+  <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.css"/>
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.css" />
   <style type="text/css">
     body {
@@ -92,7 +92,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.10/leaflet.draw.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script>
-<!--   <script src="http://www.meteoaquilano.it/abruzzo/JS-CSS/leaflet-gps.js"></script> -->
+  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
   <script>
     $(document).ready(function () {
@@ -218,20 +218,21 @@
       }
 
       //----------- GET GPS LOCATION -----------
-   //  var gps = new L.Control.Gps({
-	  // //autoActive:true,
-	  // autoCenter:true,
-	  // accuracy:true
-	  // });//inizialize control
-	  // gps
-	  // .on('gps:located', function(e) {
-	  // // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-	  // console.log(e.latlng)
-	  // })
-	  // .on('gps:disabled', function(e) {
-	  // e.marker.closePopup()
-	  // });
-	  // gps.addTo(map);
+    var gps = new L.Control.Gps({
+	  //autoActive:true,
+	  autoCenter:true,
+	  accuracy:true
+	  });//inizialize control
+	  gps
+	  .on('gps:located', function(e) {
+	  // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+	  console.log(e.latlng)
+	  })
+	  .on('gps:disabled', function(e) {
+	  e.marker.closePopup()
+	  });
+	  gps.addTo(map);
+    
     var circle_drawn = false;
     function onLocationFound(e) {
       var radius = e.accuracy / 2;
