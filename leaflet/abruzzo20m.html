@@ -62,9 +62,23 @@
         cursor: pointer;
         opacity: 1;
         box-shadow: 0 0 15px rgba(0,0,0,0.4)
-
       } 
-
+    
+    #warning {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        height: 20px;
+        width: 20px;
+        z-index: 100;
+        background:white;
+        padding: 4px;
+        border-radius:4px;
+        cursor: pointer;
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4)
+      } 
+    
   .info { padding: 6px 8px; font: 15px Arial; background: white; background: rgba(255,255,255,1); box-shadow: 0 0 15px rgba(0,0,0,0.4); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
   .legend { text-align: left; line-height: 18px; color: #555; opacity: 1;} .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.6; }
   .leaflet-control-geocoder-form input, 
@@ -303,6 +317,7 @@
 <!--   <div id="basemapslidercontainer"></div>
   <div id="basemapslider"></div> -->
   <div id="whereami" onClick="whereAmI(); return false;"><img class="noprint" width="20" height="20" src="JS-CSS/images/gps-location.png" title="Center map on your location" alt="Try to geolocate the user" /></div>
+  <div id="warning"><img class="noprint" width="20" height="20" src="JS-CSS/images/danger.png" title="La carta topografica non rappresenta la reali condizioni del terento e non è stata validata, l'utilizzo è a discrezione dell'utente che si assume tutte le responsabilità dei rischi connessi."/></div>
   <a href='#' id='export'><img class="noprint" width="20" height="20" src="JS-CSS/images/download.png" title="Export features"/></a>
 </body>
 </html>
