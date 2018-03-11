@@ -4,7 +4,7 @@
   <title>Abruzzo20m</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="JS-CSS/images/earth.png" />
+	<link rel="icon" type="image/png" href="https://edrap.github.io/leaflet/JS-CSS/images/earth.png" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.10/leaflet.draw.css"/>
@@ -65,7 +65,7 @@
         box-shadow: 0 0 10px rgba(0,0,0,0.4)
     }
 
-    #whereami {
+/*    #whereami {
         position: absolute;
         bottom: 110px;
         left: 10px;
@@ -78,7 +78,7 @@
         cursor: pointer;
         opacity: 1;
         box-shadow: 0 0 15px rgba(0,0,0,0.4)
-      } 
+      } */
     
   .info { padding: 6px 8px; font: 15px Arial; background: white; background: rgba(255,255,255,1); box-shadow: 0 0 15px rgba(0,0,0,0.4); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
   .legend { text-align: left; line-height: 18px; color: #555; opacity: 1;} .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.6; }
@@ -161,10 +161,6 @@
         attribution: '&copy; <a href="https://land.copernicus.eu/">Copernicus</a>'
       }).addTo(map);
 
-      //var hillshlayer = L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/asterh/x={x}&y={y}&z={z}', {
-      //var hillshlayer = L.tileLayer('https://129.206.66.245:8004/tms_hs.ashx?x={x}&y={y}&z={z}', {
-      //var hillshlayer = L.tileLayer('http://{s}.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png', {
-      //var hillshlayer = L.tileLayer('http://c.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png', {
       var hillshlayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/hillshade_abr_png/{z}/{x}/{y}.png', {
         //transparent: true,
         opacity: 0.1,
@@ -172,8 +168,6 @@
         minZoom: 10,
         tms: true,
         attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet">Geoportale Regione Abruzzo</a>'
-        //attribution: '&copy; <a href="https://www2.jpl.nasa.gov/srtm/">NASA</a>'
-        //attribution: '&copy; <a href="https://korona.geog.uni-heidelberg.de">MapSurfer</a>'
       }).addTo(map);
 
       var slopelayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/slope_abr_png/{z}/{x}/{y}.png', {
@@ -192,8 +186,7 @@
       }).addTo(map);
 
       L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover density':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topleft'}).addTo(map);
-      //L.control.layers({'OpenTopoMap':baselayer, 'IGM25K+Tree+Slope':abruzzolayer}, {'Hillshade':hillshlayer, 'Ski Piste':pistelayer}, {position: 'topleft'}).addTo(map);
-	  L.Permalink.setup(map);
+	    L.Permalink.setup(map);
 
 	  // ----------- DOWNLOAD FEATURES -----------
       var featureGroup = L.featureGroup().addTo(map);
@@ -221,7 +214,8 @@
     var gps = new L.Control.Gps({
 	  //autoActive:true,
 	  autoCenter:true,
-	  accuracy:true
+	  accuracy:true,
+	  style:{weight: 1,radius:8,color:'#00f',opacity: 0.8,fillColor: '#00f',fillOpacity: 0.6}
 	  });//inizialize control
 	  gps
 	  .on('gps:located', function(e) {
@@ -233,45 +227,47 @@
 	  });
 	  gps.addTo(map);
     
-    var circle_drawn = false;
-    function onLocationFound(e) {
-      var radius = e.accuracy / 2;
-      var circleOptions = {
-         weight: 1,
-         color: '#00f',
-         opacity: 0.6,
-         fillOpacity: 0.05
-      };
-      var circlemarkOptions = {
-          radius: 8,
-          color: "#00f",
-          weight: 1,
-          opacity: 0.8,
-          fillOpacity: 0.6
-      };
-      if (!circle_drawn) {
-         var circle = new L.Circle(e.latlng, radius, circleOptions);
-         var circlemark = new L.circleMarker(e.latlng, circlemarkOptions);
-         circle_drawn = true;
-         map.addLayer(circle);
-         map.addLayer(circlemark);
-      }
-    }   
-    function onLocationError(e) {
-      alert(e.message);
-    }
-    whereAmI = function() {
-      map.locate({setView: true, maxZoom: 16, minZoom: 10});
-      //map.locateAndSetView(16);
-      map.on('locationfound', onLocationFound);
-    };
+    // var circle_drawn = false;
+    // function onLocationFound(e) {
+    //   var radius = e.accuracy / 2;
+    //   var circleOptions = {
+    //      weight: 1,
+    //      color: '#00f',
+    //      fillColor: '#00f',
+    //      opacity: 0.6,
+    //      fillOpacity: 0.05
+    //   };
+    //   var circlemarkOptions = {
+    //       radius: 8,
+    //       color: "#00f",
+    //       fillColor: '#00f',
+    //       weight: 1,
+    //       opacity: 0.8,
+    //       fillOpacity: 0.6
+    //   };
+    //   if (!circle_drawn) {
+    //      var circle = new L.Circle(e.latlng, radius, circleOptions);
+    //      var circlemark = new L.circleMarker(e.latlng, circlemarkOptions);
+    //      circle_drawn = true;
+    //      map.addLayer(circle);
+    //      map.addLayer(circlemark);
+    //   }
+    // }   
+    // function onLocationError(e) {
+    //   alert(e.message);
+    // }
+    // whereAmI = function() {
+    //   map.locate({setView: true, maxZoom: 16, minZoom: 10});
+    //   //map.locateAndSetView(16);
+    //   map.on('locationfound', onLocationFound);
+    // };
 
-      // // ----------- SEARCH BOX -----------
-     var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
-     map.addControl(geocoder);
-     geocoder.markGeocode = function(result) {
-     map.fitBounds(result.bbox);
-     };   	  
+    //   // // ----------- SEARCH BOX -----------
+    //  var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
+    //  map.addControl(geocoder);
+    //  geocoder.markGeocode = function(result) {
+    //  map.fitBounds(result.bbox);
+    //  };   	  
 
       L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
 
@@ -324,8 +320,8 @@
   <div id="map"></div>
 <!--   <div id="basemapslidercontainer"></div>
   <div id="basemapslider"></div> -->
-  <div id="whereami" onClick="whereAmI(); return false;"><img class="noprint" width="20" height="20" src="JS-CSS/images/gps-location.png" title="Center map on your location" alt="Try to geolocate the user" /></div>
-  <div id="warning"><img class="noprint" width="20" height="20" src="JS-CSS/images/danger.png" title="The slope layer does not represent the real conditions of the terrain and is not validated, the use is up to the user who takes full responsibility for the risks involved."/></div>
-  <a href='#' id='export'><img class="noprint" width="20" height="20" src="JS-CSS/images/download.png" title="Export features"/></a>
+  <!-- <div id="whereami" onClick="whereAmI(); return false;"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/gps-location.png" title="Center map on your location" alt="Try to geolocate the user" /></div> -->
+  <div id="warning"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/danger.png" title="The slope layer does not represent the real conditions of the terrain and is not validated, the use is up to the user who takes full responsibility for the risks involved."/></div>
+  <a href='#' id='export'><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/download.png" title="Export features"/></a>
 </body>
 </html>
