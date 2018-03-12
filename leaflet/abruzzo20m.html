@@ -92,7 +92,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.10/leaflet.draw.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script>
-  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps2.js"></script>
+  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
   <script>
     $(document).ready(function () {
@@ -215,7 +215,6 @@
 	  //autoActive:true,
 	  autoCenter:true,
 	  accuracy:true
-	  //style:{weight: 1,radius:8,color:'#00f',opacity: 0.8,fillColor: '#00f',fillOpacity: 0.6}
 	  });//inizialize control
 	  gps
 	  .on('gps:located', function(e) {
