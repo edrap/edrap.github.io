@@ -62,9 +62,10 @@ L.Control.Gps = L.Control.extend({
 	},
 
 	initialize: function(options) {
-		if(options && options.style && options.style_accuracy)
+		if(options && options.style && options.style_accuracy) {
 			options.style = L.Util.extend({}, this.options.style, options.style);
       options.style_accuracy = L.Util.extend({}, this.options.style_accuracy, options.style_accuracy);
+    }
 		L.Util.setOptions(this, options);
 		this._errorFunc = this.options.callErr || this.showAlert;
 		this._isActive = false;
