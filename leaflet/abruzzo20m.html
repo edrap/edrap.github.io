@@ -4,7 +4,7 @@
   <title>Abruzzo20m</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="https://edrap.github.io/leaflet/JS-CSS/images/earth.png" />
+  <link rel="icon" type="image/png" href="https://edrap.github.io/leaflet/JS-CSS/images/earth.png" />
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.10/leaflet.draw.css"/>
@@ -34,8 +34,10 @@
     
     #warning {
         position: absolute;
-        bottom: 30px;
-        left: 10px;
+/*        bottom: 30px;
+        left: 10px;*/
+        top:10px;
+        left:60px;
         height: 20px;
         width: 20px;
         z-index: 100;
@@ -49,8 +51,10 @@
 
     #export {
         position: absolute;
-        bottom:70px;
-        left:10px;
+/*        bottom:70px;
+        left:10px;*/
+        top:10px;
+        left:105px;
         height: 20px;
         width: 20px;
         z-index:100;
@@ -129,13 +133,13 @@
           maxZoom: 16,
           minZoom: 10,
         subdomains:['mt0','mt1','mt2','mt3'],
-        attribution: '&copy; <a href="https://www.google.com">Google</a>'
+        attribution: '&copy; <a href="https://www.google.com" target="_blank">Google</a>'
       });
       
       var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-      	maxZoom: 16,
+        maxZoom: 16,
         minZoom: 10,
-      	attribution: '&copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
+        attribution: '&copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a>'
       });
 
       // var abruzzolayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/abruzzo20m/{z}/{x}/{y}.jpg', {
@@ -146,11 +150,11 @@
       // }).addTo(map);
       
       var igm25k = L.tileLayer.wms('http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/?', {
-    	  layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
-      	maxZoom: 16,
-     	  minZoom: 10,
-      	attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet">Geoportale Regione Abruzzo</a>'
-	    }).addTo(map);
+        layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
+        maxZoom: 16,
+        minZoom: 10,
+        attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet" target="_blank">Geoportale Regione Abruzzo</a>'
+      }).addTo(map);
       
       var tcdlayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/tcd_abr_png/{z}/{x}/{y}.png', {
         //transparent: true,
@@ -158,7 +162,7 @@
         maxZoom: 16,
         minZoom: 10,
         tms: true,
-        attribution: '&copy; <a href="https://land.copernicus.eu/">Copernicus</a>'
+        attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
       }).addTo(map);
 
       var hillshlayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/hillshade_abr_png/{z}/{x}/{y}.png', {
@@ -167,7 +171,7 @@
         maxZoom: 16,
         minZoom: 10,
         tms: true,
-        attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet">Geoportale Regione Abruzzo</a>'
+        attribution: '&copy; <a href="http://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
       }).addTo(map);
 
       var slopelayer = L.tileLayer('http://www.meteoaquilano.it/abruzzo/slope_abr_png/{z}/{x}/{y}.png', {
@@ -176,24 +180,23 @@
         maxZoom: 16,
         minZoom: 10,
         tms: true,
-        attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet">Geoportale Regione Abruzzo</a>'
+        attribution: '&copy; <a href="http://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
       }).addTo(map);
       
       var pistelayer = L.tileLayer('https://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png', {
         maxZoom: 16,
         minZoom: 10,
-        attribution: '&copy; <a href="https://www.opensnowmap.org/">OpenSnowMap</a>'
+        attribution: '&copy; <a href="https://www.opensnowmap.org/" target="_blank">OpenSnowMap</a>'
       }).addTo(map);
 
-      L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover density':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topleft'}).addTo(map);
-	    L.Permalink.setup(map);
+      L.Permalink.setup(map);
 
-	  // ----------- DOWNLOAD FEATURES -----------
+    // ----------- DOWNLOAD FEATURES -----------
       var featureGroup = L.featureGroup().addTo(map);
       var drawControl = new L.Control.Draw({
-      	edit: {
-     	  featureGroup: featureGroup
-     	}
+        edit: {
+        featureGroup: featureGroup
+      }
       }).addTo(map);
       map.on('draw:created', function(e) {
         // Each time a feaute is created, it's added to the over arching feature group
@@ -212,19 +215,19 @@
 
     //----------- GET GPS LOCATION -----------
     var gps = new L.Control.Gps({
-	  //autoActive:true,
-	  autoCenter:true,
-	  accuracy:true
-	  });//inizialize control
-	  gps
-	  .on('gps:located', function(e) {
-	  // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-	  console.log(e.latlng)
-	  })
-	  .on('gps:disabled', function(e) {
-	  e.marker.closePopup()
-	  });
-	  gps.addTo(map);
+    //autoActive:true,
+    autoCenter:true,
+    accuracy:true
+    });//inizialize control
+    gps
+    .on('gps:located', function(e) {
+    // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+    console.log(e.latlng)
+    })
+    .on('gps:disabled', function(e) {
+    e.marker.closePopup()
+    });
+    gps.addTo(map);
     
     // var circle_drawn = false;
     // function onLocationFound(e) {
@@ -266,17 +269,20 @@
     map.addControl(geocoder);
     geocoder.markGeocode = function(result) {
       map.fitBounds(result.bbox);
-    };   	  
+    };      
 
-      L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
+    L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover density':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+
+      // ----------- SCALE BAR -----------
+      L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
 
       // ----------- LEGEND -----------
       function getColor(d) {
-      	return d > 45   ? '#b546fc' :
-            	 d > 40   ? '#fb322f' :
-            	 d > 35   ? '#fdac2b' :
-            	 d > 30   ? '#efe72e' :
-            	            '#FFEDA0';
+        return d > 45   ? '#b546fc' :
+               d > 40   ? '#fb322f' :
+               d > 35   ? '#fdac2b' :
+               d > 30   ? '#efe72e' :
+                          '#FFEDA0';
       }
       function getPercent(d) {
         return d > 80   ? '#246627' :
@@ -288,15 +294,15 @@
       }
       var legend = L.control({position: 'bottomright'});
       legend.onAdd = function (map) {
-      	var div = L.DomUtil.create('div', 'info legend'),
-      	grades = [30, 35, 40, 45];
-      	labels = ['<strong> Slope class </strong>'];
+        var div = L.DomUtil.create('div', 'info legend'),
+        grades = [30, 35, 40, 45];
+        labels = ['<strong> Slope class </strong>'];
           // loop through our density intervals and generate a label with a colored square for each interval
           div.innerHTML = labels + '<br>';
           for (var i = 0; i < grades.length; i++) {
-          	div.innerHTML +=
-          	'<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-          	grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
+            div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
           }
         percent = [1, 20, 40, 60, 80];
         labels = ['<strong> Tree density </strong>'];  
