@@ -62,8 +62,9 @@ L.Control.Gps = L.Control.extend({
 	},
 
 	initialize: function(options) {
-		if(options && options.style)
+		if(options && options.style && options.style_accuracy)
 			options.style = L.Util.extend({}, this.options.style, options.style);
+      options.style_accuracy = L.Util.extend({}, this.options.style_accuracy, options.style_accuracy);
 		L.Util.setOptions(this, options);
 		this._errorFunc = this.options.callErr || this.showAlert;
 		this._isActive = false;
@@ -199,7 +200,7 @@ L.Control.Gps = L.Control.extend({
 		_updateAccuracy: function (event) {
 			var newZoom = this._map.getZoom(),
 				scale = this._map.options.crs.scale(newZoom);
-			this._gpsMarker.setRadius(this.options.style.radius * scale);
+			this._gpsMarker.setRadius(this.options.style_accuracy.radius * scale);
 			this._gpsMarker.redraw();
 		},
 	//
