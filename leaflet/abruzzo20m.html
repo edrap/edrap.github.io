@@ -272,7 +272,7 @@
       map.fitBounds(result.bbox);
     };      
 
-    L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover density':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+    L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
 
       // ----------- SCALE BAR -----------
       L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
@@ -305,15 +305,15 @@
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
             grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
           }
-        percent = [1, 20, 40, 60, 80];
-        labels = ['<strong> Tree density </strong>'];  
-          // loop through our density intervals and generate a label with a colored square for each interval
-          div.innerHTML += '<br>' + '<br>' + labels + '<br>';
-          for (var i = 0; i < percent.length; i++) {
-            div.innerHTML +=
-            '<i style="background:' + getPercent(percent[i] + 1) + '"></i> ' +
-            percent[i] + '%' + (percent[i + 1] ? '&ndash;' + percent[i + 1] + '%' + '<br>' : '+');
-          } 
+        // percent = [1, 20, 40, 60, 80];
+        // labels = ['<strong> Tree density </strong>'];  
+        //   // loop through our density intervals and generate a label with a colored square for each interval
+        //   div.innerHTML += '<br>' + '<br>' + labels + '<br>';
+        //   for (var i = 0; i < percent.length; i++) {
+        //     div.innerHTML +=
+        //     '<i style="background:' + getPercent(percent[i] + 1) + '"></i> ' +
+        //     percent[i] + '%' + (percent[i + 1] ? '&ndash;' + percent[i + 1] + '%' + '<br>' : '+');
+        //   } 
           return div;
       };
       legend.addTo(map);
