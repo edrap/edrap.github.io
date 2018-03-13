@@ -51,10 +51,10 @@
 
     #export {
         position: absolute;
-/*        bottom:70px;
-        left:10px;*/
-        top:10px;
-        left:105px;
+        bottom:40px;
+        left:10px;
+/*        top:10px;
+        left:105px;*/
         height: 20px;
         width: 20px;
         z-index:100;
@@ -191,6 +191,23 @@
 
       L.Permalink.setup(map);
 
+          //----------- GET GPS LOCATION -----------
+    var gps = new L.Control.Gps({
+    //autoActive:true,
+    autoCenter:true,
+    position: 'topleft'
+    //accuracy:true
+    });//inizialize control
+    gps
+    .on('gps:located', function(e) {
+    // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+    console.log(e.latlng)
+    })
+    .on('gps:disabled', function(e) {
+    e.marker.closePopup()
+    });
+    gps.addTo(map);
+
     // ----------- DOWNLOAD FEATURES -----------
       var featureGroup = L.featureGroup().addTo(map);
       var drawControl = new L.Control.Draw({
@@ -212,22 +229,6 @@
          document.getElementById('export').setAttribute('href', 'data:' + convertedData);
          document.getElementById('export').setAttribute('download','data.geojson');
       }
-
-    //----------- GET GPS LOCATION -----------
-    var gps = new L.Control.Gps({
-    //autoActive:true,
-    autoCenter:true,
-    accuracy:true
-    });//inizialize control
-    gps
-    .on('gps:located', function(e) {
-    // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-    console.log(e.latlng)
-    })
-    .on('gps:disabled', function(e) {
-    e.marker.closePopup()
-    });
-    gps.addTo(map);
     
     // var circle_drawn = false;
     // function onLocationFound(e) {
@@ -274,7 +275,7 @@
     L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover density':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
 
       // ----------- SCALE BAR -----------
-      L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
+      L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
 
       // ----------- LEGEND -----------
       function getColor(d) {
@@ -326,7 +327,7 @@
 <!--   <div id="basemapslidercontainer"></div>
   <div id="basemapslider"></div> -->
   <!-- <div id="whereami" onClick="whereAmI(); return false;"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/gps-location.png" title="Center map on your location" alt="Try to geolocate the user" /></div> -->
-  <div id="warning"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/danger.png" title="The slope layer does not represent the real conditions of the terrain and is not validated, thus its use is up to the user who takes full responsibility for the risks involved."/></div>
+  <div id="warning"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/danger.png" title="The slope layer does not represent the real conditions of the terrain and is not validated, thus the use is up to the user who takes full responsibility for the risks involved."/></div>
   <a href='#' id='export'><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/download.png" title="Export features"/></a>
 </body>
 </html>
