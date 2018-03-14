@@ -98,7 +98,7 @@
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
-  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.browser.print.min.js"></script>
+  <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.browser.print.min.js"></script> -->
   <script>
     $(document).ready(function () {
 
@@ -209,8 +209,8 @@
     });
     gps.addTo(map);
 
-    // ----------- PRINT MAP -----------
-    L.control.browserPrint().addTo(map);
+    //// ----------- PRINT MAP -----------
+    //L.control.browserPrint().addTo(map);
 
     // ----------- DOWNLOAD FEATURES -----------
       var featureGroup = L.featureGroup().addTo(map);
