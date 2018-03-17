@@ -98,6 +98,8 @@
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
+  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.filelayer.js"></script>
+  <script src="https://edrap.github.io/leaflet/JS-CSS/togeojson.js"></script>
   <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.browser.print.min.js"></script> -->
   <script>
     $(document).ready(function () {
@@ -194,20 +196,43 @@
 
           //----------- GET GPS LOCATION -----------
     var gps = new L.Control.Gps({
-    //autoActive:true,
-    autoCenter:true,
-    position: 'topleft'
-    //accuracy:true
+      //autoActive:true,
+      autoCenter:true,
+      position: 'topleft'
+      //accuracy:true
     });//inizialize control
     gps
     .on('gps:located', function(e) {
-    // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-    console.log(e.latlng)
+      // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+      console.log(e.latlng)
     })
     .on('gps:disabled', function(e) {
-    e.marker.closePopup()
+      e.marker.closePopup()
     });
     gps.addTo(map);
+      
+    var load = L.Control.fileLayerLoad({
+        // Allows you to use a customized version of L.geoJson.
+        // For example if you are using the Proj4Leaflet leaflet plugin,
+        // you can pass L.Proj.geoJson and load the files into the
+        // L.Proj.GeoJson instead of the L.geoJson.
+        layer: L.geoJson,
+        // See http://leafletjs.com/reference.html#geojson-options
+        layerOptions: {style: {color:'red'}},
+        // Add to map after loading (default: true) ?
+        addToMap: true,
+        // File size limit in kb (default: 1024) ?
+        fileSizeLimit: 1024,
+        // Restrict accepted file formats (default: .geojson, .kml, and .gpx) ?
+        formats: [
+            '.geojson'
+        ]
+    }).addTo(map);
+
+    load.loader.on('data:loaded', function (e) {
+        // Add to map layer switcher
+        featureGroup.addLayer(e.layer);
+    });
 
     //// ----------- PRINT MAP -----------
     //L.control.browserPrint().addTo(map);
