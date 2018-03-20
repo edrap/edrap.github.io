@@ -13,5 +13,5 @@ These are my current projects, I'll try to keep them updated as soon as I push t
     <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
-{% include archive-single.html %}
+{% include archive-single.html#disqus_thread %}
 {% endfor %}
