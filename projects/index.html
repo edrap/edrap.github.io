@@ -14,23 +14,4 @@ These are my current projects, I'll try to keep them updated as soon as I push t
     {% capture written_year %}{{ year }}{% endcapture %}
   {% endif %}
 {% include archive-single.html %}
-<div>
-  <a href="{{ site.url }}{{ post.url }}index.html#disqus_thread" data-disqus-identifier="{{ post.id }}"></a>
-</div>
 {% endfor %}
-
-<!-- Add Disqus comment count (not the comments)
-{% if site.disqus_shortname %} -->
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES * * */
-  //var disqus_shortname  = '{{ site.disqus_shortname }}';
-  // var disqus_developer = 1; // Comment out when the site is live
-  /* * * DON'T EDIT BELOW THIS LINE * * */
-  (function () {
-      var s = document.createElement('script'); s.async = true;
-      s.type = 'text/javascript';
-      s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-      (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-  }());
-</script>
-<!-- {% endif %} -->
