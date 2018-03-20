@@ -307,9 +307,6 @@
     //   //map.locateAndSetView(16);
     //   map.on('locationfound', onLocationFound);
     // };
-      
-    // ----------- FULLSCREEN -----------
-    L.control.fullscreen({position: 'topright'}).addTo(map);
 
     // ----------- SEARCH BOX -----------
     var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
@@ -318,6 +315,10 @@
       map.fitBounds(result.bbox);
     };      
 
+    // ----------- FULLSCREEN -----------
+    L.control.fullscreen({position: 'topright'}).addTo(map);
+    
+    // ----------- LAYERS -----------
     L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
 
       // ----------- SCALE BAR -----------
