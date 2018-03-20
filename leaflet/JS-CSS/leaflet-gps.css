@@ -18,12 +18,12 @@
 .leaflet-control-gps .gps-button {
 	display:block;
 	float:left;
-	width:38px;
-	height:38px;
+	width:32px;
+	height:32px;
   background-image: url('images/gps-merged.png');
 	/*background-image: url('images/gps-location-symbol.png');*/
 	background-repeat: no-repeat;
-	background-position: 3px 3px;
+	background-position: 0px 0px;
   /*background-size: 32px auto;*/
 	background-color: #fff;
 	border-radius:4px;
@@ -35,16 +35,16 @@
 .leaflet-control-gps .gps-button.loading,
 .leaflet-control-gps .gps-button.loading:hover {
 	/*background-image: url('images/gps-location-disabled.png');*/
- 	background-position: 3px -42px;
+ 	background-position: 0px -33px;
 
 }
 .leaflet-control-gps .gps-button.disabled {
 	/*background-image: url('images/gps-location-disabled.png');*/
-  background-position: 3px -42px;
+  background-position: 0px -33px;
 }
 .leaflet-control-gps .gps-button.active {
 	/*background-image: url('images/gps-fixed-indicator.png');*/
-  background-position: 3px -84px;
+  background-position: 0px -66px;
 }
 
 .leaflet-control-gps .gps-alert {
