@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.10/leaflet.draw.css"/>
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.css"/>
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.css" />
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" />
   <style type="text/css">
     body {
       padding: 0;
@@ -104,6 +105,7 @@
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.filelayer.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/togeojson.js"></script>
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
   <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.browser.print.min.js"></script> -->
   <script>
     $(document).ready(function () {
@@ -305,6 +307,9 @@
     //   //map.locateAndSetView(16);
     //   map.on('locationfound', onLocationFound);
     // };
+      
+    // ----------- FULLSCREEN -----------
+    L.control.fullscreen({position: 'topright'}).addTo(map);
 
     // ----------- SEARCH BOX -----------
     var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
