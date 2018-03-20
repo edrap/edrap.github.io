@@ -6,7 +6,7 @@
     background-position: 0px 0px;
     }
   .leaflet-fullscreen-on .leaflet-control-fullscreen a {
-    background-position:0 -26px;
+    background-position: 0px -26px;
     }
   .leaflet-touch.leaflet-fullscreen-on .leaflet-control-fullscreen a {
     background-position: 0px -26px;
