@@ -111,7 +111,7 @@
 }, function (L) {
     var FileLayerLoad = L.Control.extend({
         statics: {
-            TITLE: 'Load local file (GPX, KML, GeoJSON)',
+            TITLE: 'Load local file (GeoJSON, GPX, KML)',
             //TITLE: 'Load local GeoJSON features',
             LABEL: '&#8965;'
         },
