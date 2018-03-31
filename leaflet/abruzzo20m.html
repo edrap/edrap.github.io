@@ -48,7 +48,7 @@
         border-radius:4px;
         cursor: pointer;
         opacity: 1;
-	      /*box-shadow: 0 1px 7px rgba(0,0,0,0.65);*/
+        /*box-shadow: 0 1px 7px rgba(0,0,0,0.65);*/
         border: 1px solid rgba(0,0,0,0.4);
       }
 
@@ -69,7 +69,7 @@
         cursor: pointer;
         font-size:13px;
         text-decoration:none;
-	      /*box-shadow: 0 1px 7px rgba(0,0,0,0.65);*/
+        /*box-shadow: 0 1px 7px rgba(0,0,0,0.65);*/
         border: 1px solid rgba(0,0,0,0.4);
     }
 
@@ -182,22 +182,40 @@
         attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
       }).addTo(map);
 
-      var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/hillshade_abr_png/{z}/{x}/{y}.png', {
+      // var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/hillshade_abr_png/{z}/{x}/{y}.png', {
+      //   //transparent: true,
+      //   opacity: 0.15,
+      //   maxZoom: 16,
+      //   minZoom: 10,
+      //   tms: true,
+      //   attribution: '&copy; <a href="https://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
+      // }).addTo(map);
+
+      var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_qtiles3/{z}/{x}/{y}.png', {
         //transparent: true,
         opacity: 0.15,
         maxZoom: 16,
         minZoom: 10,
         tms: true,
-        attribution: '&copy; <a href="https://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
+        attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">TINITALY</a>'
       }).addTo(map);
 
-      var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/slope_abr_png/{z}/{x}/{y}.png', {
+      // var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/slope_abr_png/{z}/{x}/{y}.png', {
+      //   //transparent: true,
+      //   opacity: 0.5,
+      //   maxZoom: 16,
+      //   minZoom: 10,
+      //   tms: true,
+      //   attribution: '&copy; <a href="https://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
+      // }).addTo(map);
+
+      var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_qtiles3/{z}/{x}/{y}.png', {
         //transparent: true,
         opacity: 0.5,
         maxZoom: 16,
         minZoom: 10,
         tms: true,
-        attribution: '&copy; <a href="https://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
+        attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">TINITALY</a>'
       }).addTo(map);
       
       var pistelayer = L.tileLayer('https://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png', {
@@ -376,7 +394,7 @@
 <!--   <div id="basemapslidercontainer"></div>
   <div id="basemapslider"></div> -->
   <!-- <div id="whereami" onClick="whereAmI(); return false;"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/gps-location.png" title="Center map on your location" alt="Try to geolocate the user" /></div> -->
-  <a id="warning"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/danger.png" title="The slope layer does not represent the terrain conditions at scales smaller than 20 meters and is not validated, thus the use is up to the user who takes full responsibility for the risks involved."/></a>
+  <a id="warning"><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/danger.png" title="The slope layer does not represent the terrain conditions at scales smaller than 10 meters and is not validated, thus the use is up to the user who takes full responsibility for the risks involved."/></a>
   <a href='#' id='export'><img class="noprint" width="20" height="20" src="https://edrap.github.io/leaflet/JS-CSS/images/download.png" title="Export features to GeoJSON"/></a>
 </body>
 </html>
