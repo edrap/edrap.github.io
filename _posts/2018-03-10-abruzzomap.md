@@ -52,7 +52,7 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 <b>La carta delle pendenze non rappresenta le reali condizioni del terreno a scale inferiori a 10 metri e non è stata validata dagli organismi preposti, pertanto l'utilizzo è a discrezione dell'utente che si assume tutte le responsabilità dei rischi connessi</b>.
 
 <div style="width: 100%; height: 100%; margin: 0 auto;">
-<div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzo20m.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+<div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
 
 {% if page.comments %}
