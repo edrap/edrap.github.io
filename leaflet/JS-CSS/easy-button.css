@@ -13,7 +13,7 @@
 }
 
 .leaflet-bar button {
-  background-position: 50% 50%;
+  background-position: 0px 0px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
