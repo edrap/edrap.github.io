@@ -1,7 +1,7 @@
 
 .leaflet-container .leaflet-control-gps {
-	position:absolute;
-	float:left;
+	position:relative;
+	/*float:left;*/
 	background:#fff;
 	color:#1978cf;
 	-moz-border-radius: 4px;
@@ -17,7 +17,7 @@
 }
 .leaflet-control-gps .gps-button {
 	display:block;
-	float:left;
+	/*float:left;*/
 	width:32px;
 	height:32px;
   background-image: url('images/gps-merged.png');
