@@ -10,10 +10,10 @@
   text-align: center;
   text-decoration: none;
   color: black;
+  background-position: 1px 1px;
 }
 
 .leaflet-bar button {
-  background-position: 0px 0px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
