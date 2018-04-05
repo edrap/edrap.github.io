@@ -1,6 +1,6 @@
 
 .leaflet-container .leaflet-control-gps {
-	position:relative;
+	position:absolute;
 	float:left;
 	background:#fff;
 	color:#1978cf;
