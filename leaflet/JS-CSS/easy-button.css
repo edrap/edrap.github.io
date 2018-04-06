@@ -10,13 +10,15 @@
   text-align: center;
   text-decoration: none;
   color: black;
-  background-position: 1px 1px;
+  cursor: pointer;
 }
 
 .leaflet-bar button {
   background-repeat: no-repeat;
   overflow: hidden;
   display: block;
+  background-position: 0px 0px;
+/*  background-size: 12px auto;*/
 }
 
 .leaflet-bar button:hover {
@@ -53,4 +55,5 @@
   width: 26px;
   height: 26px;
   line-height: 26px;
+  background-position: 0px 0px;
 }
