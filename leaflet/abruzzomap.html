@@ -309,6 +309,9 @@
     //   //map.locateAndSetView(16);
     //   map.on('locationfound', onLocationFound);
     // };
+
+    // ----------- FULLSCREEN -----------
+    L.control.fullscreen({position: 'topright'}).addTo(map);
       
     //----------- GET GPS LOCATION -----------
     var gps = new L.Control.Gps({
@@ -332,10 +335,7 @@
     map.addControl(geocoder);
     geocoder.markGeocode = function(result) {
       map.fitBounds(result.bbox);
-    };      
-
-    // ----------- FULLSCREEN -----------
-    L.control.fullscreen({position: 'topright'}).addTo(map);
+    };
     
     // ----------- LAYERS -----------
     L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'Abruzzo IGM25K':igm25k}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
