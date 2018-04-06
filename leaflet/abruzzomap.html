@@ -225,23 +225,6 @@
       }).addTo(map);
 
       L.Permalink.setup(map);
-
-          //----------- GET GPS LOCATION -----------
-    var gps = new L.Control.Gps({
-      //autoActive:true,
-      autoCenter:true,
-      position: 'topleft'
-      //accuracy:true
-    });//inizialize control
-    gps
-    .on('gps:located', function(e) {
-      // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-      console.log(e.latlng)
-    })
-    .on('gps:disabled', function(e) {
-      e.marker.closePopup()
-    });
-    gps.addTo(map);
       
     var load = L.Control.fileLayerLoad({
         // Allows you to use a customized version of L.geoJson.
@@ -282,7 +265,6 @@
         // Each time a feaute is created, it's added to the over arching feature group
         featureGroup.addLayer(e.layer);
       });
-      // on click, clear all layers
       document.getElementById('export').onclick = function(e) {
          // Extract GeoJson from featureGroup
          var data = featureGroup.toGeoJSON();
@@ -327,6 +309,23 @@
     //   //map.locateAndSetView(16);
     //   map.on('locationfound', onLocationFound);
     // };
+      
+    //----------- GET GPS LOCATION -----------
+    var gps = new L.Control.Gps({
+      //autoActive:true,
+      autoCenter:true,
+      position: 'topleft'
+      //accuracy:true
+    });//inizialize control
+    gps
+    .on('gps:located', function(e) {
+      // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+      console.log(e.latlng)
+    })
+    .on('gps:disabled', function(e) {
+      e.marker.closePopup()
+    });
+    gps.addTo(map);
 
     // ----------- SEARCH BOX -----------
     var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
