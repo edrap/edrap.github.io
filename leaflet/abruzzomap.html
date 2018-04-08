@@ -193,6 +193,7 @@
     //L.control.browserPrint().addTo(map);
 
     // ----------- LOAD FEATURES -----------
+    var featureGroup = L.featureGroup().addTo(map);
     var load = L.Control.fileLayerLoad({
         // Allows you to use a customized version of L.geoJson.
         // For example if you are using the Proj4Leaflet leaflet plugin,
@@ -218,7 +219,6 @@
     });
 
     // ----------- DRAW FEATURES -----------
-      var featureGroup = L.featureGroup().addTo(map);
       var drawControl = new L.Control.Draw({
         edit: {
         featureGroup: featureGroup
