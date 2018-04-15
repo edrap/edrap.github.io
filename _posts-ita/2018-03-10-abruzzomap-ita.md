@@ -17,7 +17,7 @@ share: true
   {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
   {% if page.read_time %}
     <p style="font-size:18px" class="page__meta">
-      <i class="fa fa-language" aria-hidden="true"></i> Translate this post in <a href="{{ site.url }}{{ site.baseurl }}/2018-03-10-abruzzomap">english</a><BR>
+      <i class="fa fa-language" aria-hidden="true"></i> Translate this post in <a href="{{ site.url }}{{ site.baseurl }}/abruzzomap">English</a><BR>
       <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}
     </p>
   {% endif %}
