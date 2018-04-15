@@ -1,8 +1,8 @@
 ---
 layout: single_post
-title: "Carta topografica dell'Abruzzo"
+title: "Abruzzo topographic map"
 categories:
-excerpt: "Nelle regioni montuose soggette a nevicate, che presentano una copertura nevosa stagionale, le attività invernali..."
+excerpt: "Winter activities in the montainous regions that experience snowfall and a seasonal snowcover..."
 tags: []
 image:
   feature:
@@ -21,35 +21,28 @@ share: true
     </p>
   {% endif %}
 </header>
-{% endunless %}
+{% endunless %} 
 
 <p style="text-align: justify;">
-Nelle regioni montuose soggette a nevicate, che presentano una copertura nevosa stagionale, le attività invernali sono
-sempre affette da rischio legato al <b>pericolo valanghe</b>. 
+Winter activities in the montainous regions that experience snowfall and a seasonal snowcover are always affected by <b>avalanche risk</b>.
 
 <p style="text-align: justify;">
-La mitigazione del rischio dovuto al pericolo valanghe può avvenire tramite un'attenta valutazione delle caratteristiche del 
-<b>manto nevoso</b>, dell'<b>orografia</b> e della densità della <b>copertura boschiva</b>.
+The avalanche risk can be mitigated by a careful evaluation of the <b>snowpack</b> characteristics, <b>orography</b> and <b>tree cover</b> density.
 
 <p style="text-align: justify;">
-I <b>bollettini valanghe</b> del servizio
-<a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> forniscono giornalmente 
-preziose informazioni riguardanti la <b>stabilità</b> del manto nevoso, le quote e le esposizioni più a rischio. Uno studio
-attento del bollettino valanghe può mitigare il rischio durante l'escursione, tuttavia è di fondamentale
-importanza l'<b>osservazione</b> del manto nevoso durante la gita stessa, in quanto può fornire informazioni sulle condizioni del
-manto nella zona esatta dell'escursione.
+<b>Avalanche bulletins</b> of the <a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> service provide daily important informations about snowpack <b>stability</b> and dangerous elevations and the expositions. A careful evaluation of the avalanche bulletin can mitigate the risk during the tour, nevertheless it's fundamental to <b>observe</b> the snowpack during the tour, because it provides informations about the stability conditions right at the tour location.
 
 <p style="text-align: justify;">
-Conoscere l'orografia e la copertura boschiva del luogo di interesse è altrettanto fondamentale, poichè la <b>pendenza</b> e la densità del <b>bosco</b> sono variabili chiave per la stima del rischio valanghe e devono essere considerate per <b>pianificare</b> il percorso prima di intraprendere la gita. L'<b>osservazione</b> delle caratteristiche orografiche del terreno e della copertura boschiva sul luogo dell'escursione sono di fondamentale importanza e devono integrare le informazioni ottenute dalla pianificazione dell'itinerario tramite mappa.
+It's also important to know the orography and tree cover density at the tour location, because the <b>slope</b> and the <b>forest</b> density are key variables to asses the avalanche risk and have to be taken into account to <b>plan</b> the tour before starting it. The informations obtained <b>observing</b> the terrain and tree cover characteristics are also fundamental and have to be integrated with the ones obtained during the tour planning using the map.
 
 <p style="text-align: justify;">
-Per conoscere meglio come pianificare un'escursione invernale in montagna e come comportarsi durante lo svolgimento della gita è molto utile seguire le <b>lezioni</b> del portale <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a>.
+It's really useful to follow the <b>lessons</b> of the <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a> portal to learn how to plan a mountain winter tour and how to behave during it.
 
 <p style="text-align: justify;">
-Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>carta topografica</b></a>, che include un livello per la copertura boschiva, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, ed un livello per le classi di pendenza superiori a 30°, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. Queste informazioni sono rappresentate sulla mappa con una risoluzione di 20 metri per la copertura boschiva e 10 metri per le classi di pendenza, perciò non sono rappresentative della conformazione e tipologia di terreno a scale inferiori, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
+For the <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a tree cover density laver, provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a> and a slope layer obtained from DEM provided by the <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. These informations are represented on the map with a resolution of 20 meters for the tree cover and 10 meters for the slope classes, thus they're not representative of the terrain morphology at smaller scales, but they provide useful informations to plan tha tour. Is also crucial to observe the snowpack and terrain characteristics during the tour to obtain a more precise information.
 
 <p style="text-align: justify;">
-<b>La carta delle pendenze non rappresenta le reali condizioni del terreno a scale inferiori a 10 metri, pertanto l'utilizzo è a discrezione dell'utente che si assume tutte le responsabilità dei rischi connessi</b>.
+<b>The slope layer does not represent the terrain conditions at scales smaller than 10 meters, thus the use is up to the user who takes full responsibility for the risks involved.</b>
 
 <div style="width: 100%; height: 100%; margin: 0 auto;">
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
