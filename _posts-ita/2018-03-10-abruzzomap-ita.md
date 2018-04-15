@@ -18,6 +18,7 @@ share: true
   {% if page.read_time %}
     <p style="font-size:18px" class="page__meta">
       <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}<BR>
+      <i class="fa fa-language" aria-hidden="true"></i> translate this post in <a href="{{ site.url }}{{ site.baseurl }}/2018-03-10-abruzzomap"> <font color="#555555">english</font></a>.
     </p>
   {% endif %}
 </header>
