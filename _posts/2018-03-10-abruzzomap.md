@@ -25,22 +25,22 @@ share: true
 {% endunless %} 
 
 <p style="text-align: justify;">
-Winter activities in the montainous regions that experience snowfall and a seasonal snowcover are always affected by <b>avalanche risk</b>.
+Winter activities in the montainous regions that experience snowfall and a seasonal snow cover are always affected by <b>avalanche risk</b>.
 
 <p style="text-align: justify;">
 The avalanche risk can be mitigated by a careful evaluation of the <b>snowpack</b> characteristics, <b>orography</b> and <b>tree cover</b> density.
 
 <p style="text-align: justify;">
-<b>Avalanche bulletins</b> of the <a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> service provide daily important informations about snowpack <b>stability</b> and dangerous elevations and the expositions. A careful evaluation of the avalanche bulletin can mitigate the risk during the tour, nevertheless it's fundamental to <b>observe</b> the snowpack during the tour, because it provides informations about the stability conditions right at the tour location.
+<b>Avalanche bulletins</b> of <a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> service provide daily important informations about snowpack <b>stability</b>, dangerous elevations and expositions. A careful evaluation of the avalanche bulletin can mitigate risk during the tour, nevertheless it's fundamental to <b>observe</b> the snowpack during the tour, because it provides informations of stability conditions right at the tour location.
 
 <p style="text-align: justify;">
-It's also important to know the orography and tree cover density at the tour location, because the <b>slope</b> and the <b>forest</b> density are key variables to asses the avalanche risk and have to be taken into account to <b>plan</b> the tour before starting it. The informations obtained <b>observing</b> the terrain and tree cover characteristics are also fundamental and have to be integrated with the ones obtained during the tour planning using the map.
+It's also important to know orography and tree cover density at the tour location, because <b>slope</b> and <b>forest</b> density are key variables to asses avalanche risk and have to be taken into account to <b>plan</b> the tour before starting it. The informations obtained <b>observing</b> the terrain and tree cover characteristics are also fundamental and have to be integrated with the ones obtained from the map during the tour planning.
 
 <p style="text-align: justify;">
 It's really useful to follow the <b>lessons</b> of the <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a> portal to learn how to plan a mountain winter tour and how to behave during it.
 
 <p style="text-align: justify;">
-For the <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a tree cover density laver, provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a> and a slope layer obtained from DEM provided by the <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. These informations are represented on the map with a resolution of 20 meters for the tree cover and 10 meters for the slope classes, thus they're not representative of the terrain morphology at smaller scales, but they provide useful informations to plan tha tour. Is also crucial to observe the snowpack and terrain characteristics during the tour to obtain a more precise information.
+For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a tree cover density laver, provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, and a slope layer obtained from DEM, provided by the <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. These informations are represented on the map with a resolution of 20 meters for the tree cover and 10 meters for the slope classes, thus they are not representative of the terrain morphology at smaller scales, but they provide useful informations to plan tha tour. Is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
 
 <p style="text-align: justify;">
 <b>The slope layer does not represent the terrain conditions at scales smaller than 10 meters, thus the use is up to the user who takes full responsibility for the risks involved.</b>
