@@ -1,6 +1,6 @@
 ---
 layout: single_post
-title: "Abruzzo topographic map"
+title: "Abruzzo Topographic Map"
 categories:
 excerpt: "Winter activities in the montainous regions that experience snowfall and a seasonal snowcover..."
 tags: []
