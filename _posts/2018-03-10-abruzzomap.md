@@ -25,7 +25,7 @@ share: true
 {% endunless %} 
 
 <p style="text-align: justify;">
-Winter activities in the mountainous regions that experience snowfalls and a seasonal snow cover are always affected by <b>avalanche risk</b>.
+Winter activities in mountainous regions that experience snowfalls and a seasonal snow cover are always affected by <b>avalanche risk</b>.
 
 <p style="text-align: justify;">
 The avalanche risk can be mitigated by a careful evaluation of the <b>snowpack</b> characteristics, <b>orography</b> and <b>tree cover</b> density.
