@@ -2,7 +2,7 @@
 layout: single_post
 title: "Abruzzo Topographic Map"
 categories:
-excerpt: "Winter activities in the montainous regions that experience snowfall and a seasonal snowcover..."
+excerpt: "Winter activities in the mountainous regions that experience snowfall and a seasonal snow cover..."
 tags: []
 image:
   feature:
@@ -25,7 +25,7 @@ share: true
 {% endunless %} 
 
 <p style="text-align: justify;">
-Winter activities in the montainous regions that experience snowfall and a seasonal snow cover are always affected by <b>avalanche risk</b>.
+Winter activities in the mountainous regions that experience snowfall and a seasonal snow cover are always affected by <b>avalanche risk</b>.
 
 <p style="text-align: justify;">
 The avalanche risk can be mitigated by a careful evaluation of the <b>snowpack</b> characteristics, <b>orography</b> and <b>tree cover</b> density.
@@ -40,7 +40,7 @@ It's also important to know orography and tree cover density at the tour locatio
 It's really useful to follow the <b>lessons</b> of the <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a> portal to learn how to plan a mountain winter tour and how to behave during it.
 
 <p style="text-align: justify;">
-For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a tree cover density laver, provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, and a slope layer obtained from DEM, provided by the <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. These informations are represented on the map with a resolution of 20 meters for the tree cover and 10 meters for the slope classes, thus they are not representative of the terrain morphology at smaller scales, but they provide useful informations to plan tha tour. Is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
+For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a tree cover density laver, provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, and a slope layer obtained from DEM, provided by the <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. These informations are represented on the map with a resolution of 20 meters for the tree cover and 10 meters for the slope classes, thus they are not representative of the terrain morphology at smaller scales, but they provide useful data to plan tha tour. Is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
 
 <p style="text-align: justify;">
 <b>The slope layer does not represent the terrain conditions at scales smaller than 10 meters, thus the use is up to the user who takes full responsibility for the risks involved.</b>
