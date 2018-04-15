@@ -1,6 +1,6 @@
 ---
 layout: single_post
-title: "Carta topografica dell'Abruzzo"
+title: "Carta Topografica Dell'Abruzzo"
 categories:
 excerpt: "Nelle regioni montuose soggette a nevicate, che presentano una copertura nevosa stagionale, le attività invernali..."
 tags: []
