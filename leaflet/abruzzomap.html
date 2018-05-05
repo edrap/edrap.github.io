@@ -9,7 +9,8 @@
 <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" /> -->
   <link rel="stylesheet" href="https://api.tiles.mapbox.com/mapbox.js/v1.6.6/mapbox.css" />
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet.draw.css"/>
-  <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.css"/>
+<!--   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.css"/> -->  
+  <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/L.Control.Locate.css"/>
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.css" />
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/leaflet.fullscreen.css" />
   <link rel="stylesheet" href="https://edrap.github.io/leaflet/JS-CSS/easy-button.css">
@@ -49,7 +50,8 @@
   <script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.6/mapbox.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.draw.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script>
-  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script>
+  <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script> -->
+  <script src="https://edrap.github.io/leaflet/JS-CSS/L.Control.Locate.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.filelayer.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/togeojson.js"></script>
@@ -290,21 +292,26 @@
     L.control.fullscreen({position: 'topright'}).addTo(map);
 
     //----------- GET GPS LOCATION -----------
-    var gps = new L.Control.Gps({
-      //autoActive:true,
-      autoCenter: true,
-      position: 'topright'
-      //accuracy:true
-    });//inizialize control
-    gps
-    .on('gps:located', function(e) {
-      // e.marker.bindPopup(e.latlng.toString()).openPopup(),
-      console.log(e.latlng)
-    })
-    .on('gps:disabled', function(e) {
-      e.marker.closePopup()
-    });
-    gps.addTo(map);
+    // var gps = new L.Control.Gps({
+    //   //autoActive:true,
+    //   autoCenter: true,
+    //   position: 'topright'
+    //   //accuracy:true
+    // });//inizialize control
+    // gps
+    // .on('gps:located', function(e) {
+    //   // e.marker.bindPopup(e.latlng.toString()).openPopup(),
+    //   console.log(e.latlng)
+    // })
+    // .on('gps:disabled', function(e) {
+    //   e.marker.closePopup()
+    // });
+    // gps.addTo(map);
+
+    L.control.locate({
+		follow: true,
+		position: 'topright'
+	}).addTo(map);
 
     // ----------- SEARCH BOX -----------
     var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
