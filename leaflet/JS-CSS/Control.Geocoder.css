@@ -10,9 +10,9 @@
 
 .leaflet-touch .leaflet-control-geocoder {
 	/*box-shadow: none;*/
-	/*border: 1px solid rgba(0,0,0,0.4);
+	/*border: 1px solid rgba(0,0,0,0.4);*/
 	background-clip: padding-box;
-    line-height: 30px;*/
+  line-height: 18px;
 }
 
 .leaflet-control-geocoder-form {
