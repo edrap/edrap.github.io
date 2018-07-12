@@ -258,7 +258,7 @@
         // var kml = tokml(data);
         var gpx = togpx(data);
         // Stringify GPX, KML, GeoJson
-        var convertedData = 'application/gpx;charset=utf-8,' + encodeURIComponent(gpx);
+        var convertedData = 'application/gpx+xml;charset=utf-8,' + encodeURIComponent(gpx);
         // var convertedData = 'application/xml;charset=utf-8,' + encodeURIComponent(kml);
         // var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
         // Create export
