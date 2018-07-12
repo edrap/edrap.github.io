@@ -59,6 +59,7 @@
   <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.browser.print.min.js"></script> -->
   <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/easy-button.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@1/src/easy-button.js"></script>
+  <script src='https://edrap.github.io/leaflet/JS-CSS/tokml.js'></script>
   <script>
     $(document).ready(function () {
 
@@ -251,14 +252,18 @@
     		icon: '<img style="width:11px;" src="https://edrap.github.io/leaflet/JS-CSS/images/download.png">', 
    			title: 'Export features to GeoJSON', 
    			onClick: function(e) {
-         // Extract GeoJson from featureGroup
-         var data = featureGroup.toGeoJSON();
-         // Stringify the GeoJson
-         var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
-         // Create export
+        // Extract GeoJson from featureGroup
+        var data = featureGroup.toGeoJSON();
+        var kml = tokml(data);
+        // Stringify the KML
+        var convertedData = 'application/xml;charset=utf-8,' + encodeURIComponent(kml);
+        // Stringify the GeoJson
+        // var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+        // Create export
         var exp_feat = document.createElement('a');
         exp_feat.setAttribute('href', 'data:' + convertedData);
-        exp_feat.setAttribute('download', 'data.geojson');
+        // exp_feat.setAttribute('download', 'data.geojson');
+        exp_feat.setAttribute('download', 'data.kml');
         exp_feat.style.display = 'none';
         document.body.appendChild(exp_feat);
         exp_feat.click();
