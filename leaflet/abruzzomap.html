@@ -255,12 +255,12 @@
    			onClick: function(e) {
         // Extract GeoJson from featureGroup
         var data = featureGroup.toGeoJSON();
-        var kml = tokml(data);
+        // var kml = tokml(data);
         var gpx = togpx(data);
         // Stringify GPX, KML, GeoJson
         var convertedData = 'application/gpx;charset=utf-8,' + encodeURIComponent(gpx);
-        //var convertedData = 'application/xml;charset=utf-8,' + encodeURIComponent(kml);
-        //var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+        // var convertedData = 'application/xml;charset=utf-8,' + encodeURIComponent(kml);
+        // var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
         // Create export
         var exp_feat = document.createElement('a');
         exp_feat.setAttribute('href', 'data:' + convertedData);
