@@ -133,9 +133,10 @@
         attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
       }).addTo(map);
       
-      var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr_png/{z}/{x}/{y}.png', {
+      // var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr_png/{z}/{x}/{y}.png', {
+      var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr/{z}/{x}/{y}.png', {
         //transparent: true,
-        opacity: 0.35,
+        opacity: 0.5,
         maxZoom: 16,
         maxNativeZoom: 16,
         minNativeZoom: 10,
