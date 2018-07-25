@@ -109,6 +109,26 @@
         attribution: '&copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a>'
       });
 
+      var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
+        //transparent: true,
+        maxZoom: 16,
+        maxNativeZoom: 16,
+        minNativeZoom: 10,
+        minZoom: 10,
+        tms: true,
+        attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
+      }).addTo(map);
+
+      // var igm25k_reg = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_reg_abr/{z}/{x}/{y}.png', {
+      //   //transparent: true,
+      //   maxZoom: 16,
+      //   maxNativeZoom: 16,
+      //   minNativeZoom: 10,
+      //   minZoom: 10,
+      //   tms: true,
+      //   attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+      // });
+
       // var abruzzolayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/abruzzo20m/{z}/{x}/{y}.jpg', {
       //   maxZoom: 16,
       //   minZoom: 10,
@@ -122,31 +142,11 @@
       //   minZoom: 10,
       //   attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet" target="_blank">Geoportale Regione Abruzzo</a>'
       // }).addTo(map);
-
-      var igm25k_reg = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_reg_abr/{z}/{x}/{y}.png', {
-        //transparent: true,
-        maxZoom: 16,
-        maxNativeZoom: 16,
-        minNativeZoom: 10,
-        minZoom: 10,
-        tms: true,
-        attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
-      }).addTo(map);
-      
-      var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
-        //transparent: true,
-        maxZoom: 16,
-        maxNativeZoom: 16,
-        minNativeZoom: 10,
-        minZoom: 10,
-        tms: true,
-        attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
-      })
       
       // var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr_png/{z}/{x}/{y}.png', {
       var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr/{z}/{x}/{y}.png', {
         //transparent: true,
-        opacity: 0.4,
+        opacity: 0.25,
         maxZoom: 16,
         maxNativeZoom: 16,
         minNativeZoom: 10,
@@ -164,8 +164,8 @@
       //   attribution: '&copy; <a href="https://opendata.regione.abruzzo.it/content/modello-digitale-del-terreno-risoluzione-10x10-metri" target="_blank">Opendata Regione Abruzzo</a>'
       // }).addTo(map);
 
-      var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_qtiles3/{z}/{x}/{y}.png', {
-      // var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
+      // var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_qtiles3/{z}/{x}/{y}.png', {
+      var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
         //transparent: true,
         opacity: 0.15,
         maxZoom: 16,
@@ -188,7 +188,7 @@
       // var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_qtiles3/{z}/{x}/{y}.png', {
       var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
         //transparent: true,
-        opacity: 0.5,
+        opacity: 0.4,
         maxZoom: 16,
         maxNativeZoom: 16,
         minNativeZoom: 10,
@@ -209,15 +209,15 @@
 
       //----------- WARNING -----------
       L.easyButton({
-      	states: [{
-    		icon: '<img style="width:11px;" src="https://edrap.github.io/leaflet/JS-CSS/images/warning.png">', 
-   			title: 'The slope layer does not represent the terrain conditions at scales smaller than 10 meters, thus the use is up to the user who takes full responsibility for the risks involved.', 
-   			onClick: function(){
-		      	//var export = document.createElement('export');
-		        // Extract GeoJson from featureGroup
-				window.open('https://edrap.github.io/abruzzomap', '_blank');
-			}
-		}]
+        states: [{
+        icon: '<img style="width:11px;" src="https://edrap.github.io/leaflet/JS-CSS/images/warning.png">', 
+        title: 'The slope layer does not represent the terrain conditions at scales smaller than 10 meters, thus the use is up to the user who takes full responsibility for the risks involved.', 
+        onClick: function(){
+            //var export = document.createElement('export');
+            // Extract GeoJson from featureGroup
+        window.open('https://edrap.github.io/abruzzomap', '_blank');
+      }
+    }]
       }).addTo(map);
 
     //// ----------- PRINT MAP -----------
@@ -262,10 +262,10 @@
 
     // ----------- DOWNLOAD FEATURES -----------
     L.easyButton({
-    	states: [{
-    		icon: '<img style="width:11px;" src="https://edrap.github.io/leaflet/JS-CSS/images/download.png">', 
-   			title: 'Export features to GPX', 
-   			onClick: function(e) {
+      states: [{
+        icon: '<img style="width:11px;" src="https://edrap.github.io/leaflet/JS-CSS/images/download.png">', 
+        title: 'Export features to GPX', 
+        onClick: function(e) {
         // Extract GeoJson from featureGroup
         var data = featureGroup.toGeoJSON();
         // var kml = tokml(data);
@@ -284,7 +284,7 @@
         exp_feat.click();
         document.body.removeChild(exp_feat);
         }
-	    }]
+      }]
     }).addTo(map);
     
     // var circle_drawn = false;
@@ -343,9 +343,9 @@
     // gps.addTo(map);
 
     L.control.locate({
-		follow: true,
-		position: 'topright'
-	}).addTo(map);
+    follow: true,
+    position: 'topright'
+  }).addTo(map);
 
     // ----------- SEARCH BOX -----------
     var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
@@ -355,7 +355,9 @@
     };  
 
     // ----------- LAYERS -----------
-    L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_reg}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+    // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'ABR2 IGM25k':igm25k_reg, 'ABR1 IGM25k':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+    // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_reg}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+    L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
 
           // ----------- SCALE BAR -----------
       L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
