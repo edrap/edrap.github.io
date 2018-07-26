@@ -92,6 +92,14 @@
         zoom: mappos.zoom
       });
       
+      var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        maxZoom: 16,
+        maxNativeZoom: 17,
+        minNativeZoom: 5,
+        minZoom: 10,
+        attribution: '&copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a>'
+      });
+
       var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
         maxZoom: 16,
         maxNativeZoom: 20,
@@ -99,14 +107,6 @@
         minZoom: 10,
         subdomains:['mt0','mt1','mt2','mt3'],
         attribution: '&copy; <a href="https://www.google.com" target="_blank">Google</a>'
-      });
-      
-      var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        maxZoom: 16,
-        maxNativeZoom: 17,
-        minNativeZoom: 5,
-        minZoom: 10,
-        attribution: '&copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a>'
       });
 
       var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
@@ -119,15 +119,15 @@
         attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
       }).addTo(map);
 
-      // var igm25k_reg = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_reg_abr/{z}/{x}/{y}.png', {
-      //   //transparent: true,
-      //   maxZoom: 16,
-      //   maxNativeZoom: 16,
-      //   minNativeZoom: 10,
-      //   minZoom: 10,
-      //   tms: true,
-      //   attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
-      // });
+      var igm25k_reg = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_reg_abr/{z}/{x}/{y}.png', {
+        //transparent: true,
+        maxZoom: 16,
+        maxNativeZoom: 16,
+        minNativeZoom: 10,
+        minZoom: 10,
+        tms: true,
+        attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+      });
 
       // var abruzzolayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/abruzzo20m/{z}/{x}/{y}.jpg', {
       //   maxZoom: 16,
@@ -355,9 +355,9 @@
     };  
 
     // ----------- LAYERS -----------
-    // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'ABR2 IGM25k':igm25k_reg, 'ABR1 IGM25k':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+    L.control.layers({'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
     // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_reg}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
-    L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+    // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
 
           // ----------- SCALE BAR -----------
       L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
