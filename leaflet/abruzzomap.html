@@ -46,10 +46,11 @@
   </style>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script> -->
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script> -->
   <script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.6/mapbox.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.draw.js"></script>
-  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script>
+  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-fullHash.js"></script>
+  <!--  <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet.permalink.min.js"></script> -->
   <!-- <script src="https://edrap.github.io/leaflet/JS-CSS/leaflet-gps.js"></script> -->
   <script src="https://edrap.github.io/leaflet/JS-CSS/L.Control.Locate.js"></script>
   <script src="https://edrap.github.io/leaflet/JS-CSS/Control.Geocoder.js"></script>
@@ -86,11 +87,15 @@
       // })
 
       // ----------- MAPS LAYERS -----------
-      var mappos = L.Permalink.getMapLocation();
+      // var mappos = L.Permalink.getMapLocation();
+      // var map = L.map('map', {
+      //   center: mappos.center,
+      //   zoom: mappos.zoom
+      // });
       var map = L.map('map', {
-        center: mappos.center,
-        zoom: mappos.zoom
-      });
+        center: [42.3469,13.39817],
+        zoom: 14
+      });      
       
       var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
         maxZoom: 16,
@@ -205,7 +210,7 @@
         attribution: '&copy; <a href="https://www.opensnowmap.org/" target="_blank">OpenSnowMap</a>'
       }).addTo(map);
 
-      L.Permalink.setup(map);
+      // L.Permalink.setup(map);
 
       //----------- WARNING -----------
       L.easyButton({
@@ -355,7 +360,15 @@
     };  
 
     // ----------- LAYERS -----------
-    L.control.layers({'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
+
+    var baseMaps = {'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid};
+    var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer};
+
+    var allMapLayers = {'igm1':igm25k_min, 'igm2':igm25k_reg, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer};
+
+    L.hash(map, allMapLayers);
+
+    L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
     // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_reg}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
     // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
 
