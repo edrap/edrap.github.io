@@ -81,7 +81,7 @@ analytics:
 author:
   name             : *name
   avatar           : #"/assets/images/michael-rose.jpg"
-  bio              : "Master student at the University of Innsbruck (ACINN)"
+  bio              : "PhD student at Roma Sapienza ICT"
   location         : "L'Aquila, IT"
   email            : "edoardo.raparelli@gmail.com"
   uri              : "https://edrap.github.io/"
