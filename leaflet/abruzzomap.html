@@ -369,10 +369,10 @@
 
     // ----------- LAYERS -----------
 
-    var baseMaps = {'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'OpenTopoMap':baselayer, '4UMaps':baselayer2, 'Google Hybrid':googleHybrid};
+    var baseMaps = {'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid};
     var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer};
 
-    var allMapLayers = {'igm1':igm25k_min, 'igm2':igm25k_reg, 'otm':baselayer, '4um':baselayer2, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer};
+    var allMapLayers = {'igm1':igm25k_min, 'igm2':igm25k_reg, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer};
 
     L.hash(map, allMapLayers);
 
