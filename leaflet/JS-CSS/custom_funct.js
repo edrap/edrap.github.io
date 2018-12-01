@@ -13,6 +13,6 @@ function leaflet_confirm() {
 
 function keyPress (e) {
     if(e.key === "Escape") {
-        // write your logic here.
+        return false;
     }
 }
