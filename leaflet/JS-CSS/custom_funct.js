@@ -1,8 +1,8 @@
 function leaflet_alert() {
-    alert("Clicking OK the user takes full responsibility of using this map.");
+    alert("By clicking OK the user takes full responsibility of using this map and absolves the map developper of any responsibility.");
 }
 
-function leaflet_alert2() {
+function leaflet_confirm() {
   var txt;
   var r = confirm("By clicking OK the user takes full responsibility of using this map and absolves the map developper of any responsibility.");
   if (r != true) {
