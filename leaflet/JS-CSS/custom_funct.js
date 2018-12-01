@@ -1,3 +1,3 @@
 function leaflet_alert() {
-    alert("Io sono fuori di ogni discussione!");
+    alert("Clicking OK the user takes full responsibility of using this map.");
 }
