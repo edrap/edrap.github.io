@@ -1,5 +1,6 @@
 function leaflet_alert() {
     alert("By clicking OK the user takes full responsibility of using this map and absolves the map developper of any responsibility.");
+    keyPress (e);
 }
 
 function leaflet_confirm() {
@@ -8,4 +9,10 @@ function leaflet_confirm() {
   if (r != true) {
       window.location = 'https://edrap.github.io/abruzzomap';
   }
+}
+
+function keyPress (e) {
+    if(e.key === "Escape") {
+        // write your logic here.
+    }
 }
