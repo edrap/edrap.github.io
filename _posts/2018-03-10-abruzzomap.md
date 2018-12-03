@@ -43,11 +43,13 @@ It's really useful to follow the <b>lessons</b> of the <a href="https://www.whit
 For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a tree cover density laver provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, and a slope layer obtained from a DEM provided by <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. These informations are represented on the map with a resolution of 20 meters for the tree cover and 10 meters for the slope classes, thus they are not representative of the terrain morphology at smaller scales, but they provide useful data to plan the tour. Is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
 
 <p style="text-align: justify;">
-<b>The slope layer does not represent the terrain conditions at scales smaller than 10 meters, thus the use is up to the user who takes full responsibility for the risks involved.</b>
+<b>By using the <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">topographic map</a> the user takes full responsibility of the risks involved.</b>
 
+<!--
 <div style="width: 100%; height: 100%; margin: 0 auto;">
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
+-->
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
