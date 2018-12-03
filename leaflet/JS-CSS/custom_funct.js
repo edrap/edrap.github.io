@@ -1,5 +1,5 @@
 function leaflet_alert() {
-    alert("By using this map the user takes full responsibility of the risks involved and absolves the map developper of any responsibility.");
+    alert("By using the map the user takes full responsibility of the risks involved.");
 }
 
 function leaflet_confirm() {
