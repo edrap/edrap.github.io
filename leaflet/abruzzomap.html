@@ -221,7 +221,10 @@
         minZoom: 10,
         attribution: '&copy; <a href="https://www.opensnowmap.org/" target="_blank">OpenSnowMap</a>'
       }).addTo(map);
-
+ 
+      var allMapLayers = {'igm1':igm25k_min, 'igm2':igm25k_reg, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer};
+      L.hash(map, allMapLayers);
+      
       // L.Permalink.setup(map);
 
       //----------- WARNING -----------
@@ -371,15 +374,9 @@
       map.fitBounds(result.bbox);
     };
 
-    // ----------- LAYERS -----------
-
+    // ----------- LAYERS ----------
     var baseMaps = {'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid};
     var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer};
-
-    var allMapLayers = {'igm1':igm25k_min, 'igm2':igm25k_reg, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer};
-
-    L.hash(map, allMapLayers);
-
     L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
     // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_reg}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
     // L.control.layers({'Google Hybrid':googleHybrid, 'OpenTopoMap':baselayer, 'IGM 25.000':igm25k_min}, {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Ski Piste':pistelayer}, {position: 'topright'}).addTo(map);
