@@ -1,3 +1,3 @@
 function leaflet_alert() {
-    alert("By using the map you take full responsibility of the risks involved");
+    alert("The users take full responsibility of using the map for outdoor activities");
 }
