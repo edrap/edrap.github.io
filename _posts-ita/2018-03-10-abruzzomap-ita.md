@@ -50,7 +50,7 @@ Per conoscere meglio come pianificare un'escursione invernale in montagna e come
 Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>carta topografica</b></a>, che include un livello per la copertura boschiva, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, ed un livello per le classi di pendenza superiori a 30°, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. Queste informazioni sono rappresentate sulla mappa con una risoluzione di 20 metri per la copertura boschiva e 10 metri per le classi di pendenza, perciò non sono rappresentative della conformazione e tipologia di terreno a scale inferiori, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
 
 <p style="text-align: justify;">
-<b>Utilizzando la <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">carta topografica</a> l'utente si assume tutte le responsabilità dei rischi connessi.</b>
+<b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">carta topografica</a> per attività all'aperto.</b>
 
 <!--
 <div style="width: 100%; height: 100%; margin: 0 auto;">
