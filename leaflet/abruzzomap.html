@@ -257,7 +257,7 @@ $(document).ready(function () {
   }).addTo(map);
 
   // ----------- SEARCH BOX -----------
-  var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: true});
+  var geocoder = new L.Control.geocoder({position: "topright", collapsed: true, showResultIcons: false});
   map.addControl(geocoder);
   geocoder.markGeocode = function(result) {
     map.fitBounds(result.bbox);
