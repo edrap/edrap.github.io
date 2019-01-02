@@ -251,6 +251,7 @@ $(document).ready(function () {
 
   //----------- GET GPS LOCATION -----------
   L.control.locate({
+    keepCurrentZoomLevel: 'false',
     position: 'topright',
     layer: userFeatures,
     setView: 'always'
