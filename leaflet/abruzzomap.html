@@ -184,10 +184,11 @@ $(document).ready(function () {
   }).addTo(map);
 
   var userFeatures = L.featureGroup().addTo(map);
+  var gpsFeatures = L.featureGroup().addTo(map);
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
@@ -277,7 +278,7 @@ $(document).ready(function () {
   L.control.locate({
     keepCurrentZoomLevel: 'false',
     position: 'topright',
-    layer: userFeatures,
+    layer: gpsFeatures,
     setView: 'always'
   }).addTo(map);
 
