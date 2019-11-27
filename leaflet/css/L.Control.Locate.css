@@ -1,0 +1,33 @@
+.leaflet-bar-part-single {
+/*	-webkit-border-radius: 4px 4px 4px 4px;
+	        border-radius: 4px 4px 4px 4px;
+	border-bottom: none;*/
+/*	width:32px;
+	height:32px;*/
+  background-image: url('https://edrap.github.io/leaflet/images/gps-merged26.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.leaflet-touch .leaflet-bar-part-single {
+/*	-webkit-border-radius: 7px 7px 7px 7px;
+	        border-radius: 7px 7px 7px 7px;
+  border-bottom: none;*/
+/*	width:32px;
+	height:32px;*/
+}
+
+.leaflet-control-locate a {
+	/*background-image: url(https://edrap.github.io/leaflet/images/locate.png);*/
+	background-position: 0px 0px;
+}
+
+.leaflet-control-locate.requesting a {
+    /*background-image: url(https://edrap.github.io/leaflet/images/spinner.gif);*/
+    background-position: 0px -26px;
+}
+
+.leaflet-control-locate.active a {
+    /*background-image: url(https://edrap.github.io/leaflet/images/locate_active.png);*/
+    background-position: 0px -52px;
+}

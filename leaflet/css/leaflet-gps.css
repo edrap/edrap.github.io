@@ -1,0 +1,61 @@
+
+.leaflet-container .leaflet-control-gps {
+	position:relative;
+	/*float:left;*/
+	background:#fff;
+	color:#1978cf;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	/*background-color: rgba(0, 0, 0, 0.25);*/
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index:1000;
+	/*box-shadow: 0 1px 7px rgba(0,0,0,0.65);*/
+  border: 1px solid rgba(0,0,0,0.4);
+	margin-left:10px;
+	margin-top:10px;
+}
+.leaflet-control-gps .gps-button {
+	display:block;
+	/*float:left;*/
+	width:32px;
+	height:32px;
+  background-image: url('https://edrap.github.io/leaflet/images/gps-merged.png');
+	/*background-image: url('https://edrap.github.io/leaflet/images/gps-location-symbol.png');*/
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+  /*background-size: 32px auto;*/
+	background-color: #fff;
+	border-radius:4px;
+}
+.leaflet-control-gps .gps-button:hover,
+.leaflet-control-gps .gps-button.active:hover {
+	background-color: #f4f4f4;
+}
+.leaflet-control-gps .gps-button.loading,
+.leaflet-control-gps .gps-button.loading:hover {
+	/*background-image: url('https://edrap.github.io/leaflet/images/gps-location-disabled.png');*/
+ 	background-position: 0px -32px;
+
+}
+.leaflet-control-gps .gps-button.disabled {
+	/*background-image: url('https://edrap.github.io/leaflet/images/gps-location-disabled.png');*/
+  background-position: 0px -32px;
+}
+.leaflet-control-gps .gps-button.active {
+	/*background-image: url('https://edrap.github.io/leaflet/images/gps-fixed-indicator.png');*/
+  background-position: 0px -64px;
+}
+
+.leaflet-control-gps .gps-alert {
+	position:absolute;
+	right:34px;
+	bottom:-1px;
+	width:220px;
+	padding:2px;
+	line-height:.95em;
+	color:#e00;
+	border: 1px solid #888;
+	background-color: rgba(255, 255, 255, 0.75);
+	border-radius:4px;
+}
