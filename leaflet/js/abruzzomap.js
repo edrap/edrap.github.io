@@ -146,7 +146,8 @@ $(document).ready(function () {
     // L.Proj.GeoJson instead of the L.geoJson.
     layer: L.geoJson,
     // See http://leafletjs.com/reference.html#geojson-options
-    layerOptions: {style: {color:'red'}},
+    //layerOptions: {style: {color:'red'}},
+    layerOptions: {style: {color:"red",weight:1,opacity:.4,fill:!0,fillColor:null,fillOpacity:.1}},
     // Add to map after loading (default: true) ?
     addToMap: true,
     // File size limit in kb (default: 1024) ?
