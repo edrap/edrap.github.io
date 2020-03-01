@@ -107,7 +107,7 @@ $(document).ready(function () {
 
   var avalanches = L.featureGroup();
   // Load kml file
-  fetch('https://edrap.github.io/leaflet/shapefiles/Mappa storica delle valanghe dal 1957 al 2013.kml')
+  fetch('https://edrap.github.io/leaflet/shapefiles/Mappa storica delle valanghe dal 1957 al 2013 offline.kml')
       .then(res => res.text())
       .then(kmltext => {
           // Create new kml overlay
