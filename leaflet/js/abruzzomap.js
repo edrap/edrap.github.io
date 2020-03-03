@@ -157,7 +157,7 @@ $(document).ready(function () {
   //L.control.browserPrint().addTo(map);
 
   // ----------- LOAD FEATURES -----------
-  L.Control.FileLayerLoad.LABEL = '<img class="icon" src="https://edrap.github.io/leaflet/images/folder.svg" alt="file icon"/>';
+  //L.Control.FileLayerLoad.LABEL = '<img class="icon" src="https://edrap.github.io/leaflet/images/folder.svg" alt="file icon"/>';
   var load = L.Control.fileLayerLoad({
     // Allows you to use a customized version of L.geoJson.
     // For example if you are using the Proj4Leaflet leaflet plugin,
@@ -165,7 +165,8 @@ $(document).ready(function () {
     // L.Proj.GeoJson instead of the L.geoJson.
     layer: L.geoJson,
     // See http://leafletjs.com/reference.html#geojson-options
-    layerOptions: {style: {color:'red'}},
+    //layerOptions: {style: {color:'red'}},
+    layerOptions: {style: {color:"red",weight:4,opacity:.5}},
     //layerOptions: {style: {color:"red",weight:4,opacity:.5,fill:!0,fillColor:null,fillOpacity:.2}},
     // Add to map after loading (default: true) ?
     addToMap: true,
