@@ -118,7 +118,9 @@ $(document).ready(function () {
     dataType:"json",
     onEachFeature: onEachFeature,
     style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
-  }).addTo(map);
+  });
+  avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
+  avalanches.addTo(map);
 
   //var avalanches = L.featureGroup();
   //// Load kml file
