@@ -104,24 +104,39 @@ $(document).ready(function () {
     tms: true,
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   }).addTo(map);
+  
+  function onEachFeature(feature, layer) {
+    //var popupContent = null;
+    if (feature.properties && feature.properties.description) {
+      //popupContent += feature.properties.description;
+      popupContent = feature.properties.description;
+    }
+    layer.bindPopup(popupContent, {maxWidth: "200", maxHeight : "300", closeOnClick: true, closeButton: false});
+  }
+  
+  var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
+    dataType:"json",
+    onEachFeature: onEachFeature,
+    style: {color:"blue", weight:2, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
+  }).addTo(map);
 
-  var avalanches = L.featureGroup();
-  // Load kml file
-  fetch('https://edrap.github.io/leaflet/shapefiles/Mappa storica delle valanghe dal 1957 al 2013 offline.kml')
-      .then(res => res.text())
-      .then(kmltext => {
-          // Create new kml overlay
-          const parser = new DOMParser();
-          const kml = parser.parseFromString(kmltext, 'text/xml');
-          const track = new L.KML(kml);
-          avalanches.addLayer(track);
-
-          // Adjust map to show the kml
-          //const bounds = track.getBounds();
-          //map.fitBounds(bounds);
-      });
-  avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
-  avalanches.addTo(map);
+  //var avalanches = L.featureGroup();
+  //// Load kml file
+  //fetch('https://edrap.github.io/leaflet/shapefiles/Mappa storica delle valanghe dal 1957 al 2013 offline.kml')
+  //    .then(res => res.text())
+  //    .then(kmltext => {
+  //        // Create new kml overlay
+  //        const parser = new DOMParser();
+  //        const kml = parser.parseFromString(kmltext, 'text/xml');
+  //        const track = new L.KML(kml);
+  //        avalanches.addLayer(track);
+  //
+  //        // Adjust map to show the kml
+  //        //const bounds = track.getBounds();
+  //        //map.fitBounds(bounds);
+  //    });
+  //avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
+  //avalanches.addTo(map);
 
   var pistelayer = L.tileLayer('https://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png', {
     maxZoom: 16,
