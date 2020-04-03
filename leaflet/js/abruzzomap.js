@@ -117,7 +117,7 @@ $(document).ready(function () {
   var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
     dataType:"json",
     onEachFeature: onEachFeature,
-    style: {color:"blue", weight:2, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
+    style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
   }).addTo(map);
 
   //var avalanches = L.featureGroup();
