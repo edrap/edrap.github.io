@@ -14,5 +14,6 @@ function onEachFeature(feature, layer) {
     closeOnClick: true,
     closeButton: false,
     offset: [200, 0]
-  });  //layer.bringToFront();
+  });  
+  //layer.bringToFront();
 }
