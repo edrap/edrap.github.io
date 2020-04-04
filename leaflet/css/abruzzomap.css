@@ -20,3 +20,10 @@ html, body, #map {
 .leaflet-control-geocoder-alternatives a  {
   font: 12px/1.4 "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
+.leaflet-popup-tip {
+    border: 0px;
+}
+/* .leaflet-popup-tip {
+    width: 0px;
+    height: 0px;
+} */
