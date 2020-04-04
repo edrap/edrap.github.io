@@ -105,15 +105,6 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   }).addTo(map);
   
-  function onEachFeature(feature, layer) {
-    //var popupContent = null;
-    if (feature.properties && feature.properties.description) {
-      //popupContent += feature.properties.description;
-      popupContent = feature.properties.description;
-    }
-    layer.bindPopup(popupContent, {maxWidth: "200", maxHeight : "300", closeOnClick: true, closeButton: false});
-  }
-  
   var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
     dataType:"json",
     onEachFeature: onEachFeature,
