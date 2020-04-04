@@ -13,7 +13,7 @@ function onEachFeature(feature, layer) {
     maxHeight : "300",
     closeOnClick: true,
     closeButton: false,
-    offset: [200, 0]
+    offset: [110, 10]
   });  
   //layer.bringToFront();
 }
