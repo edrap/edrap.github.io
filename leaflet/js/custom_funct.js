@@ -9,4 +9,5 @@ function onEachFeature(feature, layer) {
     popupContent = feature.properties.description;
   }
   layer.bindPopup(popupContent, {maxWidth: "200", maxHeight : "300", closeOnClick: true, closeButton: false});
+  layer.bringToFront();
 }
