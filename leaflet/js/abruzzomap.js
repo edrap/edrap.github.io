@@ -174,11 +174,11 @@ $(document).ready(function () {
     layer: L.geoJson,
     // See http://leafletjs.com/reference.html#geojson-options
     //layerOptions: {style: {color:'red'}},
-    layerOptions: {style: {color:"red", weight:5, opacity:.6}},
-    //layerOptions: {
-    //  style: {color:"red",weight:5, opacity:.6, clickable:true},
-    //  onEachFeature: onEachFeature,
-    //},
+    //layerOptions: {style: {color:"red", weight:5, opacity:.6}},
+    layerOptions: {
+      style: {color:"red", weight:5, opacity:.6, clickable:true},
+      onEachFeature: onEachLoadedFeature,
+    },
     //layerOptions: {style: {color:"red",weight:4,opacity:.5,fill:!0,fillColor:null,fillOpacity:.2}},
     // Add to map after loading (default: true) ?
     addToMap: true,
