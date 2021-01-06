@@ -47,10 +47,18 @@ Conoscere l'orografia e la copertura boschiva del luogo di interesse è altretta
 Per conoscere meglio come pianificare un'escursione invernale in montagna e come comportarsi durante lo svolgimento della gita è molto utile seguire le <b>lezioni</b> del portale <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a>.
 
 <p style="text-align: justify;">
-Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>carta topografica</b></a>, che include un livello per la copertura boschiva, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, ed un livello per le classi di pendenza superiori a 30°, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>. Queste informazioni sono rappresentate sulla mappa con una risoluzione di 20 metri per la copertura boschiva e 10 metri per le classi di pendenza, perciò non sono rappresentative della conformazione e tipologia di terreno a scale inferiori, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
+Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>carta topografica</b></a>, che include un livello per la copertura boschiva, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, un livello per le classi di pendenza superiori a 30°, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a> ed un livello per le valanghe cadute dal 1957 al 2013 in Abruzzo, ottenute dal portale della <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Regione Abruzzo</a>. Le informazioni di copertura boschiva e classi di pendenza sono rappresentate sulla mappa rispettivamente con una risoluzione di 20 metri e 10 metri, perciò non sono rappresentative della conformazione e tipologia di terreno a scale inferiori, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
 
 <p style="text-align: justify;">
 <b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">carta topografica</a> per attività all'aperto.</b>
+  
+<p style="text-align: justify;">
+<b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a></b>
+<br>
+<ul>
+  <li>Per usare i livelli di ombreggiuatura, classi di pendenza e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/shapefiles/abruzzomapsources.xml" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml.</li>
+  <li>Per usare il livello delle valanghe in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.kml" target="_blank"><b>questo file</b></a> and caricalo come overlay in Oruxmaps.</li>
+</ul>
 
 <!--
 <div style="width: 100%; height: 100%; margin: 0 auto;">
