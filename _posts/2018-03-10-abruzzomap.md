@@ -45,9 +45,8 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href=
 <p style="text-align: justify;">
 <b>The users take full responsibility for using the <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">topographic map</a> for outdoor activities.</b>
 
-
 <p style="text-align: justify;">
-<b>Oruxmaps integration<\b>
+<b>Oruxmaps integration</b>
 To use the hillshade, slope class and three cover density layers with Oruxmaps add the following lines to the onlinemapsources.xml file:
 <onlinemapsource uid="1001">
    <name>Hillshade</name>
