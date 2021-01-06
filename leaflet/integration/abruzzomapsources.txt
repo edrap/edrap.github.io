@@ -1,7 +1,7 @@
 <onlinemapsource uid="1001">
    <name>Hillshade</name>
    <url><![CDATA[https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{$z}/{$x}/{$y}.png]]></url>
-   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">Edrap Abruzzomap</a>]]></website>
+   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">EdRap Abruzzomap</a>]]></website>
    <minzoom>10</minzoom>
    <maxzoom>16</maxzoom>
    <projection>MERCATORESFERICA</projection>
@@ -21,7 +21,7 @@
 <onlinemapsource uid="1002">
    <name>Slope</name>
    <url><![CDATA[https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{$z}/{$x}/{$y}.png]]></url>
-   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">Edrap Abruzzomap</a>]]></website>
+   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">EdRap Abruzzomap</a>]]></website>
    <minzoom>10</minzoom>
    <maxzoom>16</maxzoom>
    <projection>MERCATORESFERICA</projection>
@@ -41,7 +41,7 @@
 <onlinemapsource uid="1003">
    <name>Tree cover density</name>
    <url><![CDATA[https://www.meteoaquilano.it/abruzzo/tcd_abr/{$z}/{$x}/{$y}.png]]></url>
-   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">Edrap Abruzzomap</a>]]></website>
+   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">EdRap Abruzzomap</a>]]></website>
    <minzoom>10</minzoom>
    <maxzoom>16</maxzoom>
    <projection>MERCATORESFERICA</projection>
