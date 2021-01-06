@@ -40,7 +40,7 @@ It's also important to know the orography and the tree cover density at the tour
 It's really useful to follow the <b>lessons</b> of the <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a> portal to learn how to plan a mountain winter tour and how to behave during it.
 
 <p style="text-align: justify;">
-For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a slope layer obtained from a DEM provided by <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>, a tree cover laver provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, and a layer showing the avalanches occurred from 1957 to 2013 in Abruzzo region, obtained from the <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Regione Abruzzo</a> portal. Slope classes and tree cover informations are represented on the map with a resolution of 10 meters and 20 meters respectively, thus they are not representative of the terrain morphology at smaller scales, but they provide useful data to plan the tour. It is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
+For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes a slope layer obtained from a DEM provided by <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>, a tree cover laver provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>, and a layer showing the avalanches occurred from 1957 to 2013 in Abruzzo region, obtained from the <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Abruzzo region</a> portal. Slope classes and tree cover informations are represented on the map with a resolution of 10 meters and 20 meters respectively, thus they are not representative of the terrain morphology at smaller scales, but they provide useful data to plan the tour. It is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
 
 <p style="text-align: justify;">
 <b>The users take full responsibility for using the <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">topographic map</a> for outdoor activities.</b>
@@ -49,8 +49,8 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href=
 <b><a href="https://www.oruxmaps.com" target="_blank"><b>Oruxmaps</b></a> integration</b>
 <br>
 <ul>
-  <li>To use the hillshade, slope class and three cover density layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.xml" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
-  <li>To use the avalanche layer in Oruxmaps, download <a href="https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.kml" target="_blank">   <b>this file</b></a> and load it as overlay in Oruxmaps.</li>
+  <li>To use the hillshade, slope class and three cover density layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
+  <li>To use the avalanche layer with Oruxmaps, download <a href="https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.kml" target="_blank">   <b>this file</b></a> and load it as overlay in Oruxmaps.</li>
 </ul>
 
 
