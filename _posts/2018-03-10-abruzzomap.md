@@ -48,65 +48,14 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href=
 <p style="text-align: justify;">
 <b>Oruxmaps integration</b>
 To use the hillshade, slope class and three cover density layers with Oruxmaps add the following lines to the onlinemapsources.xml file:
-<onlinemapsource uid="1001">
-   <name>Hillshade</name>
-   <url><![CDATA[https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{$z}/{$x}/{$y}.png]]></url>
-   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">Edrap Abruzzomap</a>]]></website>
-   <minzoom>10</minzoom>
-   <maxzoom>16</maxzoom>
-   <projection>MERCATORESFERICA</projection>
-   <servers></servers>
-   <httpparam name=""></httpparam>
-   <cacheable>1</cacheable>
-   <downloadable>1</downloadable>
-   <maxtilesday>0</maxtilesday>
-   <maxthreads>0</maxthreads>
-   <xop></xop>
-   <yop>0</yop>
-   <zop></zop>
-   <qop></qop>
-   <sop></sop>
-</onlinemapsource>
+  
+<pre>
+  <code>
+    p { color: red; }
+    body { background-color: #eee; }
+  </code>
+</pre>
 
-<onlinemapsource uid="1002">
-   <name>Slope</name>
-   <url><![CDATA[https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{$z}/{$x}/{$y}.png]]></url>
-   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">Edrap Abruzzomap</a>]]></website>
-   <minzoom>10</minzoom>
-   <maxzoom>16</maxzoom>
-   <projection>MERCATORESFERICA</projection>
-   <servers></servers>
-   <httpparam name=""></httpparam>
-   <cacheable>1</cacheable>
-   <downloadable>1</downloadable>
-   <maxtilesday>0</maxtilesday>
-   <maxthreads>0</maxthreads>
-   <xop></xop>
-   <yop>0</yop>
-   <zop></zop>
-   <qop></qop>
-   <sop></sop>
-</onlinemapsource>
-
-<onlinemapsource uid="1003">
-   <name>Tree cover density</name>
-   <url><![CDATA[https://www.meteoaquilano.it/abruzzo/tcd_abr/{$z}/{$x}/{$y}.png]]></url>
-   <website><![CDATA[<a href="https://edrap.github.io/abruzzomap" target="_blank">Edrap Abruzzomap</a>]]></website>
-   <minzoom>10</minzoom>
-   <maxzoom>16</maxzoom>
-   <projection>MERCATORESFERICA</projection>
-   <servers></servers>
-   <httpparam name=""></httpparam>
-   <cacheable>1</cacheable>
-   <downloadable>1</downloadable>
-   <maxtilesday>0</maxtilesday>
-   <maxthreads>0</maxthreads>
-   <xop></xop>
-   <yop>0</yop>
-   <zop></zop>
-   <qop></qop>
-   <sop></sop>
-</onlinemapsource>
 
 
 
