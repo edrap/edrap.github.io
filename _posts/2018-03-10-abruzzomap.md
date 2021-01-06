@@ -49,7 +49,7 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href=
 <b><a href="https://www.oruxmaps.com" target="_blank"><b>Oruxmaps</b></a> integration</b>
 <br>
 <ul>
-  <li>To use the hillshade, slope class and three cover density layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/shapefiles/abruzzomapsources.xml" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
+  <li>To use the hillshade, slope class and three cover density layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.xml" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
   <li>To use the avalanche layer in Oruxmaps, download <a href="https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.kml" target="_blank">   <b>this file</b></a> and load it as overlay in Oruxmaps.</li>
 </ul>
 
