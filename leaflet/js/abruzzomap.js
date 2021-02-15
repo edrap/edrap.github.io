@@ -93,7 +93,7 @@ $(document).ready(function () {
     minZoom: 10,
     attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a>'
     //format: "jpgpng" // server exports in either jpg or png format
-  }).addTo(map);
+  }).addTo(map).bringToBack();
   
   var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
     //transparent: true,
@@ -123,7 +123,7 @@ $(document).ready(function () {
     style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
   });
   avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
-  avalanches.addTo(map);
+  avalanches.addTo(map).bringToFront();
 
   //var avalanches = L.featureGroup();
   //// Load kml file
