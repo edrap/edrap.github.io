@@ -73,7 +73,7 @@ $(document).ready(function () {
     minNativeZoom: 12,
     minZoom: 10,
     attribution: '&copy; <a href="https://www.sentinel-hub.com" target="_blank">Sentinel Hub</a>'
-  });
+  }).addTo(map);
 
   // var igm25k_reg = L.tileLayer('https://services.sentinel-hub.com/ogc/wmts/c7250729-435f-45f1-8f27-ab627866c6ae', {
   //   maxZoom: 16,
@@ -120,7 +120,7 @@ $(document).ready(function () {
     minZoom: 10,
     tms: true,
     attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
-  }).addTo(map);
+  });
 
   // var tcdlayer = L.esri.imageMapLayer({
   //   //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
@@ -143,7 +143,7 @@ $(document).ready(function () {
     minZoom: 10,
     tms: true,
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
-  }).addTo(map);
+  });
 
   var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
     //transparent: true,
@@ -195,7 +195,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 's2':sentinel2};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 's2':sentinel2, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
@@ -311,7 +311,7 @@ $(document).ready(function () {
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg};
-  var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures, 'Sentinel2':sentinel2};
+  var overlayMaps = {'Sentinel2':sentinel2, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- SCALE BAR -----------
