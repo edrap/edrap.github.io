@@ -72,28 +72,28 @@ $(document).ready(function () {
   //   attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet" target="_blank">Geoportale Regione Abruzzo</a>'
   // }).addTo(map);
 
-  // var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr/{z}/{x}/{y}.png', {
-  //   //transparent: true,
-  //   opacity: 0.3,
-  //   maxZoom: 16,
-  //   maxNativeZoom: 16,
-  //   minNativeZoom: 10,
-  //   minZoom: 10,
-  //   tms: true,
-  //   attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
-  // }).addTo(map);
-
-  var tcdlayer = L.esri.imageMapLayer({
-    //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
-    url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
-    opacity: 0.25,
+  var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr/{z}/{x}/{y}.png', {
+    //transparent: true,
+    opacity: 0.3,
     maxZoom: 16,
     maxNativeZoom: 16,
     minNativeZoom: 10,
     minZoom: 10,
-    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a>'
-    //format: "jpgpng" // server exports in either jpg or png format
-  }).addTo(map).bringToBack();
+    tms: true,
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
+  }).addTo(map);
+
+  // var tcdlayer = L.esri.imageMapLayer({
+  //   //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
+  //   url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
+  //   opacity: 0.25,
+  //   maxZoom: 16,
+  //   maxNativeZoom: 16,
+  //   minNativeZoom: 10,
+  //   minZoom: 10,
+  //   attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a>'
+  //   //format: "jpgpng" // server exports in either jpg or png format
+  // }).addTo(map).bringToBack();
   
   var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
     //transparent: true,
@@ -315,16 +315,16 @@ $(document).ready(function () {
     //     '<i style="background:' + getPercent(percent[i] + 1) + '"></i> ' +
     //     percent[i] + '%' + (percent[i + 1] ? '&ndash;' + percent[i + 1] + '%' + '<br>' : '+');
     //   }
-    tc_dlt = ["Broadleaved", "Coniferous"];
-    tc_dlt_colors = ["#469e4a", "#1c5c24"]
-    labels = ['<strong> Leaf type </strong>'];
-      // loop through our density intervals and generate a label with a colored square for each interval
-    div.innerHTML += '<br>' + '<br>' + labels + '<br>';
-      for (var i = 0; i < tc_dlt.length; i++) {
-        div.innerHTML +=
-        '<i style="background:' + tc_dlt_colors[i] + '"></i> ' +
-        tc_dlt[i] + '<br>';
-      }
+    // tc_dlt = ["Broadleaved", "Coniferous"];
+    // tc_dlt_colors = ["#469e4a", "#1c5c24"]
+    // labels = ['<strong> Leaf type </strong>'];
+    //   // loop through our density intervals and generate a label with a colored square for each interval
+    // div.innerHTML += '<br>' + '<br>' + labels + '<br>';
+    //   for (var i = 0; i < tc_dlt.length; i++) {
+    //     div.innerHTML +=
+    //     '<i style="background:' + tc_dlt_colors[i] + '"></i> ' +
+    //     tc_dlt[i] + '<br>';
+    //   }
     return div;
   };
   legend.addTo(map);
