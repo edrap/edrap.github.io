@@ -12,6 +12,8 @@ $(document).ready(function () {
     zoom: 14
   });
 
+  var none = L.tileLayer('');  
+
   var mapy_winter = L.tileLayer('https://mapserver.mapy.cz/winter-m/{z}-{x}-{y}', {
     maxZoom: 16,
     maxNativeZoom: 18,
@@ -195,7 +197,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 's2':sentinel2};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 's2':sentinel2, 'nn':none};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
@@ -310,7 +312,7 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg};
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'None': none};
   var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures, 'Sentinel2':sentinel2};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
