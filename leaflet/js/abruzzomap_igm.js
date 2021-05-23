@@ -12,7 +12,7 @@ $(document).ready(function () {
     zoom: 14
   });
 
-  var none = L.tileLayer('');  
+  //var none = L.tileLayer('');  
 
   var mapy_winter = L.tileLayer('https://mapserver.mapy.cz/winter-m/{z}-{x}-{y}', {
     maxZoom: 16,
@@ -20,7 +20,7 @@ $(document).ready(function () {
     minNativeZoom: 3,
     minZoom: 10,
     attribution: '&copy; <a href="https://mapy.cz" target="_blank">Mapy</a>'
-  }).addTo(map);
+  });
 
   var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16,
@@ -55,7 +55,7 @@ $(document).ready(function () {
     minZoom: 10,
     tms: true,
     attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
-  });
+  }).addTo(map);
 
   var igm25k_reg = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_reg_abr/{z}/{x}/{y}.png', {
     //transparent: true,
@@ -67,15 +67,15 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
   });
 
-  var sentinel2 = L.tileLayer.wms('https://services.sentinel-hub.com/ogc/wms/c7250729-435f-45f1-8f27-ab627866c6ae', {
-    layers: 'TRUE_COLOR',
-    opacity: 0.3,
-    maxZoom: 16,
-    maxNativeZoom: 16,
-    minNativeZoom: 12,
-    minZoom: 10,
-    attribution: '&copy; <a href="https://www.sentinel-hub.com" target="_blank">Sentinel Hub</a>'
-  }).addTo(map);
+  // var sentinel2 = L.tileLayer.wms('https://services.sentinel-hub.com/ogc/wms/c7250729-435f-45f1-8f27-ab627866c6ae', {
+  //   layers: 'TRUE_COLOR',
+  //   opacity: 0.3,
+  //   maxZoom: 16,
+  //   maxNativeZoom: 16,
+  //   minNativeZoom: 12,
+  //   minZoom: 10,
+  //   attribution: '&copy; <a href="https://www.sentinel-hub.com" target="_blank">Sentinel Hub</a>'
+  // }).addTo(map);
 
   // var igm25k_reg = L.tileLayer('https://services.sentinel-hub.com/ogc/wmts/c7250729-435f-45f1-8f27-ab627866c6ae', {
   //   maxZoom: 16,
@@ -197,7 +197,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 's2':sentinel2, 'nn':none};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
@@ -229,7 +229,28 @@ $(document).ready(function () {
     //layerOptions: {style: {color:'red'}},
     //layerOptions: {style: {color:"red", weight:5, opacity:.6}},
     layerOptions: {
-      style: {color:"red", weight:5, opacity:.6, clickable:true},
+      style: function(feature, layer) {
+        //console.log(feature)
+        if (feature.geometry.type == "Polygon") {
+          //return {color:"#1f78b4", weight:0, opacity:.4, clickable:false};
+          if (feature.properties.SEB == 100) {
+            return {fillColor:"#1f78b4", stroke: false, fillOpacity:0.3, clickable:false};
+          }
+          else if (feature.properties.SEB == 205) {
+            return {fillColor:"#7f7f7f", stroke: false, fillOpacity:0.3, clickable:false};
+          }
+          else if (feature.properties.SEB == 254) {
+            return {fillColor:"#000000", stroke: false, fillOpacity:0.3, clickable:false};
+          }
+          else {
+            return {color:"red", weight:5, opacity:.6, fill:true, fillColor:"red", fillOpacity:.2, clickable:true};
+          }
+        }
+        else {
+          return {color:"red", weight:5, opacity:.6, fill:true, fillColor:"red", fillOpacity:.2, clickable:true};
+        };
+      //style: {color:"red", weight:5, opacity:.6, clickable:true},
+      },
       onEachFeature: onEachLoadedFeature,
     },
     //layerOptions: {style: {color:"red",weight:4,opacity:.5,fill:!0,fillColor:null,fillOpacity:.2}},
@@ -312,8 +333,8 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'None': none};
-  var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures, 'Sentinel2':sentinel2};
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg};
+  var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- SCALE BAR -----------
