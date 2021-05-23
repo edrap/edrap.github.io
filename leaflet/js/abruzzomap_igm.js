@@ -122,7 +122,7 @@ $(document).ready(function () {
     minZoom: 10,
     tms: true,
     attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
-  });
+  }).addTo(map);
 
   // var tcdlayer = L.esri.imageMapLayer({
   //   //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
@@ -145,7 +145,7 @@ $(document).ready(function () {
     minZoom: 10,
     tms: true,
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
-  });
+  }).addTo(map);
 
   var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
     //transparent: true,
