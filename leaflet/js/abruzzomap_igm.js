@@ -334,7 +334,7 @@ $(document).ready(function () {
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg};
-  var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var overlayMaps = {'Tree cover (2015)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches (1957-2013)':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- SCALE BAR -----------
