@@ -190,7 +190,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
@@ -326,7 +326,7 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid};
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg};
   var overlayMaps = {'Tree cover (2015)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'C.L.P.V VA':avalanches_va, 'C.L.P.V VF':avalanches_vf, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
