@@ -45,6 +45,20 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://www.google.com" target="_blank">Google</a>'
   });
 
+  var igm25k_reg = L.tileLayer.wms('https://tinyurl.com/4xvpkp3y', {
+    layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
+    maxZoom: 16,
+    minZoom: 10,
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+  });
+  
+  var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
+    layers: 'CB.IGM25000.33',
+    maxZoom: 16,
+    minZoom: 10,
+    attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
+  });
+  
   // var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
   //   //transparent: true,
   //   maxZoom: 16,
@@ -117,14 +131,34 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   }).addTo(map);
   
-  var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
-    dataType:"json",
-    onEachFeature: onEachFeature,
-    style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
-  });
-  avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
-  avalanches.addTo(map).bringToFront();
+  // var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
+  //   dataType:"json",
+  //   onEachFeature: onEachFeature,
+  //   style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
+  // });
+  // avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
+  // avalanches.addTo(map).bringToFront();
 
+ var avalanches_va = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+    layers: 'VA',
+    maxZoom: 16,
+    minZoom: 10,
+    minNativeZoom: 13,
+    transparent: true,
+    format: 'image/png',   
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+  }).addTo(map);
+  
+ var avalanches_vf = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+    layers: 'VF',
+    maxZoom: 16,
+    minZoom: 10,
+    minNativeZoom: 13,
+    transparent: true,
+    format: 'image/png',   
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+  }).addTo(map);
+  
   //var avalanches = L.featureGroup();
   //// Load kml file
   //fetch('https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.kml')
@@ -156,7 +190,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'av':avalanches, 'sp':pistelayer, 'uf':userFeatures};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
@@ -293,7 +327,7 @@ $(document).ready(function () {
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid};
-  var overlayMaps = {'Tree cover (2015)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Avalanches (1957-2013)':avalanches, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var overlayMaps = {'Tree cover (2015)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'C.L.P.V VA':avalanches_va, 'C.L.P.V VF':avalanches_vf, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- SCALE BAR -----------
