@@ -165,14 +165,21 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   }).addTo(map);
 
-  var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
-    dataType:"json",
-    onEachFeature: onEachFeature,
-    style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
-  });
-  avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
-  avalanches.addTo(map).bringToFront();
-
+  // var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
+  //   dataType:"json",
+  //   onEachFeature: onEachFeature,
+  //   style: {color:"blue", weight:1, opacity:.6, fill:true, fillColor:"blue", fillOpacity:.4, clickable:true},
+  // });
+  // avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
+  // avalanches.addTo(map).bringToFront();
+  
+  var avalanches = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+    layers: 'VF',
+    maxZoom: 16,
+    minZoom: 10,
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+  }).addTo(map);
+  
   //var avalanches = L.featureGroup();
   //// Load kml file
   //fetch('https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.kml')
