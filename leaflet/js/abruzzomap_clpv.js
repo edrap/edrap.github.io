@@ -147,7 +147,7 @@ $(document).ready(function () {
     transparent: true,
     format: 'image/png',   
     attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
-  }).addTo(map);
+  });
   
  var avalanches_vf = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
     layers: 'VF',
@@ -157,7 +157,7 @@ $(document).ready(function () {
     transparent: true,
     format: 'image/png',   
     attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
-  }).addTo(map);
+  });
   
   //var avalanches = L.featureGroup();
   //// Load kml file
@@ -326,7 +326,7 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg};
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
   var overlayMaps = {'Tree cover (2015)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'C.L.P.V VA':avalanches_va, 'C.L.P.V VF':avalanches_vf, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
