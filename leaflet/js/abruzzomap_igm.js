@@ -174,7 +174,7 @@ $(document).ready(function () {
   // avalanches.addTo(map).bringToFront();
   
   var avalanches = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
-    layers: 'VF',
+    layers: 'VA',
     maxZoom: 16,
     minZoom: 10,
     minNativeZoom: 13,
