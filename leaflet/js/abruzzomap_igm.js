@@ -47,15 +47,15 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://www.google.com" target="_blank">Google</a>'
   });
 
-  var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
-    //transparent: true,
-    maxZoom: 16,
-    maxNativeZoom: 16,
-    minNativeZoom: 12,
-    minZoom: 10,
-    tms: true,
-    attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
-  }).addTo(map);
+  // var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
+  //   //transparent: true,
+  //   maxZoom: 16,
+  //   maxNativeZoom: 16,
+  //   minNativeZoom: 12,
+  //   minZoom: 10,
+  //   tms: true,
+  //   attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
+  // }).addTo(map);
 
   // var igm25k_reg = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_reg_abr/{z}/{x}/{y}.png', {
   //   //transparent: true,
@@ -110,7 +110,14 @@ $(document).ready(function () {
     layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
     maxZoom: 16,
     minZoom: 10,
-    attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet" target="_blank">Geoportale Regione Abruzzo</a>'
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+  });
+  
+  var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
+    layers: 'CB.IGM25000.33',
+    maxZoom: 16,
+    minZoom: 10,
+    attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
   });
 
   var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr/{z}/{x}/{y}.png', {
