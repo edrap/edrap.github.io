@@ -118,7 +118,7 @@ $(document).ready(function () {
     maxZoom: 16,
     minZoom: 10,
     attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
-  });
+  }).addTo(map);
 
   var tcdlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/tcd_abr/{z}/{x}/{y}.png', {
     //transparent: true,
