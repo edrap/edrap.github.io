@@ -177,6 +177,7 @@ $(document).ready(function () {
     layers: 'VF',
     maxZoom: 16,
     minZoom: 10,
+    minNativeZoom: 13,
     transparent: true,
     format: 'image/png',   
     attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
