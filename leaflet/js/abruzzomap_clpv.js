@@ -109,9 +109,9 @@ $(document).ready(function () {
     //format: "jpgpng" // server exports in either jpg or png format
   }).addTo(map).bringToBack();
   
-  var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
-  //var hillshlayer = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}', {
-    //transparent: true,
+  //var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
+  var hillshlayer = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png', {
+    transparent: true,
     opacity: 0.2,
     maxZoom: 16,
     maxNativeZoom: 16,
