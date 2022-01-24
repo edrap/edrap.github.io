@@ -98,8 +98,8 @@ $(document).ready(function () {
   // }).addTo(map);
 
   var tcdlayer = L.esri.imageMapLayer({
-    //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
-    url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
+    url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
+    //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
     opacity: 0.25,
     maxZoom: 16,
     maxNativeZoom: 16,
