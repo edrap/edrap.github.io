@@ -122,7 +122,7 @@ $(document).ready(function () {
 
   var hillshlayer = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png', {
     transparent: true,
-    opacity: 0.4,
+    opacity: 1.,
     maxZoom: 16,
     maxNativeZoom: 16,
     minNativeZoom: 10,
