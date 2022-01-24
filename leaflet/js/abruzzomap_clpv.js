@@ -109,27 +109,27 @@ $(document).ready(function () {
     //format: "jpgpng" // server exports in either jpg or png format
   }).addTo(map).bringToBack();
   
-  // var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
-  //   //transparent: true,
-  //   opacity: 0.2,
-  //   maxZoom: 16,
-  //   maxNativeZoom: 16,
-  //   minNativeZoom: 10,
-  //   minZoom: 10,
-  //   tms: true,
-  //   attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
-  // }).addTo(map);
-
-  var hillshlayer = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png', {
-    transparent: true,
-    opacity: 1.,
+  var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
+    //transparent: true,
+    opacity: 0.2,
     maxZoom: 16,
     maxNativeZoom: 16,
     minNativeZoom: 10,
     minZoom: 10,
-    tms: false,
+    tms: true,
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   }).addTo(map);
+
+  // var hillshlayer = L.tileLayer('https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png', {
+  //   transparent: true,
+  //   opacity: 1.,
+  //   maxZoom: 16,
+  //   maxNativeZoom: 16,
+  //   minNativeZoom: 10,
+  //   minZoom: 10,
+  //   tms: false,
+  //   attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
+  // }).addTo(map);
   
   var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
     //transparent: true,
