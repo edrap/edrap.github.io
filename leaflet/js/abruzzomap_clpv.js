@@ -117,7 +117,7 @@ $(document).ready(function () {
     maxNativeZoom: 16,
     minNativeZoom: 10,
     minZoom: 10,
-    tms: true,
+    tms: false,
     attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   }).addTo(map);
 
