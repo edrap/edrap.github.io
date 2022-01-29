@@ -157,7 +157,7 @@ $(document).ready(function () {
     minNativeZoom: 13,
     transparent: true,
     format: 'image/png',   
-    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
  var avalanches_vf = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
@@ -167,7 +167,7 @@ $(document).ready(function () {
     minNativeZoom: 13,
     transparent: true,
     format: 'image/png',   
-    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
   //var avalanches = L.featureGroup();
