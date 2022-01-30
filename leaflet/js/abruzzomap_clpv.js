@@ -341,6 +341,11 @@ $(document).ready(function () {
   var overlayMaps = {'Tree cover (2018)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
+  // ----------- ATTRIBUTION -----------
+  L.control.attribution({
+    position: 'bottomleft'
+  }).addTo(map);
+
   // ----------- SCALE BAR -----------
   L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
 
