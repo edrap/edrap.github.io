@@ -1,5 +1,9 @@
 function leaflet_alert() {
-    alert("The users take full responsibility for using the map for outdoor activities");
+    var newLine = "\r\n"
+    var brows = "The map was tested on Firefox and Safari"
+    var resp = "The users take full responsibility for using the map for outdoor activities"
+    msg = brows + newLine + resp;
+    alert(msg);
 }
 
 function onEachFeature(feature, layer) {
