@@ -8,6 +8,7 @@ $(document).ready(function () {
   // });
 
   var map = L.map('map', {
+    attributionControl: false,
     center: [42.3469,13.39817],
     zoom: 14
   });
