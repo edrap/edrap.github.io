@@ -1,7 +1,7 @@
 function leaflet_alert() {
     var newLine = "\r\n"
-    var brows = "The map was tested on Firefox and Safari"
-    var resp = "The users take full responsibility for using the map for outdoor activities"
+    var brows = "The map was tested on Firefox and Safari. To use it on Chrome you must allow mixed contents."
+    var resp = "The users take full responsibility for using the map for outdoor activities."
     msg = brows + newLine + newLine + resp;
     alert(msg);
 }
