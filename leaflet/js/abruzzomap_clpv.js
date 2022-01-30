@@ -342,7 +342,7 @@ $(document).ready(function () {
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- SCALE BAR -----------
-  L.control.scale({imperial: false, position: 'bottomright'}).addTo(map);
+  L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
 
   // ----------- LEGEND -----------
   function getColor(d) {
