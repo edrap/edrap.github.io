@@ -360,7 +360,7 @@ $(document).ready(function () {
   //   d > 1    ? '#a3ec9a' :
   //   '#FFEDA0';
   // }
-  var legend = L.control({position: 'bottomright'});
+  var legend = L.control({position: 'bottomleft'});
   legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
     grades = [30, 35, 40, 45];
