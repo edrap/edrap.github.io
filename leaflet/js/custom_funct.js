@@ -2,7 +2,7 @@ function leaflet_alert() {
     var newLine = "\r\n"
     var brows = "The map was tested on Firefox and Safari"
     var resp = "The users take full responsibility for using the map for outdoor activities"
-    msg = brows + newLine + resp;
+    msg = brows + newLine + newLine + resp;
     alert(msg);
 }
 
