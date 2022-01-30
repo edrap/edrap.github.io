@@ -46,16 +46,16 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://www.google.com" target="_blank">Google</a>'
   });
 
-  //var igm25k_reg = L.tileLayer.wms('https://tinyurl.com/4xvpkp3y', {
-  var igm25k_reg = L.tileLayer.wms('http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/', {
+  var igm25k_reg = L.tileLayer.wms('https://tinyurl.com/4xvpkp3y', {
+  //var igm25k_reg = L.tileLayer.wms('http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/', {
     layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
     maxZoom: 16,
     minZoom: 10,
     attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
-  //var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
-  var igm25k_min = L.tileLayer.wms('http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/IGM_25000.map', {
+  var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
+  //var igm25k_min = L.tileLayer.wms('http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/IGM_25000.map', {
     layers: 'CB.IGM25000.33',
     maxZoom: 16,
     minZoom: 10,
