@@ -51,7 +51,7 @@ $(document).ready(function () {
     layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
     maxZoom: 16,
     minZoom: 10,
-    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
+    attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
   //var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
@@ -59,7 +59,7 @@ $(document).ready(function () {
     layers: 'CB.IGM25000.33',
     maxZoom: 16,
     minZoom: 10,
-    attribution: '&copy; <a href="https://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
+    attribution: '&copy; <a href="http://www.pcn.minambiente.it/geoportal/catalog/search/resource/details.page?uuid={E0BD50F3-2238-41B5-8F78-AE3593BB1B3F}" target="_blank">Geoportale Nazionale</a>'
   });
   
   // var igm25k_min = L.tileLayer('https://www.meteoaquilano.it/abruzzo/igm25k_min_abr/{z}/{x}/{y}.png', {
@@ -161,7 +161,7 @@ $(document).ready(function () {
     minNativeZoom: 13,
     transparent: true,
     format: 'image/png',   
-    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
+    attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
  //var avalanches_vf = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
@@ -172,7 +172,7 @@ $(document).ready(function () {
     minNativeZoom: 13,
     transparent: true,
     format: 'image/png',   
-    attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
+    attribution: '&copy; <a href="http://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
   //var avalanches = L.featureGroup();
