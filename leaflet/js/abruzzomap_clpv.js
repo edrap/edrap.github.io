@@ -46,14 +46,16 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://www.google.com" target="_blank">Google</a>'
   });
 
-  var igm25k_reg = L.tileLayer.wms('https://tinyurl.com/4xvpkp3y', {
+  //var igm25k_reg = L.tileLayer.wms('https://tinyurl.com/4xvpkp3y', {
+  var igm25k_reg = L.tileLayer.wms('http://geocatalogo.regione.abruzzo.it/erdas-iws/ogc/wms/', {
     layers: 'Mosaici_UTM-WGS84_IGM25k_WGS84.ecw',
     maxZoom: 16,
     minZoom: 10,
     attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/cartografia-di-sfondo-raster/carta-topografica-igm-scala-1-25.000" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
-  var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
+  //var igm25k_min = L.tileLayer.wms('https://tinyurl.com/mrtec773', {
+  var igm25k_min = L.tileLayer.wms('http://wms.pcn.minambiente.it/ogc?map=/ms_ogc/WMS_v1.3/raster/IGM_25000.map', {
     layers: 'CB.IGM25000.33',
     maxZoom: 16,
     minZoom: 10,
@@ -151,7 +153,8 @@ $(document).ready(function () {
   // avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
   // avalanches.addTo(map).bringToFront();
 
- var avalanches_va = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+ //var avalanches_va = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+ var avalanches_va = L.tileLayer.wms('http://catasto.regione.abruzzo.it:6080/arcgis/services/Protezione_Civile/CLPV_Abruzzo/MapServer/WMSServer', {
     layers: 'VA',
     maxZoom: 16,
     minZoom: 10,
@@ -161,7 +164,8 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Geoportale Regione Abruzzo</a>'
   });
   
- var avalanches_vf = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+ //var avalanches_vf = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
+ var avalanches_vf = L.tileLayer.wms('http://catasto.regione.abruzzo.it:6080/arcgis/services/Protezione_Civile/CLPV_Abruzzo/MapServer/WMSServer', {
     layers: 'VF',
     maxZoom: 16,
     minZoom: 10,
