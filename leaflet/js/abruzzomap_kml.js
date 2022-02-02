@@ -37,7 +37,7 @@ $(document).ready(function () {
   //});
   
   var baselayer2 = L.leafletGeotiff(
-    url="https://edrap.github.io/leaflet/FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG_wgs84_c.tif",
+    url="../FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG_wgs84_c.tif",
     options={
       band: 0
     }
