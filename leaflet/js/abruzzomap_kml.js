@@ -36,7 +36,7 @@ $(document).ready(function () {
   //  attribution: '&copy; <a href="https://www.4umaps.com" target="_blank">4UMaps</a>'
   //});
   
-  var baselayer2 = L.leafletGeotiff("https://edrap.github.io/leaflet/FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG_wgs84_c.tif", {
+  var baselayer2 = L.leafletGeotiff("../FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG_wgs84_c.tif", {
     band: 0
   });
 
