@@ -40,7 +40,7 @@ $(document).ready(function () {
     url="./FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG_wgs84_c.tif",
     options={
       band: 1,
-      image: 0
+      image: 1
     }
   );
 
