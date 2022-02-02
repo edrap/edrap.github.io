@@ -28,13 +28,15 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a>'
   });
 
-  var baselayer2 = L.tileLayer('https://4umaps.com/{z}/{x}/{y}.png', {
-    maxZoom: 16,
-    maxNativeZoom: 15,
-    minNativeZoom: 2,
-    minZoom: 10,
-    attribution: '&copy; <a href="https://www.4umaps.com" target="_blank">4UMaps</a>'
-  });
+  //var baselayer2 = L.tileLayer('https://4umaps.com/{z}/{x}/{y}.png', {
+  //  maxZoom: 16,
+  //  maxNativeZoom: 15,
+  //  minNativeZoom: 2,
+  //  minZoom: 10,
+  //  attribution: '&copy; <a href="https://www.4umaps.com" target="_blank">4UMaps</a>'
+  //});
+  
+  var baselayer2 = L.leafletGeotiff("http://www.meteoaquilano.it/abruzzo/FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG.tif");
 
   var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
     maxZoom: 16,
