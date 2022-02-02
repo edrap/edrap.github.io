@@ -36,7 +36,9 @@ $(document).ready(function () {
   //  attribution: '&copy; <a href="https://www.4umaps.com" target="_blank">4UMaps</a>'
   //});
   
-  var baselayer2 = L.leafletGeotiff("http://www.meteoaquilano.it/abruzzo/FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG.tif");
+  var baselayer2 = L.leafletGeotiff("http://www.meteoaquilano.it/abruzzo/FSC_20220115T100908_S2A_T33TUG_V101_1_FSCOG.tif", {
+    band: 0
+  });
 
   var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
     maxZoom: 16,
