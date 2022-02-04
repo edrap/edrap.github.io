@@ -266,7 +266,7 @@ $(document).ready(function () {
     // Add to map after loading (default: true) ?
     addToMap: true,
     // File size limit in kb (default: 1024) ?
-    fileSizeLimit: 102400,
+    fileSizeLimit: 1024000,
     // Restrict accepted file formats (default: .geojson, .kml, and .gpx) ?
     formats: [
       '.geojson',
