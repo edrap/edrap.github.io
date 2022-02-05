@@ -276,6 +276,7 @@ $(document).ready(function () {
   }).addTo(map);
   load.loader.on('data:loaded', function (e) {
     // Add to map layer switcher
+    console.log(e.layer);
     userFeatures.addLayer(e.layer);
   });
 
