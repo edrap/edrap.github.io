@@ -242,15 +242,15 @@ $(document).ready(function () {
         //console.log(feature)
         if (feature.geometry.type == "Polygon") {
           //return {color:"#1f78b4", weight:0, opacity:.4, clickable:false};
-          if (feature.properties.SEB == 100) {
+          if (feature.properties.SDATA == 100) {
             return {fillColor:"#1f78b4", stroke: false, fillOpacity:0.3, clickable:false};
           }
-          else if (feature.properties.SEB == 205) {
+          else if (feature.properties.SDATA == 205) {
             return {fillColor:"#7f7f7f", stroke: false, fillOpacity:0.3, clickable:false};
           }
-          else if (feature.properties.SEB == 254) {
-            return {fillColor:"#000000", stroke: false, fillOpacity:0.3, clickable:false};
-          }
+          //else if (feature.properties.SEB == 254) {
+          //  return {fillColor:"#000000", stroke: false, fillOpacity:0.3, clickable:false};
+          //}
           else {
             return {color:"red", weight:5, opacity:.6, fill:true, fillColor:"red", fillOpacity:.2, clickable:true};
           }
