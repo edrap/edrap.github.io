@@ -266,7 +266,7 @@ $(document).ready(function () {
     // Add to map after loading (default: true) ?
     addToMap: true,
     // File size limit in kb (default: 1024) ?
-    fileSizeLimit: 1024000,
+    fileSizeLimit: 102400,
     // Restrict accepted file formats (default: .geojson, .kml, and .gpx) ?
     formats: [
       '.geojson',
@@ -276,7 +276,6 @@ $(document).ready(function () {
   }).addTo(map);
   load.loader.on('data:loaded', function (e) {
     // Add to map layer switcher
-    console.log(e.layer);
     userFeatures.addLayer(e.layer);
   });
 
