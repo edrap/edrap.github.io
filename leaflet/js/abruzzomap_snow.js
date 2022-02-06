@@ -152,17 +152,7 @@ $(document).ready(function () {
   //   attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   // }).addTo(map);
 
-  var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
-    //transparent: true,
-    opacity: 0.4,
-    maxZoom: 16,
-    maxNativeZoom: 16,
-    minNativeZoom: 10,
-    minZoom: 10,
-    tms: true,
-    attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
-  }).addTo(map);
-
+  
  //var avalanches_va = L.tileLayer.wms('https://tinyurl.com/yf6t2xrv', {
  var avalanches_va = L.tileLayer.wms('http://catasto.regione.abruzzo.it:6080/arcgis/services/Protezione_Civile/CLPV_Abruzzo/MapServer/WMSServer', {
     layers: 'VA',
@@ -213,7 +203,26 @@ $(document).ready(function () {
   //    });
   // avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
   // avalanches.addTo(map);
+  
+  var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
+    //transparent: true,
+    opacity: 0.4,
+    maxZoom: 16,
+    maxNativeZoom: 16,
+    minNativeZoom: 10,
+    minZoom: 10,
+    tms: true,
+    attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
+  }).addTo(map);
 
+  var pistelayer = L.tileLayer('https://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png', {
+    maxZoom: 16,
+    maxNativeZoom: 18,
+    minNativeZoom: 3,
+    minZoom: 10,
+    attribution: '&copy; <a href="https://www.opensnowmap.org/" target="_blank">OpenSnowMap</a>'
+  }).addTo(map);
+  
   var userFeatures = L.featureGroup().addTo(map);
   var gpsFeatures = L.featureGroup().addTo(map);
 
@@ -356,7 +365,7 @@ $(document).ready(function () {
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-  var overlayMaps = {'Tree cover (2018)':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'Snow cover':sca, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var overlayMaps = {'Snow cover':sca, 'Tree cover (2018)':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- ATTRIBUTION -----------
