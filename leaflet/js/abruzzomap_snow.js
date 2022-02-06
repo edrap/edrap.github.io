@@ -100,6 +100,24 @@ $(document).ready(function () {
   //  attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
   // }).addTo(map);
 
+  var options = {
+    maxZoom: 16,
+    minZoom: 10,
+    debug: 0,
+    style: (properties) => {
+        if (properties.SDATA == 100) {
+          return {fillColor:"#1f78b4", stroke: false, weight: 0.1, fillOpacity:0.4, clickable:false};
+        }
+        else if (properties.SDATA == 205) {
+          return {fillColor:"#7f7f7f", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
+        }
+        else if (properties.SDATA == 255) {
+         return {fillColor:"#000000", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
+        }
+    }
+  };
+  var sca = L.geoJson.vt(data, options);
+  
   var tcdlayer = L.esri.imageMapLayer({
     //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
     url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
@@ -178,24 +196,6 @@ $(document).ready(function () {
   // //   avalanches.addTo(map).bringToFront();
   // // })
 
-  var options = {
-    maxZoom: 16,
-    minZoom: 10,
-    debug: 0,
-    style: (properties) => {
-        if (properties.SDATA == 100) {
-          return {fillColor:"#1f78b4", stroke: false, weight: 0.1, fillOpacity:0.4, clickable:false};
-        }
-        else if (properties.SDATA == 205) {
-          return {fillColor:"#7f7f7f", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
-        }
-        else if (properties.SDATA == 255) {
-         return {fillColor:"#000000", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
-        }
-    }
-  };
-  var sca = L.geoJson.vt(data, options);
-
   // var avalanches = L.featureGroup();
   // // Load kml file
   // fetch('https://edrap.github.io/leaflet/shapefiles/out.kml')
@@ -213,14 +213,6 @@ $(document).ready(function () {
   //    });
   // avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
   // avalanches.addTo(map);
-
-  var pistelayer = L.tileLayer('https://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png', {
-    maxZoom: 16,
-    maxNativeZoom: 18,
-    minNativeZoom: 3,
-    minZoom: 10,
-    attribution: '&copy; <a href="https://www.opensnowmap.org/" target="_blank">OpenSnowMap</a>'
-  }).addTo(map);
 
   var userFeatures = L.featureGroup().addTo(map);
   var gpsFeatures = L.featureGroup().addTo(map);
