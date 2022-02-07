@@ -114,7 +114,8 @@ $(document).ready(function () {
         else if (properties.SDATA == 255) {
          return {fillColor:"#000000", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
         }
-    }
+    },
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
   };
   var sca = L.geoJson.vt(data, options);
   
