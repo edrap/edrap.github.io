@@ -395,15 +395,7 @@ $(document).ready(function () {
   var legend = L.control({position: 'bottomleft'});
   legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'info legend'),
-    grades = [30, 35, 40, 45];
-    labels = ['<strong> Slope class </strong>'];
-    // loop through our density intervals and generate a label with a colored square for each interval
-    div.innerHTML = labels + '<br>';
-    for (var i = 0; i < grades.length; i++) {
-      div.innerHTML +=
-      '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-      grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
-    }
+        
     // percent = [1, 20, 40, 60, 80];
     // labels = ['<strong> Tree density </strong>'];
     //   // loop through our density intervals and generate a label with a colored square for each interval
@@ -413,28 +405,41 @@ $(document).ready(function () {
     //     '<i style="background:' + getPercent(percent[i] + 1) + '"></i> ' +
     //     percent[i] + '%' + (percent[i + 1] ? '&ndash;' + percent[i + 1] + '%' + '<br>' : '+');
     //   }
+
+    sca_legend = ["Snow", "Clouds","No data"];
+    sca_legend_colors = ["#1f78b4", "#7f7f7f", "#000000"]
+    labels = ['<strong> Snow cover </strong>'];
+      // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML = labels + '<br>';
+    for (var i = 0; i < sca_legend.length; i++) {
+      div.innerHTML +=
+      '<i style="background:' + sca_legend_colors[i] + '"></i> ' +
+      sca_legend[i] + '<br>';
+    }
+
     tc_dlt = ["Broadleaved", "Coniferous"];
     tc_dlt_colors = ["#469e4a", "#1c5c24"]
     labels = ['<strong> Leaf type </strong>'];
       // loop through our density intervals and generate a label with a colored square for each interval
-    div.innerHTML += '<br>' + labels + '<br>';
+    div.innerHTML += labels + '<br>';
     for (var i = 0; i < tc_dlt.length; i++) {
       div.innerHTML +=
       '<i style="background:' + tc_dlt_colors[i] + '"></i> ' +
       tc_dlt[i] + '<br>';
     }
 
-    sca_legend = ["Snow", "Clouds","No data"];
-    sca_legend_colors = ["#1f78b4", "#7f7f7f", "#000000"]
-    labels = ['<strong> Snow cover </strong>'];
-      // loop through our density intervals and generate a label with a colored square for each interval
+    grades = [30, 35, 40, 45];
+    labels = ['<strong> Slope class </strong>'];
+    // loop through our density intervals and generate a label with a colored square for each interval
     div.innerHTML += labels + '<br>';
-    for (var i = 0; i < sca_legend.length; i++) {
+    for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
-      '<i style="background:' + sca_legend_colors[i] + '"></i> ' +
-      sca_legend[i] + '<br>';
+      '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+      grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
     }
+
     return div;
+    
   };
   legend.addTo(map);
 
