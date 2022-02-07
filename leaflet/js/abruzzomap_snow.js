@@ -366,7 +366,7 @@ $(document).ready(function () {
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-  var overlayMaps = {'Snow cover':sca, 'Tree cover (2018)':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- ATTRIBUTION -----------
