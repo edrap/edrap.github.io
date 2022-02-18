@@ -45,7 +45,6 @@ function readTextFile(file)
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
-        allText = '';
         if(rawFile.readyState === 4)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
@@ -54,7 +53,6 @@ function readTextFile(file)
                 //alert(allText);
             }
         }
-        return allText;
     }
     rawFile.send(null);
 }
