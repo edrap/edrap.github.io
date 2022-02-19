@@ -104,7 +104,6 @@ $(document).ready(function () {
     maxZoom: 16,
     minZoom: 10,
     debug: 0,
-    onEachFeature: readTextFile,
     style: (properties) => {
         if (properties.SDATA == 100) {
           return {fillColor:"#1f78b4", stroke: false, weight: 0.1, fillOpacity:0.4, clickable:false};
