@@ -39,20 +39,25 @@ function onEachLoadedFeature(feature, layer) {
   //layer.bringToFront();
 }
 
-function readTextFile(file)
+function readTextFile(feature, layer)
 {
     var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", file, false);
+    rawFile.open("GET", "https://www.meteoaquilano.it/abruzzo/filedate.txt", false);
     rawFile.onreadystatechange = function ()
     {   
-        snowdate = ""
         if(rawFile.readyState === 4)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
-                snowdate = rawFile.responseText;
+                popupContent = rawFile.responseText;
+                layer.bindPopup(popupContent, {
+                  maxWidth: "200",
+                  maxHeight : "300",
+                  closeOnClick: true,
+                  closeButton: false,
+                  //offset: [10, 10]
+                });
             }
         }
     }
-    return snowdate;
 }
