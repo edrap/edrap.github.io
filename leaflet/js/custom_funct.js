@@ -56,3 +56,25 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
+
+function leaflet_alert_2() {
+    var newLine = "\r\n"
+    var brows = "The map was tested on Firefox and Safari. To use it on Chrome you must allow mixed contents."
+    var resp = "The users take full responsibility for using the map for outdoor activities."
+    var snow = "Snow cover map valid for "
+    
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var snowdate = rawFile.responseText;
+                msg = brows + newLine + newLine + resp + newLine + newLine + snow + snowdate;
+                alert(msg);
+            }
+        }
+    }
+}
