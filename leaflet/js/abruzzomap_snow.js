@@ -229,7 +229,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sc':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
   L.hash(map, allMapLayers);
   // L.Permalink.setup(map);
 
