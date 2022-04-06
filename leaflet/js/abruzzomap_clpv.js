@@ -134,17 +134,6 @@ $(document).ready(function () {
   //   attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
   // }).addTo(map);
   
-  var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
-    //transparent: true,
-    opacity: 0.4,
-    maxZoom: 16,
-    maxNativeZoom: 16,
-    minNativeZoom: 10,
-    minZoom: 10,
-    tms: true,
-    attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
-  }).addTo(map);
-  
   // var avalanches = new L.GeoJSON.AJAX("https://edrap.github.io/leaflet/shapefiles/valanghe_abruzzo_1957-2013.json", {
   //   dataType:"json",
   //   onEachFeature: onEachFeature,
@@ -192,7 +181,18 @@ $(document).ready(function () {
   //    });
   //avalanches.getAttribution = function() { return '&copy; <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Opendata Regione Abruzzo</a>'; };
   //avalanches.addTo(map);
-
+  
+  var slopelayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_slope_abr/{z}/{x}/{y}.png', {
+    //transparent: true,
+    opacity: 0.4,
+    maxZoom: 16,
+    maxNativeZoom: 16,
+    minNativeZoom: 10,
+    minZoom: 10,
+    tms: true,
+    attribution: '&copy; <a href="https://tinitaly.pi.ingv.it/" target="_blank">Tinitaly</a>'
+  }).addTo(map);
+  
   var pistelayer = L.tileLayer('https://www.opensnowmap.org/tiles-pistes/{z}/{x}/{y}.png', {
     maxZoom: 16,
     maxNativeZoom: 18,
@@ -344,7 +344,7 @@ $(document).ready(function () {
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-  var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'Slope class':slopelayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var overlayMaps = {'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   // ----------- ATTRIBUTION -----------
