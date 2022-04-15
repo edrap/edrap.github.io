@@ -279,7 +279,8 @@ $(document).ready(function () {
           }
         }
         else {
-          return {color:"red", weight:5, opacity:.6, fill:true, fillColor:"red", fillOpacity:.2, clickable:true};
+          //return {color:"red", weight:5, opacity:.6, fill:true, fillColor:"red", fillOpacity:.2, clickable:true};
+          return {color:"red", weight:5, opacity:.6, fill:false, clickable:true};
         };
       //style: {color:"red", weight:5, opacity:.6, clickable:true},
       },
