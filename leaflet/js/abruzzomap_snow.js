@@ -99,27 +99,8 @@ $(document).ready(function () {
   //  tms: true,
   //  attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density" target="_blank">Copernicus</a>'
   // }).addTo(map);
-
-  var options = {
-    maxZoom: 16,
-    minZoom: 10,
-    debug: 0,
-    style: (properties) => {
-        if (properties.SDATA == 100) {
-          return {fillColor:"#1f78b4", stroke: false, weight: 0.1, fillOpacity:0.4, clickable:false};
-        }
-        else if (properties.SDATA == 205) {
-          return {fillColor:"#7f7f7f", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
-        }
-        else if (properties.SDATA == 255) {
-         return {fillColor:"#000000", stroke: false, weight: 0.1, fillOpacity:0.6, clickable:false};
-        }
-    },
-    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
-  };
-  var sca = L.geoJson.vt(data_gfsc, options);
   
-  var options = {
+  var options_fsc = {
     maxZoom: 16,
     minZoom: 10,
     debug: 0,
@@ -136,7 +117,8 @@ $(document).ready(function () {
     },
     attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
   };
-  var sca2 = L.geoJson.vt(data_fsc, options);
+  var sca = L.geoJson.vt(data_fsc, options_fsc);
+  var sca2 = L.geoJson.vt(data_gfsc, options_fsc);
   
   var tcdlayer = L.esri.imageMapLayer({
     //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
