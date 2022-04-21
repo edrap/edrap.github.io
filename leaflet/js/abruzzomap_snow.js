@@ -307,7 +307,7 @@ $(document).ready(function () {
   // ----------- DRAW FEATURES -----------
   var drawControl = new L.Control.Draw({
     draw: {
-        polygon: false,
+        polygon: true,
         circle: false,
         rectangle: false
     },
