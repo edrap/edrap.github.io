@@ -263,7 +263,7 @@ $(document).ready(function () {
     //layerOptions: {style: {color:"red", weight:5, opacity:.6}},
     layerOptions: {
       style: function(feature, layer) {
-        //console.log(feature)
+        console.log(feature)
         if (feature.geometry.type == "Polygon") {
           //return {color:"#1f78b4", weight:0, opacity:.4, clickable:false};
           if (feature.properties.SDATA == 100) {
