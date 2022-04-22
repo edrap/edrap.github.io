@@ -328,18 +328,18 @@ $(document).ready(function () {
       onClick: function(e) {
         // Extract GeoJson from featureGroup
         var data = userFeatures.toGeoJSON();
-        // var kml = tokml(data);
+        var kml = tokml(data);
         // var gpx = togpx(data);
         // Stringify GPX, KML, GeoJson
         // var convertedData = 'application/gpx+xml;charset=utf-8,' + encodeURIComponent(gpx);
-        // var convertedData = 'application/xml;charset=utf-8,' + encodeURIComponent(kml);
-        var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+        var convertedData = 'application/xml;charset=utf-8,' + encodeURIComponent(kml);
+        // var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
         // Create export
         var exp_feat = document.createElement('a');
         exp_feat.setAttribute('href', 'data:' + convertedData);
-        exp_feat.setAttribute('download', 'data.geojson');
+        // exp_feat.setAttribute('download', 'data.geojson');
         // exp_feat.setAttribute('download', 'data.gpx');
-        // exp_feat.setAttribute('download', 'data.kml');
+        exp_feat.setAttribute('download', 'data.kml');
         exp_feat.style.display = 'none';
         document.body.appendChild(exp_feat);
         exp_feat.click();
