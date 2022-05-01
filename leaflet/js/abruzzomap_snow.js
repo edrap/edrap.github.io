@@ -122,7 +122,7 @@ $(document).ready(function () {
 
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
   var url_to_geotiff_file = "https://edrap.github.io/leaflet/fsc_33_merged.tif";
-  
+
   fetch(url_to_geotiff_file)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -138,6 +138,9 @@ $(document).ready(function () {
         var sca = new GeoRasterLayer({
             georaster: georaster,
             opacity: 0.4,
+            resolution: 512,
+            maxZoom: 16,
+            minZoom: 10,
             pixelValuesToColorFn: function(pixelValues) {
               var pixelValue = pixelValues[0]; // there's just one band in this raster
 
