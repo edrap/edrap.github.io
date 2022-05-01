@@ -138,7 +138,7 @@ $(document).ready(function () {
         var sca = new GeoRasterLayer({
             georaster: georaster,
             opacity: 0.4,
-            resolution: 512,
+            resolution: 256,
             maxZoom: 16,
             minZoom: 10,
             pixelValuesToColorFn: function(pixelValues) {
