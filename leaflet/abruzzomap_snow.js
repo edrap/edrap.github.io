@@ -51,8 +51,8 @@
   <script src='https://edrap.github.io/leaflet/js/leaflet.ajax.js'></script>
   <script src='https://edrap.github.io/leaflet/js/custom_funct.js'></script>
   <script src='https://edrap.github.io/leaflet/js/abruzzomap_snow.js'></script>
-  <script src="https://edrap.github.io/leaflet/js/georaster"></script>
-  <script src="https://edrap.github.io/leaflet/js/georaster-layer-for-leaflet"></script>
+  <script src="https://unpkg.com/georaster"></script>
+  <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
 
 </head>
 
