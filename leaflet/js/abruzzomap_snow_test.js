@@ -120,8 +120,9 @@ $(document).ready(function () {
   // var sca = L.geoJson.vt(data_fsc, options_fsc);
   // var sca2 = L.geoJson.vt(data_gfsc, options_fsc);
 
-  var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
-
+  //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";
+  
   fetch(url_to_geotiff_file)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -145,7 +146,7 @@ $(document).ready(function () {
                 var color=null;
               }
               else if (pixelValue > 0 && pixelValue <= 100) {
-                var color="1f78b4";
+                var color="#1f78b4";
               }
               else if (pixelValue == 205) {
                 var color="#7f7f7f";
