@@ -120,6 +120,10 @@ $(document).ready(function () {
   // var sca = L.geoJson.vt(data_fsc, options_fsc);
   // var sca2 = L.geoJson.vt(data_gfsc, options_fsc);
 
+  var sca = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
+  
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
   var url_to_geotiff_file = "https://edrap.github.io/leaflet/fsc_33_merged.tif";
 
@@ -161,21 +165,22 @@ $(document).ready(function () {
               return color;
             },
         });
-        sca.addTo(map);
+        //sca.addTo(map);
 
         //map.fitBounds(sca.getBounds());
+
+        map.removeControl(layersControl);
 
         // --------- HASHTAG ---------
         //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
         var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
-        L.hash(map, allMapLayers);
 
         // ----------- LAYERS ----------
         // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
         var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
         var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
-        L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
-
+        var layersControl = L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
+        
     });
   });
 
@@ -287,6 +292,11 @@ $(document).ready(function () {
   var userFeatures = L.featureGroup().addTo(map);
   var gpsFeatures = L.featureGroup().addTo(map);
 
+  // --------- HASHTAG ---------
+  //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
+  L.hash(map, allMapLayers);
+  
   // L.Permalink.setup(map);
 
   //----------- INFO -----------
@@ -421,6 +431,12 @@ $(document).ready(function () {
     map.fitBounds(result.bbox);
   };
 
+  // ----------- LAYERS ----------
+  // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
+  var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var layersControl = L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
+  
   // ----------- ATTRIBUTION -----------
   L.control.attribution({
     position: 'bottomleft'
@@ -428,7 +444,7 @@ $(document).ready(function () {
 
   // ----------- SCALE BAR -----------
   L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
-
+  
   // ----------- LEGEND -----------
   function getColor(d) {
     return d > 45   ? '#b546fc' :
