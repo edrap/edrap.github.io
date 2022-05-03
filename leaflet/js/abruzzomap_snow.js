@@ -181,6 +181,8 @@ $(document).ready(function () {
         var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
         L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
         
+        alert("Snow cover layer ready!")
+        
     });
   });
 
