@@ -21,13 +21,22 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://mapy.cz" target="_blank">Mapy</a>'
   }).addTo(map);
 
-  var osm_std = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //var osm_std = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  //  maxZoom: 16,
+  //  maxNativeZoom: 18,
+  //  minNativeZoom: 3,
+  //  minZoom: 10,
+  //  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  //});
+  
+  var osm_std = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
     maxZoom: 16,
     maxNativeZoom: 18,
     minNativeZoom: 3,
     minZoom: 10,
     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
   });
+
   
   var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16,
@@ -185,8 +194,8 @@ $(document).ready(function () {
 
         // ----------- LAYERS ----------
         // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-        var baseMaps = {'Mapy Winter':mapy_winter, 'OSM Standard':osm_std, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-        var overlayMaps = {'Contours':contours, 'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
+        var baseMaps = {'Mapy Winter':mapy_winter, 'CyclOSM':osm_std, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
+        var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
         L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
         
         alert("Snow cover layer ready to use!")
@@ -206,15 +215,15 @@ $(document).ready(function () {
     //format: "jpgpng" // server exports in either jpg or png format
   }).addTo(map).bringToBack();
 
- var contours = L.tileLayer.wms('https://ows.terrestris.de/osm/service?', {
-    layers: 'SRTM30-Contour',
-    maxZoom: 16,
-    minZoom: 10,
-    minNativeZoom: 10,
-    transparent: true,
-    format: 'image/png',
-    attribution: '&copy; <a href="https://www.terrestris.de" target="_blank">Terrestris</a>'
-  });
+ //var contours = L.tileLayer.wms('https://ows.terrestris.de/osm/service?', {
+ //   layers: 'SRTM30-Contour',
+ //   maxZoom: 16,
+ //   minZoom: 10,
+ //   minNativeZoom: 10,
+ //   transparent: true,
+ //   format: 'image/png',
+ //   attribution: '&copy; <a href="https://www.terrestris.de" target="_blank">Terrestris</a>'
+ // });
   
   var hillshlayer = L.tileLayer('https://www.meteoaquilano.it/abruzzo/ingv_dem10m_hillshade_abr/{z}/{x}/{y}.png', {
     //transparent: true,
@@ -453,8 +462,8 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  var baseMaps = {'Mapy Winter':mapy_winter, 'OSM Standard':osm_std, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-  var overlayMaps = {'Contours':contours, 'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var baseMaps = {'Mapy Winter':mapy_winter, 'CyclOSM':osm_std, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
+  var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
   var layersControl = L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
   
   // ----------- ATTRIBUTION -----------
