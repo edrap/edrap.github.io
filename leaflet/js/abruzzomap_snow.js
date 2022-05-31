@@ -203,6 +203,7 @@ $(document).ready(function () {
         // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
         var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'OSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
         var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Contours':contours, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};        
+        
         L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
         
         alert("Snow cover layer ready to use!")
@@ -228,7 +229,7 @@ $(document).ready(function () {
     minZoom: 10,
     minNativeZoom: 10,
     transparent: true,
-    opacity: 0.5
+    opacity: 0.2,
     format: 'image/png',
     attribution: '&copy; <a href="https://www.terrestris.de" target="_blank">Terrestris</a>'
   });
