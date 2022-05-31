@@ -228,6 +228,7 @@ $(document).ready(function () {
     minZoom: 10,
     minNativeZoom: 10,
     transparent: true,
+    opacity: 0.5
     format: 'image/png',
     attribution: '&copy; <a href="https://www.terrestris.de" target="_blank">Terrestris</a>'
   });
