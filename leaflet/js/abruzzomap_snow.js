@@ -45,21 +45,21 @@ $(document).ready(function () {
   //  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
   //});
   
-  //var osm = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-  //  maxZoom: 16,
-  //  maxNativeZoom: 18,
-  //  minNativeZoom: 3,
-  //  minZoom: 10,
-  //  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-  //});
-
-  var osm = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  var osm = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
     maxZoom: 16,
     maxNativeZoom: 18,
     minNativeZoom: 3,
     minZoom: 10,
     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
   });
+
+  //var osm = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+  //  maxZoom: 16,
+  //  maxNativeZoom: 18,
+  //  minNativeZoom: 3,
+  //  minZoom: 10,
+  //  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+  //});
   
   var googleHybrid = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}',{
     maxZoom: 16,
