@@ -1,7 +1,7 @@
 function leaflet_alert() {
     var newLine = "\r\n"
     var brows = "" //"The map works on Firefox and Safari. On Chrome you must allow mixed contents."
-    var resp = "!!!THE USERS TAKE FULL RESPONSIBILITY FOR USING THE MAP FOR OUTDOOR ACTIVITIES!!!"
+    var resp = "!!! The users take full responsibility for using the map for outdoor activities !!!"
     var scal = "The snow cover layer may take some time to show."
     //msg = brows + newLine + newLine + resp;
     msg = resp;
