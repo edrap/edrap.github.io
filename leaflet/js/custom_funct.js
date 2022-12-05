@@ -3,7 +3,7 @@ function leaflet_alert() {
     var brows = "" //"The map works on Firefox and Safari. On Chrome you must allow mixed contents."
     var resp = "!!!THE USERS TAKE FULL RESPONSIBILITY FOR USING THE MAP FOR OUTDOOR ACTIVITIES!!!"
     var scal = "The snow cover layer may take some time to show."
-    #msg = brows + newLine + newLine + resp;
+    //msg = brows + newLine + newLine + resp;
     msg = resp;
     alert(msg);
 }
