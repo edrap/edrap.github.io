@@ -173,10 +173,10 @@ $(document).ready(function () {
               var pixelValue = pixelValues[0]; // there's just one band in this raster
 
               // if there's zero wind, don't return a color
-              if (pixelValue == 0) {
-                var color=null;
-              }
-              else if (pixelValue > 0 && pixelValue <= 100) {
+              //if (pixelValue == 0) {
+              //  var color=null;
+              //}
+              if (pixelValue >= 0 && pixelValue <= 100) {
                 var color="#1f78b4";
               }
               else if (pixelValue == 205) {
