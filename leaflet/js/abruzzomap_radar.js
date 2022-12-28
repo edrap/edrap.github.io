@@ -173,19 +173,22 @@ $(document).ready(function () {
               var pixelValue = pixelValues[0]; // there's just one band in this raster
 
               // if there's zero wind, don't return a color
-              //if (pixelValue == 0) {
-              //  var color=null;
-              //}
-              if (pixelValue >= 0 && pixelValue <= 100) {
-                var color="#1f78b4";
+              if (pixelValue < 1) {
+                var color=null;
               }
-              else if (pixelValue == 205) {
-                var color="#7f7f7f";
+              else if (pixelValue >= 1 && pixelValue < 10) {
+                var color="#ffe817";
               }
-              else if (pixelValue == 255) {
-                var color="#000000";
+              else if (pixelValue >= 10 && pixelValue < 30) {
+                var color="#ff6897";
               }
-
+              else if (pixelValue >= 30 && pixelValue < 50) {
+                var color="#c628d7";
+              }
+              else if (pixelValue >= 50) {
+                var color="#6200ff";
+              }
+              
               return color;
             },
         });
