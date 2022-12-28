@@ -149,7 +149,7 @@ $(document).ready(function () {
   });
   
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
-  var url_to_geotiff_file = "https://edrap.github.io/leaflet/HSN24.tif";
+  var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
 
   fetch(url_to_geotiff_file)
     .then(response => response.arrayBuffer())
