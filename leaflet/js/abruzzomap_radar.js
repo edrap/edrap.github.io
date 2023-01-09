@@ -150,7 +150,7 @@ $(document).ready(function () {
   
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
   //var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
-  var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/SRT24.tif";
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";
 
   fetch(url_to_geotiff_file)
     .then(response => response.arrayBuffer())
@@ -534,7 +534,17 @@ $(document).ready(function () {
       '<i style="background:' + sca_legend_colors[i] + '"></i> ' +
       sca_legend[i] + '<br>';
     }
-
+    
+    grades = [1, 10, 30, 50];
+    labels = ['<strong> New snow height </strong>'];
+    // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML += '<br>' + labels + '<br>';
+    for (var i = 0; i < grades.length; i++) {
+      div.innerHTML +=
+      '<i style="background:' + getColorHS(grades[i] + 1) + '"></i> ' +
+      grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
+    }
+    
     tc_dlt = ["Broadleaved", "Coniferous"];
     tc_dlt_colors = ["#469e4a", "#1c5c24"]
     labels = ['<strong> Leaf type </strong>'];
@@ -553,16 +563,6 @@ $(document).ready(function () {
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
       '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-      grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
-    }
-    
-    grades = [1, 10, 30, 50];
-    labels = ['<strong> New snow height </strong>'];
-    // loop through our density intervals and generate a label with a colored square for each interval
-    div.innerHTML += labels + '<br>';
-    for (var i = 0; i < grades.length; i++) {
-      div.innerHTML +=
-      '<i style="background:' + getColorHS(grades[i] + 1) + '"></i> ' +
       grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
     }
 
