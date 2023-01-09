@@ -525,7 +525,7 @@ $(document).ready(function () {
     //   }
 
     sca_legend = ["Snow", "Clouds","No data"];
-    sca_legend_colors = ["#1f78b4", "#7f7f7f", "#000000"]
+    sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"]
     labels = ['<strong> Snow cover </strong>'];
       // loop through our density intervals and generate a label with a colored square for each interval
     div.innerHTML = labels + '<br>';
