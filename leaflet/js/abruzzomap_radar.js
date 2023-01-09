@@ -538,13 +538,13 @@ $(document).ready(function () {
     }
     
     grades = [1, 10, 30, 50];
-    labels = ['<strong> New snow height </strong>'];
+    labels = ['<strong> New snow height (cm) </strong>'];
     // loop through our density intervals and generate a label with a colored square for each interval
     div.innerHTML += labels + '<br>';
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
       '<i style="background:' + getColorHS(grades[i] + 1) + '"></i> ' +
-      grades[i] + 'cm' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + 'cm' + '<br>' : '+');
+      grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
     }
     
     tc_dlt = ["Broadleaved", "Coniferous"];
@@ -559,13 +559,13 @@ $(document).ready(function () {
     }
 
     grades = [30, 35, 40, 45];
-    labels = ['<strong> Slope class </strong>'];
+    labels = ['<strong> Slope class (°) </strong>'];
     // loop through our density intervals and generate a label with a colored square for each interval
     div.innerHTML += labels + '<br>';
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
       '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-      grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
+      grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
     }
 
     return div;
