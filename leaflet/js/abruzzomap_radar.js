@@ -152,6 +152,8 @@ $(document).ready(function () {
   //var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";
 
+  const colorsHS = ["#deebf7", "#9dcae1", "#4191c6", "#08509b"]; 
+  
   fetch(url_to_geotiff_file)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -178,16 +180,16 @@ $(document).ready(function () {
                 var color=null;
               }
               else if (pixelValue >= 1 && pixelValue < 10) {
-                var color="#ffe817";
+                var color=colorsHS[0];
               }
               else if (pixelValue >= 10 && pixelValue < 30) {
-                var color="#ff6897";
+                var color=colorsHS[1];
               }
               else if (pixelValue >= 30 && pixelValue < 50) {
-                var color="#c628d7";
+                var color=colorsHS[2];
               }
               else if (pixelValue >= 50) {
-                var color="#6200ff";
+                var color=colorsHS[3];
               }
               
               return color;
@@ -496,10 +498,10 @@ $(document).ready(function () {
     '#FFEDA0';
   }
   function getColorHS(d) {
-    return d > 50   ? '#6200ff' :
-    d > 30   ? '#c628d7' :
-    d > 10   ? '#ff6897' :
-    d > 1   ? '#ffe817' :
+    return d > 50   ? colorsHS[3] :
+    d > 30   ? colorsHS[2] :
+    d > 10   ? colorsHS[1] :
+    d > 1   ? colorsHS[0] :
     '#FFEDA0';
   }
   // function getPercent(d) {
