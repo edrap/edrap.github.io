@@ -538,7 +538,7 @@ $(document).ready(function () {
     grades = [1, 10, 30, 50];
     labels = ['<strong> New snow height </strong>'];
     // loop through our density intervals and generate a label with a colored square for each interval
-    div.innerHTML += '<br>' + labels + '<br>';
+    div.innerHTML += labels + '<br>';
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
       '<i style="background:' + getColorHS(grades[i] + 1) + '"></i> ' +
@@ -549,7 +549,7 @@ $(document).ready(function () {
     tc_dlt_colors = ["#469e4a", "#1c5c24"]
     labels = ['<strong> Leaf type </strong>'];
       // loop through our density intervals and generate a label with a colored square for each interval
-    div.innerHTML += labels + '<br>';
+    div.innerHTML += '<br>' + labels + '<br>';
     for (var i = 0; i < tc_dlt.length; i++) {
       div.innerHTML +=
       '<i style="background:' + tc_dlt_colors[i] + '"></i> ' +
