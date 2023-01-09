@@ -495,6 +495,13 @@ $(document).ready(function () {
     d > 30   ? '#efe72e' :
     '#FFEDA0';
   }
+  function getColorHS(d) {
+    return d > 50   ? '#6200ff' :
+    d > 30   ? '#c628d7' :
+    d > 10   ? '#ff6897' :
+    d > 1   ? '#ffe817' :
+    '#FFEDA0';
+  }
   // function getPercent(d) {
   //   return d > 80   ? '#246627' :
   //   d > 60   ? '#3a8240' :
@@ -546,6 +553,16 @@ $(document).ready(function () {
     for (var i = 0; i < grades.length; i++) {
       div.innerHTML +=
       '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+      grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>');
+    }
+    
+    grades = [1, 10, 30, 50];
+    labels = ['<strong> New snow height </strong>'];
+    // loop through our density intervals and generate a label with a colored square for each interval
+    div.innerHTML += labels + '<br>';
+    for (var i = 0; i < grades.length; i++) {
+      div.innerHTML +=
+      '<i style="background:' + getColorHS(grades[i] + 1) + '"></i> ' +
       grades[i] + '°' + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '°' + '<br>' : '+');
     }
 
