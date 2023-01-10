@@ -289,8 +289,8 @@ $(document).ready(function () {
     attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
   });
   const sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"];
-  //var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
-  //var sca = fetch_fsc(url_to_geotiff_file, sca_legend_colors);
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
+  fetch_fsc(url_to_geotiff_file, sca_legend_colors);
   
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
