@@ -1,4 +1,4 @@
-function fetch_fsc(url) {
+function fetch_fsc(url, colors) {
   fetch(url)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -25,13 +25,13 @@ function fetch_fsc(url) {
                 var color=null;
               }
               else if (pixelValue > 0 && pixelValue <= 100) {
-                var color="#1f78b4";
+                var color=colors[0];
               }
               else if (pixelValue == 205) {
-                var color="#7f7f7f";
+                var color=colors[1];
               }
               else if (pixelValue == 255) {
-                var color="#000000";
+                var color=colors[2];
               }
 
               return color;
@@ -75,16 +75,16 @@ function fetch_hs(url) {
                 var color=null;
               }
               else if (pixelValue >= 1 && pixelValue < 10) {
-                var color=colorsHS[0];
+                var color=colors[0];
               }
               else if (pixelValue >= 10 && pixelValue < 30) {
-                var color=colorsHS[1];
+                var color=colors[1];
               }
               else if (pixelValue >= 30 && pixelValue < 50) {
-                var color=colorsHS[2];
+                var color=colors[2];
               }
               else if (pixelValue >= 50) {
-                var color=colorsHS[3];
+                var color=colors[3];
               }
               
               return color;
