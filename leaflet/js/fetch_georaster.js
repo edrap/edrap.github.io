@@ -38,14 +38,15 @@ function fetch_fsc(url, colors) {
             },
         });
         //sca.addTo(map);
-
+        
+        return sca;
+        
         //map.fitBounds(sca.getBounds());
 
         reloadMapControl();
         
     });
   });
-  return sca;
 };
 
 function fetch_hs(url) {
@@ -91,6 +92,8 @@ function fetch_hs(url) {
             },
         });
         //sca.addTo(map);
+        
+        return hs;
 
         //map.fitBounds(sca.getBounds());
 
@@ -98,7 +101,6 @@ function fetch_hs(url) {
         
     });
   });
-  return hs;
 };
 
 function reloadMapControl() {
