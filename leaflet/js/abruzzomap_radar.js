@@ -152,12 +152,14 @@ $(document).ready(function () {
   //var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
   
   const sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"];
-  
+  var sca = null;
   var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
   var sca = fetch_fsc(url_to_geotiff_file, sca_legend_colors);
   
   const hs_legend_colors = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
-  
+  var hs24 = null;
+  var hs48 = null;
+  var hs72 = null;
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";  
   var hs24 = fetch_fsc(url_to_geotiff_file, hs_legend_colors);
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN48.tif";  
