@@ -154,16 +154,16 @@ $(document).ready(function () {
   const sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"];
   
   var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
-  var sca = fetch_fsc(url_to_geotiff_file, colorSCA);
+  var sca = fetch_fsc(url_to_geotiff_file, sca_legend_colors);
   
-  const colorsHS = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
+  const hs_legend_colors = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
   
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";  
-  var hs24 = fetch_fsc(url_to_geotiff_file, colorsHS);
+  var hs24 = fetch_fsc(url_to_geotiff_file, hs_legend_colors);
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN48.tif";  
-  var hs48 = fetch_fsc(url_to_geotiff_file, colorsHS);
+  var hs48 = fetch_fsc(url_to_geotiff_file, hs_legend_colors);
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN72.tif";  
-  var hs72 = fetch_fsc(url_to_geotiff_file, colorsHS);
+  var hs72 = fetch_fsc(url_to_geotiff_file, hs_legend_colors);
   
   var tcdlayer = L.esri.imageMapLayer({
     //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
@@ -446,10 +446,10 @@ $(document).ready(function () {
     '#FFEDA0';
   }
   function getColorHS(d) {
-    return d > 50   ? colorsHS[3] :
-    d > 30   ? colorsHS[2] :
-    d > 10   ? colorsHS[1] :
-    d > 1   ? colorsHS[0] :
+    return d > 50   ? hs_legend_colors[3] :
+    d > 30   ? hs_legend_colors[2] :
+    d > 10   ? hs_legend_colors[1] :
+    d > 1   ? hs_legend_colors[0] :
     '#FFEDA0';
   }
   // function getPercent(d) {
