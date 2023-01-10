@@ -1,7 +1,4 @@
 function fetch_fsc(url, colors) {
-  var sca = L.tileLayer('', {
-    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
-  });
   fetch(url)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -42,8 +39,9 @@ function fetch_fsc(url, colors) {
         });
         //sca.addTo(map);
 
-        reloadMapControl();
         return sca;
+        
+        reloadMapControl();        
         
         //map.fitBounds(sca.getBounds());
         
@@ -52,9 +50,6 @@ function fetch_fsc(url, colors) {
 };
 
 function fetch_hs(url) {
-  var hs = L.tileLayer('', {
-    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
-  });
   fetch(url)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -110,12 +105,12 @@ function fetch_hs(url) {
 
 function reloadMapControl() {
 
-  //map.removeControl(layersControl);
+  map.removeControl(layersControl);
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
   var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'hs24':hs24, 'hs48':hs48, 'hs72':hs72};
-  L.hash(map, allMapLayers);
+  //L.hash(map, allMapLayers);
   
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
