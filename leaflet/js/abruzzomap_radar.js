@@ -151,72 +151,20 @@ $(document).ready(function () {
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
   //var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
   
+  const colorsSCA = ["#efe72e", "#fdac2b", "#fb322f", "#b546fc"]; 
+  
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
+  var sca = fetch_fsc(url_to_geotiff_file, colorSCA);
+  
   const colorsHS = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
-
+  
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";  
-  fetch(url_to_geotiff_file)
-    .then(response => response.arrayBuffer())
-    .then(arrayBuffer => {
-      parseGeoraster(arrayBuffer).then(georaster => {
-        console.log("georaster:", georaster);
-
-        /*
-            GeoRasterLayer is an extension of GridLayer,
-            which means can use GridLayer options like opacity.
-            Just make sure to include the georaster option!
-            http://leafletjs.com/reference-1.2.0.html#gridlayer
-        */
-        var sca = new GeoRasterLayer({
-            georaster: georaster,
-            opacity: 0.6,
-            resolution: 256,
-            maxZoom: 16,
-            minZoom: 10,
-            pixelValuesToColorFn: function(pixelValues) {
-              var pixelValue = pixelValues[0]; // there's just one band in this raster
-
-              // if there's zero wind, don't return a color
-              if (pixelValue < 1) {
-                var color=null;
-              }
-              else if (pixelValue >= 1 && pixelValue < 10) {
-                var color=colorsHS[0];
-              }
-              else if (pixelValue >= 10 && pixelValue < 30) {
-                var color=colorsHS[1];
-              }
-              else if (pixelValue >= 30 && pixelValue < 50) {
-                var color=colorsHS[2];
-              }
-              else if (pixelValue >= 50) {
-                var color=colorsHS[3];
-              }
-              
-              return color;
-            },
-        });
-        //sca.addTo(map);
-
-        //map.fitBounds(sca.getBounds());
-
-        map.removeControl(layersControl);
-
-        // --------- HASHTAG ---------
-        //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-        var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
-
-        // ----------- LAYERS ----------
-        // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-        var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'CyclOSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-        var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};        
-        
-        L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
-        
-        alert("Snow cover layer ready to use!")
-        
-    });
-  });
-
+  var hs24 = fetch_fsc(url_to_geotiff_file, colorsHS);
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN48.tif";  
+  var hs48 = fetch_fsc(url_to_geotiff_file, colorsHS);
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN72.tif";  
+  var hs72 = fetch_fsc(url_to_geotiff_file, colorsHS);
+  
   var tcdlayer = L.esri.imageMapLayer({
     //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
     url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
@@ -338,7 +286,7 @@ $(document).ready(function () {
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg};
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'hs24':hs24, 'hs48':hs48, 'hs72':hs72};
   L.hash(map, allMapLayers);
   
   // L.Permalink.setup(map);
@@ -477,8 +425,8 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'OSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-  var overlayMaps = {'Snow cover':sca, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'CyclOSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
+  var overlayMaps = {'Snow cover':sca, 'New snow 24H':hs24, 'New snow 48H':hs48, 'New snow 72H':hs72, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};        
   var layersControl = L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
   
   // ----------- ATTRIBUTION -----------
@@ -488,13 +436,13 @@ $(document).ready(function () {
 
   // ----------- SCALE BAR -----------
   L.control.scale({imperial: false, position: 'bottomleft'}).addTo(map);
-  
+    
   // ----------- LEGEND -----------
   function getColor(d) {
-    return d > 45   ? '#b546fc' :
-    d > 40   ? '#fb322f' :
-    d > 35   ? '#fdac2b' :
-    d > 30   ? '#efe72e' :
+    return d > 45   ? colorsSCA[3] :
+    d > 40   ? colorsSCA[2] :
+    d > 35   ? colorsSCA[1] :
+    d > 30   ? colorsSCA[0] :
     '#FFEDA0';
   }
   function getColorHS(d) {
