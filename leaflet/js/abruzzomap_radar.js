@@ -151,7 +151,7 @@ $(document).ready(function () {
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
   //var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
   
-  const colorsSCA = ["#efe72e", "#fdac2b", "#fb322f", "#b546fc"]; 
+  const sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"];
   
   var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
   var sca = fetch_fsc(url_to_geotiff_file, colorSCA);
@@ -475,7 +475,6 @@ $(document).ready(function () {
     //   }
 
     sca_legend = ["Snow", "Clouds","No data"];
-    sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"]
     labels = ['<strong> Snow cover </strong>'];
       // loop through our density intervals and generate a label with a colored square for each interval
     div.innerHTML = labels + '<br>';
