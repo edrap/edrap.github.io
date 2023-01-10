@@ -268,6 +268,15 @@ $(document).ready(function () {
   var userFeatures = L.featureGroup().addTo(map);
   var gpsFeatures = L.featureGroup().addTo(map);
   
+  var hs24 = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
+  var hs48 = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
+  var hs72 = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
   const hs_legend_colors = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";  
   var hs24 = fetch_hs(url_to_geotiff_file, hs_legend_colors);
@@ -275,15 +284,18 @@ $(document).ready(function () {
   var hs48 = fetch_hs(url_to_geotiff_file, hs_legend_colors);
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN72.tif";  
   var hs72 = fetch_hs(url_to_geotiff_file, hs_legend_colors);
-
+  
+  var sca = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
   const sca_legend_colors = ["#ffc0cb", "#7f7f7f", "#000000"];
   var url_to_geotiff_file = "https://www.meteoaquilano.it/abruzzo/fsc_33_merged.tif";  
   var sca = fetch_fsc(url_to_geotiff_file, sca_legend_colors);
   
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
-  //var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'hs24':hs24, 'hs48':hs48, 'hs72':hs72};
-  //L.hash(map, allMapLayers);
+  var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'hs24':hs24, 'hs48':hs48, 'hs72':hs72};
+  L.hash(map, allMapLayers);
   
   // L.Permalink.setup(map);
 
@@ -421,9 +433,9 @@ $(document).ready(function () {
 
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
-  //var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'CyclOSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
-  //var overlayMaps = {'Snow cover':sca, 'New snow 24H':hs24, 'New snow 48H':hs48, 'New snow 72H':hs72, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};        
-  //var layersControl = L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
+  var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'CyclOSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
+  var overlayMaps = {'Snow cover':sca, 'New snow 24H':hs24, 'New snow 48H':hs48, 'New snow 72H':hs72, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};        
+  var layersControl = L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
   
   // ----------- ATTRIBUTION -----------
   L.control.attribution({
