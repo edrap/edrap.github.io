@@ -1,4 +1,7 @@
 function fetch_fsc(url, colors) {
+  var sca = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
   fetch(url)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -49,6 +52,9 @@ function fetch_fsc(url, colors) {
 };
 
 function fetch_hs(url) {
+  var hs = L.tileLayer('', {
+    attribution: '&copy; <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products" target="_blank">Copernicus</a>'
+  });
   fetch(url)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
@@ -109,12 +115,12 @@ function reloadMapControl() {
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
   var allMapLayers = {'lf':gpsFeatures, 'mpw':mapy_winter, 'osm':osm, '4um':baselayer2, 'otm':baselayer, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sa':sca, 'va':avalanches_va, 'vf':avalanches_vf, 'sp':pistelayer, 'uf':userFeatures, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'hs24':hs24, 'hs48':hs48, 'hs72':hs72};
-
+  L.hash(map, allMapLayers);
+  
   // ----------- LAYERS ----------
   // var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'Igm25k Min':igm25k_min, 'Igm25k Reg':igm25k_reg, 'Google Hybrid':googleHybrid};
   var baseMaps = {'Mapy Winter':mapy_winter, '4UMaps':baselayer2, 'OpenTopoMap':baselayer, 'CyclOSM':osm, 'Google Hybrid':googleHybrid, 'IGM Italia':igm25k_min, 'IGM Abruzzo':igm25k_reg};
   var overlayMaps = {'Snow cover':sca, 'New snow 24H':hs24, 'New snow 48H':hs48, 'New snow 72H':hs72, 'Tree cover':tcdlayer, 'Hillshade':hillshlayer, 'C.L.P.V. VA':avalanches_va, 'C.L.P.V. VF':avalanches_vf, 'Slope class':slopelayer, 'Ski Piste':pistelayer, 'User features':userFeatures};        
-
   L.control.layers(baseMaps, overlayMaps, {position: 'topright'}).addTo(map);
 
   //alert("Snow cover layer ready to use!")
