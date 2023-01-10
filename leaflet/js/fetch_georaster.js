@@ -43,7 +43,7 @@ function fetch_fsc(url, colors) {
         
         //map.fitBounds(sca.getBounds());
 
-        reloadMapControl();
+        //reloadMapControl();
         
     });
   });
@@ -97,7 +97,7 @@ function fetch_hs(url) {
 
         //map.fitBounds(sca.getBounds());
 
-        reloadMapControl();
+        //reloadMapControl();
         
     });
   });
