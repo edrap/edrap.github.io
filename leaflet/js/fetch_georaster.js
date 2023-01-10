@@ -43,7 +43,7 @@ function fetch_fsc(url, colors) {
         
         //map.fitBounds(sca.getBounds());
 
-        //reloadMapControl();
+        reloadMapControl();
         
     });
   });
@@ -105,7 +105,7 @@ function fetch_hs(url) {
 
 function reloadMapControl() {
 
-  map.removeControl(layersControl);
+  //map.removeControl(layersControl);
 
   // --------- HASHTAG ---------
   //var allMapLayers = {'mpw':mapy_winter, '4um':baselayer2, 'otm':baselayer, 'igm1':igm25k_min, 'igm2':igm25k_reg, 'gh':googleHybrid, 'tc':tcdlayer, 'hs':hillshlayer, 'sc':slopelayer, 'sp':pistelayer, 'uf':userFeatures};
