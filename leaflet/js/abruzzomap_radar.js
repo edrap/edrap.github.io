@@ -165,6 +165,8 @@ $(document).ready(function () {
   var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN72.tif";  
   var hs72 = fetch_fsc(url_to_geotiff_file, hs_legend_colors);
   
+  reloadMapControl();
+  
   var tcdlayer = L.esri.imageMapLayer({
     //url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_TreeCoverDensity_2018/ImageServer",
     url: "https://image.discomap.eea.europa.eu/arcgis/rest/services/GioLandPublic/HRL_DominantLeafType_2018/ImageServer",
