@@ -439,10 +439,10 @@ $(document).ready(function () {
     
   // ----------- LEGEND -----------
   function getColor(d) {
-    return d > 45   ? colorsSCA[3] :
-    d > 40   ? colorsSCA[2] :
-    d > 35   ? colorsSCA[1] :
-    d > 30   ? colorsSCA[0] :
+    return d > 45   ? '#b546fc' :
+    d > 40   ? '#fb322f' :
+    d > 35   ? '#fdac2b' :
+    d > 30   ? '#efe72e' :
     '#FFEDA0';
   }
   function getColorHS(d) {
