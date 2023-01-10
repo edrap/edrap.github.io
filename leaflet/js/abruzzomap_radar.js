@@ -150,10 +150,10 @@ $(document).ready(function () {
   
   //var url_to_geotiff_file = "https://github.com/edrap/edrap.github.io/raw/master/leaflet/fsc_33_merged.tif";
   //var url_to_geotiff_file = "https://edrap.github.io/leaflet/SRT24.tif";
-  var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";
-
-  const colorsHS = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
   
+  const colorsHS = ["#9dcae1", "#4191c6", "#08509b", "#08306b"]; 
+
+  var url_to_geotiff_file = "https://www.meteoaquilano.it/radar-sat/HSN24.tif";  
   fetch(url_to_geotiff_file)
     .then(response => response.arrayBuffer())
     .then(arrayBuffer => {
