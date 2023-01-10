@@ -38,12 +38,11 @@ function fetch_fsc(url, colors) {
             },
         });
         //sca.addTo(map);
-        
+
+        reloadMapControl();
         return sca;
         
         //map.fitBounds(sca.getBounds());
-
-        reloadMapControl();
         
     });
   });
