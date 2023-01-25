@@ -84,7 +84,7 @@ analytics:
 author:
   name             : "Edoardo Raparelli"
   avatar           : "/images/edo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "PhD student of Roma Sapienza ICT working at CETEMPS"
+  bio              : "Postdoctoral researcher at CETEMPS (University of L'Aquila), interested in weather and snow cover modelling"
   location         : "L'Aquila, IT"
   email            : "edoardo.raparelli@gmail.com"
   uri              : #"https://edrap.github.io/"
