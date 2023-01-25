@@ -24,28 +24,20 @@ share: true
 </header>
 {% endunless %} 
 
-<p style="text-align: justify;">
 Winter activities in mountainous regions that experience snowfalls and a seasonal snow cover are always affected by <b>avalanche risk</b>.
 
-<p style="text-align: justify;">
 The avalanche risk can be mitigated by a careful evaluation of the <b>snowpack</b> characteristics, <b>orography</b> and <b>tree cover</b> density.
 
-<p style="text-align: justify;">
 <b>Avalanche bulletins</b> of <a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> service provide daily important informations about the snowpack <b>stability</b> and the dangerous elevations and expositions. A careful evaluation of the avalanche bulletin can mitigate the risk during the tour, nevertheless it's fundamental to <b>observe</b> the snowpack while proceeding, because it provides informations of the stability conditions right at the tour location.
 
-<p style="text-align: justify;">
 It's also important to know the orography and the tree cover density at the tour location, because <b>slope</b> and <b>forest</b> density are key variables to asses the avalanche risk and have to be taken into account to <b>plan</b> the tour before starting it. The informations obtained <b>observing</b> the terrain and the tree cover are also fundamental and have to be integrated with the ones obtained from the map during the tour planning.
 
-<p style="text-align: justify;">
 It's really useful to follow the <b>lessons</b> of the <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a> portal to learn how to plan a mountain winter tour and how to behave during it.
 
-<p style="text-align: justify;">
 For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes several layers: i) a slope layer obtained from a DEM provided by <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a> at 10 meters resolution; ii) a tree cover layer provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a> at 10 meters resolution; iii) a snow cover layer showing the presence or absence of snow in the past 6 days at 20 meters resolution provided again by <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products/snow-cover" target="_blank">Copernicus</a>; iv) two layers that show the avalanches corresponding to the photointerpretation (orange color) and to the direct survey (purple color) present in the Avalanche Hazard Location Map (C.L.P.V.), provided by the <a href="https://opendata.regione.abruzzo.it/content/carta-storica-della-valanghe" target="_blank">Abruzzo region</a> portal. Slope classes, tree cover and snow cover layers are not representative of the terrain conditions at scales smaller than the respective resolution, however they provide useful data to plan the tour. It is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
 
-<p style="text-align: justify;">
 <b>The users take full responsibility for using the <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">topographic map</a> for outdoor activities.</b>
 
-<p style="text-align: justify;">
 <b><a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a> integration:</b>
 <br>
 <ul>
