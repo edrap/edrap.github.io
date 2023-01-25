@@ -24,15 +24,12 @@ share: true
 </header>
 {% endunless %}
 
-<p style="text-align: justify;">
 Nelle regioni montuose soggette a nevicate, che presentano una copertura nevosa stagionale, le attività invernali sono
 sempre affette da rischio legato al <b>pericolo valanghe</b>. 
 
-<p style="text-align: justify;">
 La mitigazione del rischio dovuto al pericolo valanghe può avvenire tramite un'attenta valutazione delle caratteristiche del 
 <b>manto nevoso</b>, dell'<b>orografia</b> e della densità della <b>copertura boschiva</b>.
 
-<p style="text-align: justify;">
 I <b>bollettini valanghe</b> del servizio
 <a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> forniscono giornalmente 
 preziose informazioni riguardanti la <b>stabilità</b> del manto nevoso, le quote e le esposizioni più a rischio. Uno studio
@@ -40,19 +37,14 @@ attento del bollettino valanghe può mitigare il rischio durante l'escursione, t
 importanza l'<b>osservazione</b> del manto nevoso durante la gita stessa, in quanto può fornire informazioni sulle condizioni del
 manto nella zona esatta dell'escursione.
 
-<p style="text-align: justify;">
 Conoscere l'orografia e la copertura boschiva del luogo di interesse è altrettanto fondamentale, poichè la <b>pendenza</b> e la densità del <b>bosco</b> sono variabili chiave per la stima del rischio valanghe e devono essere considerate per <b>pianificare</b> il percorso prima di intraprendere la gita. Le informazioni ottenute tramite l'<b>osservazione</b> delle caratteristiche orografiche del terreno e della copertura boschiva sul luogo dell'escursione sono di fondamentale importanza e devono integrare quelle ricavate dalla pianificazione dell'itinerario tramite mappa.
 
-<p style="text-align: justify;">
 Per conoscere meglio come pianificare un'escursione invernale in montagna e come comportarsi durante lo svolgimento della gita è molto utile seguire le <b>lezioni</b> del portale <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a>.
 
-<p style="text-align: justify;">
 Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>carta topografica</b></a>, che include: i) un livello per le classi di inclinazione superiori a 30° con una risoluzione a 10 metri, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>; ii) un livello per la copertura boschiva a 10 metri, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a>; iii) un livello che riporta la presenza o assenza di neve nell'arco dei 6 giorni precedenti ad una risoluzione di 20 metri fornito di nuovo da <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products/snow-cover" target="_blank">Copernicus</a>; iv) due livelli che riportano le valanghe corrispondenti alla fotointerpretazione (colore arancio) e all'indagine diretta (colore viola) presenti nella Carta di Localizzazione dei Pericoli da Valanga (C.L.P.V.), fornito dalla <a href="http://geoportale.regione.abruzzo.it/Cartanet/catalogo/protezione-civile/c.l.p.v.-abruzzo" target="_blank">Regione Abruzzo</a>. Le informazioni di classi di inclinazione, copertura boschiva e copertura nevosa non sono rappresentative della conformazione e tipologia di terreno a scale inferiori alla loro risoluzione, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
 
-<p style="text-align: justify;">
 <b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">carta topografica</a> per attività all'aperto.</b>
   
-<p style="text-align: justify;">
 <b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 <br>
 <ul>
