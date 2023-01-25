@@ -6,7 +6,7 @@ excerpt: "Winter activities in mountainous regions that experience snowfalls and
 tags: []
 image:
   feature:
-modified: 2022-12-05T16:00:00-00:00 
+modified: 2023-01-04T16:00:00-00:00 
 author_profile: true
 comments: true
 read_time: true
