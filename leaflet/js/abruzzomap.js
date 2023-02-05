@@ -19,7 +19,7 @@ $(document).ready(function () {
     minNativeZoom: 3,
     minZoom: 10,
     attribution: '&copy; <a href="https://mapy.cz" target="_blank">Mapy</a>'
-  }).addTo(map);
+  });
   
   var baselayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     maxZoom: 16,
@@ -51,7 +51,7 @@ $(document).ready(function () {
     minNativeZoom: 3,
     minZoom: 10,
     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
-  });
+  }).addTo(map);
 
   //var osm = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
   //  maxZoom: 16,
