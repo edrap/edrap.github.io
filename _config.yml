@@ -110,10 +110,6 @@ author:
   weibo            :
   xing             :
   youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-  links            :
-    - label: "CV"
-      icon: "far fa-fw fa-file-pdf"
-      url: "/docs/CV_Edoardo_Raparelli.pdf"
 
 
 # Reading Files
