@@ -23,6 +23,7 @@ html, body, #map {
 .leaflet-popup-tip {
     border: 0px;
 }
+.leaflet-fade-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-zoom-animated { will-change:auto !important; }
 /* .leaflet-popup-tip {
     width: 0px;
     height: 0px;
