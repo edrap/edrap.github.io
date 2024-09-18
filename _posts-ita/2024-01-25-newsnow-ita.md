@@ -26,7 +26,7 @@ visible: true
 </header>
 {% endunless %}
 
-Sono un appassionato di sci e scialpinismo, perciò non posso che adorare la neve, soprattutto quella fresca e polverosa. 
+Sono un appassionato di sci e scialpinismo ed adoro la neve, soprattutto quella fresca e polverosa. 
 Perciò ogni volta che si verifica una nevicata nella mia regione, guardo sempre le immagini delle webcam ed i dati riportati
 dalle stazioni meteo per capire dove si trovi l'accumulo maggiore di neve fresca. 
 Tuttavia, le stazioni meteorologiche automatiche e le webcam non offrono una visione su larga scala degli accumuli
