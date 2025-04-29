@@ -29,7 +29,7 @@ Winter activities in mountainous regions that experience snowfalls and a seasona
 
 The avalanche risk can be mitigated by a careful evaluation of the <b>snowpack</b> characteristics, <b>orography</b> and <b>tree cover</b> density.
 
-<b>Avalanche bulletins</b> of <a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> service provide daily important informations about the snowpack <b>stability</b> and the dangerous elevations and expositions. A careful evaluation of the avalanche bulletin can mitigate the risk during the tour, nevertheless it's fundamental to <b>observe</b> the snowpack while proceeding, because it provides informations of the stability conditions right at the tour location.
+<b>Avalanche bulletins</b> of <a href="https://meteomont.carabinieri.it/home" target="_blank">Meteomont</a> service provide daily important informations about the snowpack <b>stability</b> and the dangerous elevations and expositions. A careful evaluation of the avalanche bulletin can mitigate the risk during the tour, nevertheless it's fundamental to <b>observe</b> the snowpack while proceeding, because it provides informations of the stability conditions right at the tour location.
 
 It's also important to know the orography and the tree cover density at the tour location, because <b>slope</b> and <b>forest</b> density are key variables to asses the avalanche risk and have to be taken into account to <b>plan</b> the tour before starting it. The informations obtained <b>observing</b> the terrain and the tree cover are also fundamental and have to be integrated with the ones obtained from the map during the tour planning.
 
