@@ -39,20 +39,20 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href=
 
 <b>The users take full responsibility for using the <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">topographic map</a> for outdoor activities.</b>
 
+<!--
 <b><a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a> integration:</b>
 <br>
 <ul>
   <li>To use the slope class layer with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
 </ul>
+-->
 
 
 
 
-<!--
 <div style="width: 100%; height: 100%; margin: 0 auto;">
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
--->
 
 
 {% if page.comments %}
