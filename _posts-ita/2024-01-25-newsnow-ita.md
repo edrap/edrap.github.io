@@ -37,6 +37,8 @@ utilizzando solo dati radar meteorologici e misurazioni della temperatura dell'a
 Le stime sono mostrate su delle mappe che riportano l'accumulo relativo alle 1, 3, 6, 12, 24, 48 e 72 ore antecedenti
 alla pubblicazione delle mappe stesse, e vengono aggiornate ogni ora.
 
+Bisogna specificare che il metodo sviluppato non tiene conto dell'effetto di erosione e deposizione del vento sul manto nevoso, che può causare una grande variabilità spaziale dello spessore della neve fresca, e quindi generare differenze anche marcate tra la realtà osservata e ed i valori stimati.
+
 I dati per produrre le mappe sono forniti dall'<a href="https://dpc-radar.readthedocs.io/it/latest/api.html" target="_blank">API della Protezione Civile Italiana</a>,
 e i risultati sono mostrati di seguito in questa pagina.
 
