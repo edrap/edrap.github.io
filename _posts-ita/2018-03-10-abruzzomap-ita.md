@@ -31,7 +31,7 @@ La mitigazione del rischio dovuto al pericolo valanghe può avvenire tramite un'
 <b>manto nevoso</b>, dell'<b>orografia</b> e della densità della <b>copertura boschiva</b>.
 
 I <b>bollettini valanghe</b> del servizio
-<a href="http://www.meteomont.gov.it/infoMeteo/stampaBollettinoStampa.do?settore=D" target="_blank">Meteomont</a> forniscono giornalmente 
+<a href="https://meteomont.carabinieri.it/home" target="_blank">Meteomont</a> forniscono giornalmente 
 preziose informazioni riguardanti la <b>stabilità</b> del manto nevoso, le quote e le esposizioni più a rischio. Uno studio
 attento del bollettino valanghe può mitigare il rischio durante l'escursione, tuttavia è di fondamentale
 importanza l'<b>osservazione</b> del manto nevoso durante la gita stessa, in quanto può fornire informazioni sulle condizioni del
