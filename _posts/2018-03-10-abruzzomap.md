@@ -35,9 +35,9 @@ It's also important to know the orography and the tree cover density at the tour
 
 It's really useful to follow the <b>lessons</b> of the <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a> portal to learn how to plan a mountain winter tour and how to behave during it.
 
-For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>topographic map</b></a> that includes several layers: i) a slope layer obtained from a DEM provided by <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a> at 10 meters resolution; ii) a tree cover layer provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a> at 10 meters resolution; iii) a snow cover layer showing the presence or absence of snow combining satellite observations of the past 6 days provided again by <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products/snow-cover" target="_blank">Copernicus</a>; iv) a layer that shows new snow accumulated in the past 24 hours, generated with the methodology <a href="https://edrap.github.io/newsnow/" target="_blank">described here</a>. Slope classes, tree cover and snow cover layers are not representative of the terrain conditions at scales smaller than the respective resolution, however they provide useful data to plan the tour. It is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
+For <b>Abruzzo</b> region it's possible to plan the tour online using the following topographic map that includes several layers: i) a slope layer obtained from a DEM provided by <a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a> at 10 meters resolution; ii) a tree cover layer provided by <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a> at 10 meters resolution; iii) a snow cover layer showing the presence or absence of snow combining satellite observations of the past 6 days provided again by <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products/snow-cover" target="_blank">Copernicus</a>; iv) a layer that shows new snow accumulated in the past 24 hours, generated with the methodology <a href="https://edrap.github.io/newsnow/" target="_blank">described here</a>. Slope classes, tree cover and snow cover layers are not representative of the terrain conditions at scales smaller than the respective resolution, however they provide useful data to plan the tour. It is also crucial to observe the snowpack and the terrain characteristics during the tour to obtain a more precise information.
 
-<b>The users take full responsibility for using the <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">topographic map</a> for outdoor activities.</b>
+<b>The users take full responsibility for using the topographic map for outdoor activities.</b>
 
 <!--
 <b><a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a> integration:</b>
@@ -46,9 +46,6 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using a <a href=
   <li>To use the slope class layer with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
 </ul>
 -->
-
-
-
 
 <div style="width: 100%; height: 100%; margin: 0 auto;">
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
