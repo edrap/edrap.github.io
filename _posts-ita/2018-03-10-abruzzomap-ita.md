@@ -41,9 +41,9 @@ Conoscere l'orografia e la copertura boschiva del luogo di interesse è altretta
 
 Per conoscere meglio come pianificare un'escursione invernale in montagna e come comportarsi durante lo svolgimento della gita è molto utile seguire le <b>lezioni</b> del portale <a href="https://www.whiterisk.ch/it/" target="_blank">White Risk</a>.
 
-Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank"><b>carta topografica</b></a>, che include: i) un livello per le classi di inclinazione superiori a 30° con una risoluzione a 10 metri, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>; ii) un livello per la copertura boschiva a 10 metri, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a>; iii) un livello che riporta la presenza o assenza di neve combinando osservazioni satellitari nell'arco dei 6 giorni precedenti fornito di nuovo da <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products/snow-cover" target="_blank">Copernicus</a>; iv) un livello che riporta la neve fresca caduta nelle 24 ore precedenti ottenuto tramite l'approccio <a href="https://edrap.github.io/_posts-ita/2024-01-25-newsnow-ita/" target="_blank">descritto qui</a>. Le informazioni di classi di inclinazione, copertura boschiva e copertura nevosa non sono rappresentative della conformazione e tipologia di terreno a scale inferiori alla loro risoluzione, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
+Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utilizzando una <b>carta topografica</b>, che include: i) un livello per le classi di inclinazione superiori a 30° con una risoluzione a 10 metri, ottenuto dal DEM fornito dall'<a href="http://tinitaly.pi.ingv.it/" target="_blank">Istituto NazionaIe di Geofisica e Vulcanologia</a>; ii) un livello per la copertura boschiva a 10 metri, fornito da <a href="https://land.copernicus.eu/pan-european/high-resolution-layers/forests/dominant-leaf-type" target="_blank">Copernicus</a>; iii) un livello che riporta la presenza o assenza di neve combinando osservazioni satellitari nell'arco dei 6 giorni precedenti fornito di nuovo da <a href="https://land.copernicus.eu/pan-european/biophysical-parameters/high-resolution-snow-and-ice-monitoring/snow-products/snow-cover" target="_blank">Copernicus</a>; iv) un livello che riporta la neve fresca caduta nelle 24 ore precedenti ottenuto tramite l'approccio <a href="https://edrap.github.io/_posts-ita/2024-01-25-newsnow-ita/" target="_blank">descritto qui</a>. Le informazioni di classi di inclinazione, copertura boschiva e copertura nevosa non sono rappresentative della conformazione e tipologia di terreno a scale inferiori alla loro risoluzione, tuttavia forniscono dati utili per poter pianificare l'escursione. È inoltre di fondamentale importanza l'osservazione delle caratteristiche del terreno e del manto nevoso durante la gita stessa per ottenere un'informazione più puntuale e precisa.
 
-<b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della <a href="https://edrap.github.io/leaflet/abruzzomap.html" target="_blank">carta topografica</a> per attività all'aperto.</b>
+<b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della carta topografica per attività all'aperto.</b>
   
 <b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 <br>
@@ -51,11 +51,9 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
   <li>Per usare il livello delle classi di inclinazione in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml.</li>
 </ul>
 
-<!--
 <div style="width: 100%; height: 100%; margin: 0 auto;">
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://edrap.github.io/leaflet/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
--->
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
