@@ -1,6 +1,6 @@
 ---
 layout: single_post
-title: "Conference Contributions"
+title: "Conferences"
 categories:
 excerpt: "Talks, posters, and abstracts presented at international and national conferences."
 tags: [conferences, research, presentations]
@@ -15,7 +15,7 @@ published: true
 visible: true
 ---
 
-## Conference Contributions
+## Conferences
 
 - Palermo, G., Raparelli, E., Romero, N.A., Manzi, M.P., Papa, M., Biscarini, M., Tuccclla, P., Lombardi, A., Colaiuda, V., Tomassetti, B. and Cimini, D., 2022, July.  
   *Snow-Mantle Remote Sensing from Spaceborne Sar Interferometry Using a Model-Based Synergetic Retrieval Approach in Central Apennines.*  
