@@ -263,6 +263,11 @@ defaults:
       layout: single
       author_profile: true
 
+collections:
+  postPublications:
+    output: true
+    permalink: /publications/:name/
+    
 defaults:
   # _postPublications
   - scope:
