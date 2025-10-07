@@ -28,11 +28,17 @@ html, body, #map {
     width: 0px;
     height: 0px;
 } */
-/* NON invertire Street View */
-/* .dark .pano-canvas,
-.dark .pano-canvas *,
-.dark .gm-style,
-.dark .gm-style * {
-  filter: none !important;
-  mix-blend-mode: normal !important;
-} */
+/* Street View fuori dalla dark-mode, quindi niente filtri */
+#gsv-root {
+  position: fixed;      /* usa absolute se lo vuoi dentro un container specifico */
+  right: 16px;
+  bottom: 16px;
+  width: 420px;         /* cambia dimensioni a piacere */
+  height: 300px;
+  z-index: 1000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,.18);
+}
+/* il resto del sito può restare scurito */
+#app.dark { filter: invert(1) hue-rotate(180deg); }
