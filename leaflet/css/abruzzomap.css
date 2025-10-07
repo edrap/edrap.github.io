@@ -29,10 +29,10 @@ html, body, #map {
     height: 0px;
 } */
 /* NON invertire Street View */
-.dark .pano-canvas,
+/* .dark .pano-canvas,
 .dark .pano-canvas *,
 .dark .gm-style,
 .dark .gm-style * {
   filter: none !important;
   mix-blend-mode: normal !important;
-}
+} */
