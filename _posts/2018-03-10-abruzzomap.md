@@ -43,11 +43,12 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using the follow
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.meteoaquilano.it/abruzzo/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
 
-<b><a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a> integration:</b>
 <br>
-<ul>
-  <li>To use slope class, hillshade and tree cover layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
-</ul>
+<b>Android App</b>
+It is also possible to use the topographic map via a dedicated Android app by downloading and installing <a href="https://edrap.github.io/leaflet/integration/abruzzomap.apk" target="_blank"><b>this file</b></a>.
+
+<b>Integration with <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a></b>
+To use slope class, hillshade and tree cover layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
