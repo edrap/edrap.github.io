@@ -46,7 +46,7 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using the follow
 <b><a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a> integration:</b>
 <br>
 <ul>
-  <li>To use the slope class layer with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
+  <li>To use slope class, hillshade and tree cover layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.</li>
 </ul>
 
 {% if page.comments %}
