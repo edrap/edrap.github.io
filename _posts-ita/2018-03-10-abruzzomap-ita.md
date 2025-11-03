@@ -49,12 +49,9 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.meteoaquilano.it/abruzzo/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
 
-
-<b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 <br>
-<ul>
-  <li>Per usare il livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml.</li>
-</ul>
+<b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
+Per usare il livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
