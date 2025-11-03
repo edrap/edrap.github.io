@@ -45,15 +45,15 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 
 <b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della carta topografica per attività all'aperto.</b>
 
+<div style="width: 100%; height: 100%; margin: 0 auto;">
+<div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.meteoaquilano.it/abruzzo/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
+</div>
+
 <b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 <br>
 <ul>
   <li>Per usare il livello delle classi di inclinazione in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml.</li>
 </ul>
-
-<div style="width: 100%; height: 100%; margin: 0 auto;">
-<div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.meteoaquilano.it/abruzzo/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
-</div>
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
