@@ -49,6 +49,7 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 <div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://www.meteoaquilano.it/abruzzo/abruzzomap.html" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
 </div>
 
+
 <b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 <br>
 <ul>
