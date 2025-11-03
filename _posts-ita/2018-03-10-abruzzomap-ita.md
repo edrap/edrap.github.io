@@ -50,11 +50,11 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 </div>
 
 <br>
-<b>Android App</b>
+<b>Android App:</b>
 È anche possibile utilizzare la carta topografica tramite app Android dedicata, scaricando ed installando <a href="https://edrap.github.io/leaflet/integration/abruzzomap.apk" target="_blank"><b>questo file</b></a>. 
 
-<b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a></b>
-Per usare il livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml
+<b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
+Per usare i livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml
 
 {% if page.comments %}
 <div id="disqus_thread"></div>
