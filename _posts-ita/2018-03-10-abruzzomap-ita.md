@@ -52,7 +52,7 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 <b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 <br>
 <ul>
-  <li>Per usare il livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml.</li>
+  <li>Per usare il livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml.</li>
 </ul>
 
 {% if page.comments %}
