@@ -45,7 +45,6 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 
 <b>Gli utenti si assumono tutte le responsabilità dell'utilizzo della carta topografica per attività all'aperto.</b>
 
-<br>
 <b>Web App:</b>
 È possibile visualizzare la mappa topografica tramite questo link: <a href="https://bregno.it/abruzzomap" target="_blank"><b>https://bregno.it/abruzzomap</b></a>
 
