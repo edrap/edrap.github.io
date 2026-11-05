@@ -39,10 +39,6 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using the follow
 
 <b>The users take full responsibility for using the topographic map for outdoor activities.</b>
 
-<div style="width: 100%; height: 100%; margin: 0 auto;">
-<div style="position: relative; padding-top: 60%;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://bregno.it/abruzzomap" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div>
-</div>
-
 <br>
 <b>Web App:</b>
 You can view the topographic map via browser using this link: <a href="https://bregno.it/abruzzomap/abruzzomap.apk" target="_blank"><b>https://bregno.it/abruzzomap/abruzzomap.apk</b></a>
