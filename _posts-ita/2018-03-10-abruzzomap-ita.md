@@ -49,7 +49,7 @@ Per la regione <b>Abruzzo</b> l'itinerario può essere pianificato online utiliz
 È possibile visualizzare la mappa topografica tramite questo link: <a href="https://bregno.it/abruzzomap" target="_blank"><b>https://bregno.it/abruzzomap</b></a>
 
 <b>Android App:</b>
-È anche possibile utilizzare la carta topografica tramite app Android dedicata, scaricando ed installando <a href="https://bregno.it/abruzzomap/abruzzomap.apk" target="_blank"><b>questo file</b></a> (Versione 1.52 - Ultimo aggiornamento 5/11/2026 18:20). 
+È anche possibile utilizzare la carta topografica tramite app Android dedicata, scaricando ed installando <a href="https://bregno.it/abruzzomap/abruzzomap.apk" target="_blank"><b>questo file</b></a> (Versione 1.56 - Ultimo aggiornamento 6/11/2026 18:20). 
 
 <b>Integrazione con <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 Per usare i livelli di classi di pendenza, ombreggiatura e copertura boschiva in Oruxmaps, scarica <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>questo file</b></a> e copia il suo contenuto nel file onlinemapsources.xml
