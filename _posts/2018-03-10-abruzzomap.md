@@ -43,7 +43,7 @@ For <b>Abruzzo</b> region it's possible to plan the tour online using the follow
 You can view the topographic map via browser using this link: <a href="https://bregno.it/abruzzomap" target="_blank"><b>https://bregno.it/abruzzomap</b></a>
 
 <b>Android App:</b>
-It is also possible to use the topographic map via a dedicated Android app by downloading and installing <a href="https://bregno.it/abruzzomap/abruzzomap.apk" target="_blank"><b>this file</b></a> (Version 1.56 - Last update 6/11/2026 18:20). .
+It is also possible to use the topographic map via a dedicated Android app by downloading and installing <a href="https://bregno.it/abruzzomap/abruzzomap.apk" target="_blank"><b>this file</b></a> (Version 1.60 - Last update 7/11/2026 20:10). .
 
 <b>Integration with <a href="https://www.oruxmaps.com" target="_blank">Oruxmaps</a>:</b>
 To use slope class, hillshade and tree cover layers with Oruxmaps, download <a href="https://edrap.github.io/leaflet/integration/abruzzomapsources_tcd.txt" target="_blank"><b>this file</b></a> and copy it's content to the onlinemapsources.xml file.
